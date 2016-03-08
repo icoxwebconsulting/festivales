@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Ruina';
+    src: url("../lib/ionic/fonts/Ruina.eot");
+    src: url("../lib/ionic/fonts/Ruina.eot")
+    format("embedded-opentype"),
+    url("../lib/ionic/fonts/Ruina.woff") format("woff"),
+    url("../lib/ionic/fonts/Ruina.ttf") format("truetype"),
+    url("../lib/ionic/fonts/Ruina.svg") format("svg");
+}
+
+
+.nav-bar-block, .bar-footer{
+    background-color: #0A0A20 !important;
+}
+
+.bar-header{
+    position: static !important;
+    height: 50px !important;
+}
+
+
+.logo{
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.logo img{
+    height : 35px;
+}
+
+.menu-button{
+    height: 30px;
+    margin-top:5px;
+}
+
+.buttons-left:hover, .buttons-right:hover{
+    opacity: 0.8;
+}
+
+.row-stick , .col-stick{
+    padding: 0 !important;
+}
+
+.col-stick{
+    position: relative !important;
+}
+
+.col-stick span {
+    position:absolute;
+    top: 2%;
+    left: 80%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    color: #fff;
+    font-size: 25px;
+}
+
+.tabs-top>.tabs, .tabs.tabs-top{
+    top: 1px !important;
+}
+
+.menu{
+    font-family: Ruina, sans-serif  !important;
+}
+
+.menu-left .pane{
+    background-image: url('../img/menu/background.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+}
+
+.menu-left .header-left-menu,.footer-left-menu {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.menu-left .header-left-menu img{
+    height : 80px;
+}
+
+.menu-left .footer-left-menu img{
+    width: 100px;
+}
+
+.menu-left .footer-left-menu img{
+    width: 140px;
+    vertical-align: middle;
+}
+
+.menu-left .footer-left-menu{
+    color: #ffffff;
+}
+
+.sidebar-right .button-clear, .category{
+    display: block !important;
+}
+
+.categories li{
+    margin:25px;
+}
+
+.category img{
+    height: 40px;
+    margin-left: 35px;
+    vertical-align: middle;
+}
+
+.category a{
+    width:800px;
+    margin:10px auto;
+    text-align:left;
+    color:#FFA700;
+    font-family: Ruina, sans-serif  !important;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.category a:hover{
+    opacity: 0.8;
+}
+
+.header-right-menu{
+    background-color: #0A0A20 !important;
+}
+
+.header-right-menu img{
+    height: 35px;
+}
+
+.sidebar-right .menu-tabs{
+    background-color: #FFA700 !important;
+}
+
+.sidebar-right .tab-item{
+    margin-top: 18px !important;
+    font-family: Ruina, sans-serif  !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+}
+
+.sidebar-right .active{
+    text-decoration: underline;
+}
+
+.sidebar-right .tab-image{
+    max-width: 30px !important;
+    margin: 13px !important;
+}
+
+.sidebar-right .tab-image img{
+    height: 20px;
+}
+
+.menu-right .pane{
+    background-color: #04041B !important;
+}
+
+.menu-right .favorites .pane, .menu-right .notifications .pane{
+    margin-top: 100px !important;
+}
+
+.menu-right .favorites .not-found img {
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20%;
+    width: 250px;
+    transform: translateY(-50%);
+}
+
+.menu-right .favorites .item-content{
+    background-color: #04041B !important;
+    color: #ffffff;
+    border: none !important;
+}

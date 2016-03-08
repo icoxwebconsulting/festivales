@@ -1,0 +1,27 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Settings</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeSettings()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-toggle ng-model="view.setting.notifications">Notificaciones</ion-toggle>
+        <h4>Cambiar contrase&ntilde;a</h4>
+        <form ng-submit="changePassword()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Contrase&ntilde;a actual</span>
+                    <input type="password" ng-model="loginData.password.old">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Nueva contrase&ntilde;a</span>
+                    <input type="password" ng-model="loginData.password.new">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Actualizar</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,42 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-light">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-title>
+                <div class="logo">
+                    <img src="img/festival_arts.png" >
+                </div>
+            </ion-nav-title>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear" menu-toggle="left">
+                    <img src="img/menu/category.png" class="menu-button">
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear" menu-toggle="right">
+                    <img src="img/menu/user.png" class="menu-button">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="content"></ion-nav-view>
+        <ion-footer-bar align-title="left" class="bar-dark">
+            <!--<div class="buttons">-->
+            <!--<button class="button"></button>-->
+            <!--</div>-->
+            <h1 class="title">Spotify preview track</h1>
+            <!--<i style="float: right" class="ion-play"></i>-->
+        </ion-footer-bar>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <div ng-include="'templates/sidebar/left.html'" class="sidebar-left"></div>
+    </ion-side-menu>
+
+
+    <ion-side-menu side="right">
+        <div ng-include="'templates/sidebar/right.html'" class="sidebar-right"></div>
+    </ion-side-menu>
+
+</ion-side-menus>

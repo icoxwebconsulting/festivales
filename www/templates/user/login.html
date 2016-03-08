@@ -1,0 +1,42 @@
+<ion-view>
+    <ion-content has-bouncing="false">
+        <div class="row" data-ng-show="!view.loginEmail">
+            <div class="col">
+                <button ng-click="loginFacebook()" class="button button-full facebook icon">
+                    Iniciar sesión con Facebook
+                </button>
+                <button ng-click="toggleLoginEmail()" class="button button-full google">
+                    Iniciar sesión con Email
+                </button>
+                <a ui-sref="base.register" class="button button-full google">
+                    Registrate
+                </A>
+            </div>
+        </div>
+        <div class="list" data-ng-show="view.loginEmail">
+            <label class="item item-input">
+                <span class="input-label">E-Mail</span>
+                <input ng-model="data.email" type="email">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Contraseña</span>
+                <input ng-model="data.password" type="password">
+            </label>
+
+            <div class="row">
+                <div class="col">
+                    <button ng-disabled="!data.email || !data.password" ng-click="login()"
+                            class="button button-full entrar">Entrar</button>
+                    <a ng-click="toggleLoginEmail()" class="">Volver</a>
+                </div>
+            </div>
+        </div>
+        <div class="list">
+            <div class="row">
+                <div class="col">
+                    <a ui-sref="menu.main" class="recordar">Más tarde</a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
