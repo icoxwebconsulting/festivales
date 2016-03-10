@@ -1,6 +1,6 @@
 app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-    $stateProvider
 
+    $stateProvider
         .state('base', {
             url: '/',
             abstract: true,
@@ -28,14 +28,14 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         .state('menu', {
             url: 'app/',
             abstract: true,
-            templateUrl: 'templates/menu.html',
+            templateUrl: 'templates/menu/main.html',
             controller: 'MenuController'
         })
-        .state('menu.main', {
-            url: 'main',
+        .state('menu.discover', {
+            url: 'artist/discover',
             views: {
                 'content': {
-                    templateUrl: 'templates/artist/main.html',
+                    templateUrl: 'templates/artist/discover.html',
                     controller: 'MainController'
                 }
             }
@@ -44,8 +44,43 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: 'ticket',
             views: {
                 'content': {
-                    templateUrl: 'templates/ticket.html',
+                    templateUrl: 'templates/ticket/main.html',
                     controller: 'TicketController'
+                }
+            }
+        })
+        .state('menu.coolway', {
+            url: 'coolway',
+            views: {
+                'content': {
+                    templateUrl: 'templates/coolway/main.html',
+                    controller: 'CoolwayController'
+                }
+            }
+        })
+        .state('menu.streaming', {
+            url: 'streaming',
+            views: {
+                'content': {
+                    templateUrl: 'templates/streaming/main.html',
+                    controller: 'StreamingController'
+                }
+            }
+        })
+        .state('menu.info', {
+            url: 'info',
+            views: {
+                'content': {
+                    templateUrl: 'templates/info/main.html',
+                    controller: 'InfoController'
+                }
+            }
+        })
+        .state('menu.organizer', {
+            url: 'organizer',
+            views: {
+                'content': {
+                    templateUrl: 'templates/info/organizer.html'
                 }
             }
         });

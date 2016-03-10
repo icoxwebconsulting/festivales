@@ -6,5 +6,4 @@ app.controller('TicketController', function($scope) {
     };
 
 
-
 });

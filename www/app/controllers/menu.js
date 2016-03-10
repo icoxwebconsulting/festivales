@@ -1,4 +1,4 @@
-app.controller('MenuController', function($scope, $ionicModal, $timeout) {
+app.controller('MenuController', function($scope, $ionicModal, Spotify) {
 
     $scope.init = function(){
         $scope.view = {};
@@ -36,7 +36,13 @@ app.controller('MenuController', function($scope, $ionicModal, $timeout) {
         $scope.modal.hide();
     };
 
-
-
+    $scope.login = function () {
+        Spotify.login().then(function (data) {
+            console.log(data);
+            alert("You are now logged in");
+        }, function () {
+            console.log('didn\'t log in');
+        })
+    };
 
 });
