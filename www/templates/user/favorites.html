@@ -2,7 +2,8 @@
     <div ng-if="view.favorites.length > 0">
         <ion-list>
             <ion-item nav-clear class="item-icon-left" ng-repeat="favorite in view.favorites" href="#/app/tab/journal/{{friend.user.username}}" ng-click="conf.current = friend.user.username">
-                <img class="icon menu-icon-avatar" ng-src="{{favorite.name}}">{{favorite.name}}</ion-item>
+                <img class="icon menu-icon-avatar" ng-src="{{favorite.name}}">{{favorite.name}}
+            </ion-item>
         </ion-list>
     </div>
     <div ng-if="!view.favorites.length">

@@ -1,0 +1,57 @@
+<ion-view>
+    <ion-content has-bouncing="true" scroll="false" class="bg-dark schedule">
+        <div class="row subtitle" scroll="false">
+            <div class="col col-100">
+                <div class="landscape">
+                    <button class="button button-clear">
+                        <img src="img/schedule/landscape.png">
+                    </button>
+                </div>
+                <div class="days">
+                    <button class="button button-clear">
+                        <img src="img/schedule/pro.png">
+                    </button>
+                    <button class="button button-clear">
+                        <img src="img/schedule/10.png">
+                    </button>
+                    <button class="button button-clear">
+                        <img src="img/schedule/11.png">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row filters" scroll="false">
+            <div class="col col-50" ng-class="{'active': view.show_list  === 'time'}">
+                <div class="time filter">
+                    <button class="button button-clear">
+                        Por hora
+                    </button>
+                </div>
+            </div>
+            <div class="col col-50" ng-class="{'active': view.show_list  === 'stage'}">
+                <div class="stage filter">
+                    <button class="button button-clear">
+                        Por escenario
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row" scroll="true">
+            <ion-list class="list">
+                <ion-item>
+                    <div class="left">
+                        <img src="img/hurts.jpg" class="artist-cover">
+                    </div>
+                    <div class="center">
+                        <p class="artist-name">Hurts</p>
+                        <p class="time"> <i class="ion-clock"> </i> 21:00 - 22:00</p>
+                        <p class="stage-name"> <i class="ion-location"> Escenario Coolway</i></p>
+                    </div>
+                    <div class="right">
+                        <img src="img/favorite/off.png">
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

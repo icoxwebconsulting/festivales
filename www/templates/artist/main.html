@@ -1,0 +1,26 @@
+<ion-view>
+    <ion-content has-bouncing="true" scroll="false">
+        <div class="row subtitle" scroll="false">
+            <div class="col col-100">
+                <div class="left">
+                    <img src="img/chair/1.png">
+                    <img src="img/chair/2.png">
+                </div>
+                <div class="center">
+                    <span>120 horas 43 minutos</span>
+                </div>
+                <div class="right">
+                    <img src="img/chair/3.png">
+                    <img src="img/chair/4.png">
+                </div>
+
+            </div>
+        </div>
+        <div class="row row-stick" ng-repeat="tracks in view.tracks" scroll="true">
+            <div class="col col-50 col-stick" ng-repeat="track in tracks">
+                <img ng-src="http://placehold.it/100x100" width="100%" />
+                <span class="ion-play" ng-click="playTrack(track)"></span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

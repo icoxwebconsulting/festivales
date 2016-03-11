@@ -8,6 +8,10 @@
     url("../lib/ionic/fonts/Ruina.svg") format("svg");
 }
 
+.bar{
+    background-image: none !important;
+    border-bottom: none !important;
+}
 
 .nav-bar-block, .bar-footer{
     background-color: #0A0A20 !important;
@@ -22,11 +26,11 @@
 .logo{
     width: 100%;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 2px;
 }
 
 .logo img{
-    height : 35px;
+    height : 44px;
 }
 
 .menu-button{
@@ -73,22 +77,37 @@
     background-attachment: fixed;
 }
 
+.menu-left .powered-by{
+    float : left;
+    display: inline-block;
+}
+
+.menu-left .powered-by img{
+    height : 100px;
+}
+
+.menu-left .header-left-menu{
+    margin-top: -70px;
+    display: inline-block;
+}
+
 .menu-left .header-left-menu,.footer-left-menu {
     width: 100%;
+    height: auto;
     text-align: center;
-    margin-top: 25px;
+}
+
+.footer-left-menu {
+    margin-top: 5px;
 }
 
 .menu-left .header-left-menu img{
-    height : 80px;
+    width : 100%;
+    padding: 0px 20px;
 }
 
 .menu-left .footer-left-menu img{
-    width: 100px;
-}
-
-.menu-left .footer-left-menu img{
-    width: 140px;
+    width: 125px;
     vertical-align: middle;
 }
 
@@ -114,7 +133,7 @@
     width:800px;
     margin:10px auto;
     text-align:left;
-    color:#FFA700;
+    color: #ffffff;
     font-family: Ruina, sans-serif  !important;
     font-size: 18px;
     text-decoration: none;
@@ -178,4 +197,127 @@
     background-color: #04041B !important;
     color: #ffffff;
     border: none !important;
+}
+
+.subtitle{
+    background-color: #FFA700 !important;
+    position: static !important;
+    height: 65px !important;
+}
+
+.subtitle .center{
+    padding: 30px;
+}
+
+.subtitle .left, .subtitle .center, .subtitle .right, .subtitle .landscape, .subtitle .days{
+    display: inline;
+    width: auto;
+}
+
+.subtitle .left img, .subtitle .right img{
+    height: 46px;
+    vertical-align: middle;
+}
+
+.subtitle .landscape{
+    padding: 20px;
+}
+
+.subtitle .days img{
+    height: 50px;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.subtitle .landscape img{
+    height: 25px;
+    vertical-align: middle;
+}
+
+.filters{
+    background-color: #008D61 !important;
+    position: static !important;
+    height: 50px !important;
+    padding: 0px !important;
+    width: 100% !important;
+}
+
+.filters .filter{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #ffffff !important;
+}
+
+.filters .filter button{
+    color: #ffffff !important;
+    margin-top: -4px !important;
+}
+
+.filters .active .filter button{
+    color: #ffffff !important;
+    font-weight: bold !important;
+    margin-top: -5px !important;
+}
+
+
+.filters .active{
+    border-style: solid;
+    border-bottom: 4px solid #fff;
+    width: 100%;
+    height: 50px;
+}
+
+
+.list{
+    width: 350px;
+    margin: 5px;
+}
+
+.list .item{
+    background-color: #04041B !important;
+    color: #ffffff;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+}
+
+.list .left, .list .center, .list .right{
+    display: inline-block;
+    width: auto;
+}
+
+.list .left{
+    background-color: #FFA700 !important;
+}
+
+.list .center{
+    margin-left: 10px;
+}
+
+.list .right{
+    position: absolute;
+    margin: 20px 90px;
+}
+
+.list .artist-cover{
+    height: 80px;
+    max-height: 80px;
+}
+
+.list .artist-name{
+    font-family: Ruina, sans-serif  !important;
+    color: #FFA700 !important;
+    font-size: 20px;
+}
+
+.list .time, .list .stage-name{
+    color: #ffffff;
+}
+
+.list .right img{
+    height: 30px;
 }
