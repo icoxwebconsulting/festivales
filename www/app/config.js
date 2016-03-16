@@ -32,7 +32,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             controller: 'MenuController'
         })
         .state('menu.artist-discover', {
-            url: 'artist-discover',
+            url: 'artist/discover',
             views: {
                 'content': {
                     templateUrl: 'templates/artist/main.html',
@@ -41,10 +41,19 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             }
         })
         .state('menu.artist-list', {
-            url: 'artist-list',
+            url: 'artist',
             views: {
                 'content': {
                     templateUrl: 'templates/artist/list.html',
+                    controller: 'ArtistController'
+                }
+            }
+        })
+        .state('menu.artist-detail', {
+            url: 'artist/:id',
+            views: {
+                'content': {
+                    templateUrl: 'templates/artist/detail.html',
                     controller: 'ArtistController'
                 }
             }

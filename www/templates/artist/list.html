@@ -1,5 +1,5 @@
 <ion-view>
-    <ion-content has-bouncing="false" class="artist">
+    <ion-content has-bouncing="true" class="artist">
         <div class="row subtitle filter" scroll="false">
             <div class="col col-100">
                 <input type="search"
@@ -19,9 +19,10 @@
                 <ion-item class="my-item"
                           ng-repeat="item in getContacts() | filter:view.search"
                           item-height="getItemHeight(item)"
-                          id="{{ item.isLetter ? (item.letter + '_divider') : ''}}"
+                          id="{{ item.isLetter ? (item.letter + '_divider') : item.id}}"
                           ng-style="{'line-height': getItemHeight(item) + 'px'}"
-                          ng-class="{'item-divider': item.isLetter}">
+                          ng-class="{'item-divider': item.isLetter}"
+                          ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">
                     <img ng-if="!item.isLetter" ng-src="http://placehold.it/80x80">
                     <p>{{item.letter || (item.first_name+' '+item.last_name)}}</p>
                     <button ng-if="!item.isLetter" class="button button-clear favorite">

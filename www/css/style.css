@@ -87,8 +87,9 @@
 }
 
 .menu-left .header-left-menu{
-    margin-top: -70px;
     display: inline-block;
+    margin-top: -60px;
+    margin-bottom: 10px;
 }
 
 .menu-left .header-left-menu,.footer-left-menu {
@@ -98,12 +99,12 @@
 }
 
 .footer-left-menu {
-    margin-top: 5px;
+    margin-top: 25px;
 }
 
 .menu-left .header-left-menu img{
     width : 100%;
-    padding: 0px 20px;
+    padding: 0px 25px;
 }
 
 .menu-left .footer-left-menu img{
@@ -125,7 +126,7 @@
 
 .category img{
     height: 40px;
-    margin-left: 35px;
+    margin-left: 45px;
     vertical-align: middle;
 }
 
@@ -276,12 +277,12 @@
 }
 
 .list .item{
-    background-color: #04041B !important;
-    color: #ffffff;
+    color: #04041B;
+    background-color: #F5E5C1 !important;
     border-top: none !important;
     border-right: none !important;
     border-left: none !important;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #04041B;
     padding-bottom: 0px !important;
     padding-left: 0px !important;
 }
@@ -313,12 +314,12 @@
 
 .list .artist-name{
     font-family: Ruina, sans-serif  !important;
-    color: #FFA700 !important;
+    color: #04041B !important;
     font-size: 20px;
 }
 
 .list .time, .list .stage-name{
-    color: #ffffff;
+    color: #04041B;
 }
 
 .list .right img{
@@ -435,6 +436,7 @@
     vertical-align: middle;
     padding: 4px;
     max-height: 20px !important;
+    cursor: default !important;
 }
 
 .artist .list .item-divider p{
@@ -454,4 +456,111 @@
 .artist .list .favorite img{
     height: 40px !important;
     width: 40px !important;
+}
+
+.artist-detail .header img{
+    height: 250px;
+    width: 100%;
+}
+
+.artist-detail .picture{
+    position: absolute;
+    z-index: 10 !important;
+}
+
+.artist-detail .legend{
+    width:100% !important;
+    height: 50px !important;
+    position: absolute;
+    margin-top: 200px;
+    z-index: 12 !important;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(10,10,32,0.33) 20%, rgba(10,10,32,0.35) 21%, rgba(10,10,32,0.7) 43%) !important;
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(10,10,32,0.33) 20%,rgba(10,10,32,0.35) 21%,rgba(10,10,32,0.7) 43%) !important;
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(10,10,32,0.33) 20%,rgba(10,10,32,0.35) 21%,rgba(10,10,32,0.7) 43%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b30a0a20',GradientType=0 ) !important;
+}
+
+.artist-detail .legend p{
+    font-family: Ruina,sans-serif!important;
+    font-size: 28px;
+    display: inline-block;
+    float: left;
+    margin: 18px 10px;
+}
+
+.artist-detail .legend img{
+    float: right;
+    height: 35px!important;
+    width: 35px!important;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.artist-detail .body{
+    height: auto;
+    width: 100%;
+    font-family: sans-serif  !important;
+    color: #04041B;
+    background-color: #F5E5C1 !important;
+    position: absolute;
+    display: block;
+    margin-top: 250px;
+    margin-bottom: 50px;
+}
+
+.artist-detail .body .date{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom:0 !important;
+}
+
+.artist-detail .body .time, .artist-detail .body .stage-name, .artist-detail .body .description{
+    font-size: 12px;
+    margin-bottom:0 !important;
+}
+
+.artist-detail .body .listen{
+    height: 50px;
+    width: 100%;
+    padding: 0 !important;
+    margin-top:10px !important;
+}
+
+.artist-detail .body .listen img{
+    height: 35px!important;
+    width: 35px!important;
+    display: inline-block;
+    margin-right: 5px;
+    float: left;
+    vertical-align: middle;
+}
+
+.artist-detail .body .listen p{
+    font-family: sans-serif!important;
+    font-size: 12px;
+    display: inline-block;
+    font-weight: bold;
+    color: #04041B;
+    float:left;
+    vertical-align: middle;
+}
+
+.artist-detail .body .social-title{
+    font-family:  Ruina,sans-serif!important;
+    font-size: 28px;
+    display: block;
+    color: #04041B;
+    float:left;
+    width: 100%;
+    margin-top:10px;
+}
+
+.artist-detail .body .social img{
+    height: 40px!important;
+    width:  auto !important;
+    display: inline-block;
+    margin-right: 15px;
+    float: left;
+    vertical-align: middle;
 }

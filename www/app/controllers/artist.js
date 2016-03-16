@@ -7,7 +7,7 @@ app.controller('ArtistController', function ($scope, $state, $ionicScrollDelegat
     $scope.init();
 
 
-    if ($state.current.name == "menu.artist-list") {
+    if ($state.current.name == 'menu.artist-list') {
         var letters = $scope.letters = [];
         var contacts = $scope.contacts = [];
         var currentCharCode = ' '.charCodeAt(0) - 1;
@@ -104,6 +104,17 @@ app.controller('ArtistController', function ($scope, $state, $ionicScrollDelegat
         $scope.clearSearch = function () {
             $scope.view.search = '';
         };
+
+        $scope.showDetail = function(id){
+            if(id > 0)
+                $state.go('menu.artist-detail', {'id': id});
+            else
+                return false;
+        }
+    }
+
+    if ($state.current.name == 'menu.artist-detail') {
+        console.info('entro en detail');
     }
 
 
