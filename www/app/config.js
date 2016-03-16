@@ -31,12 +31,21 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             templateUrl: 'templates/menu/main.html',
             controller: 'MenuController'
         })
-        .state('menu.artist', {
-            url: 'artist',
+        .state('menu.artist-discover', {
+            url: 'artist-discover',
             views: {
                 'content': {
                     templateUrl: 'templates/artist/main.html',
                     controller: 'MainController'
+                }
+            }
+        })
+        .state('menu.artist-list', {
+            url: 'artist-list',
+            views: {
+                'content': {
+                    templateUrl: 'templates/artist/list.html',
+                    controller: 'ArtistController'
                 }
             }
         })

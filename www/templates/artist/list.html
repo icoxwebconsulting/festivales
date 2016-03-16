@@ -1,0 +1,34 @@
+<ion-view>
+    <ion-content has-bouncing="false" class="artist">
+        <div class="row subtitle filter" scroll="false">
+            <div class="col col-100">
+                <input type="search"
+                       placeholder="Filter artists..."
+                       ng-model="view.search"
+                       ng-focus="searchFocused = true"
+                       ng-blur="searchFocused = false"
+                       ng-change="scrollTop()"
+                       class="full-width">
+                <button ng-if="view.search.length"
+                        class="button button-icon ion-close input-button"
+                        ng-click="view.search = '' "> </button>
+            </div>
+        </div>
+        <div class="listed" scroll="true">
+            <ion-list>
+                <ion-item class="my-item"
+                          ng-repeat="item in getContacts() | filter:view.search"
+                          item-height="getItemHeight(item)"
+                          id="{{ item.isLetter ? (item.letter + '_divider') : ''}}"
+                          ng-style="{'line-height': getItemHeight(item) + 'px'}"
+                          ng-class="{'item-divider': item.isLetter}">
+                    <img ng-if="!item.isLetter" ng-src="http://placehold.it/80x80">
+                    <p>{{item.letter || (item.first_name+' '+item.last_name)}}</p>
+                    <button ng-if="!item.isLetter" class="button button-clear favorite">
+                        <img src="img/favorite/off.png">
+                    </button>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

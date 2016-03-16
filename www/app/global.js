@@ -1,4 +1,5 @@
 app.constant('GLOBAL', {
+    'FESTIVAL_ID' : 4,
     'HOST': 'http://festivales.dev/app_dev.php/api/',
     'IMAGE': 'http://festivales.icox.mobi/',
     'COUNTRY_ISO': 'ES'

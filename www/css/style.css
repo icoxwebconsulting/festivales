@@ -203,6 +203,7 @@
     background-color: #FFA700 !important;
     position: static !important;
     height: 65px !important;
+    text-align: center;
 }
 
 .subtitle .center{
@@ -292,6 +293,8 @@
 
 .list .left{
     background-color: #FFA700 !important;
+    width:80px;
+    height:80px;
 }
 
 .list .center{
@@ -319,5 +322,136 @@
 }
 
 .list .right img{
-    height: 30px;
+    height: 40px;
+}
+
+.coolway .header{
+    background-color: #333333 !important;
+}
+
+.coolway .logo img{
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coolway .left img, .coolway .center img, .coolway .right img, .coolway .social img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+.coolway .left img, .coolway .right img{
+    height: 35px;
+    margin-top: 20px;
+}
+
+.coolway .center img{
+    height: 80px;
+}
+
+.coolway .social img{
+    height: 37px;
+    display: inline-block;
+}
+.coolway .social-network{
+     text-align: center;
+}
+
+.coolway .social-network .center{
+    margin: 0px 10px;
+}
+
+.artist .button.button-icon.input-button {
+    position: absolute;
+    right: 8px;
+    top: 3px;
+    color: #bbb;
+}
+
+.artist .filter{
+    position: static !important;
+}
+
+.artist .list, .artist .disable-user-behavior{
+    padding: 0px !important;
+    margin: 0px !important;
+    z-index: 20 !important;
+    width: 100%;
+}
+
+.artist .item img {
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.artist .my-item.item {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.artist .my-item.item p{
+    font-family: Ruina, sans-serif  !important;
+    color: #04041B;
+    font-size:18px;
+    display: inline-block;
+}
+
+.artist .subtitle{
+    height: 50px !important;
+}
+
+.artist .full-width {
+    width: 97%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 20px;
+    padding: 5px;
+}
+
+.artist .listed{
+    background-color: #F5E5C1 !important;
+}
+
+.artist .list .item{
+    background-color: #F5E5C1 !important;
+    border-style: solid;
+    border-top: 1px solid #04041B !important;
+    margin: 0px 5px;
+    height: 100px;
+    max-height: 100px;
+}
+
+.artist .list .item-divider{
+    background-color: #008D61 !important;
+    border-style: none !important;
+    border-top: none !important;
+    margin: 0px !important;
+    vertical-align: middle;
+    padding: 4px;
+    max-height: 20px !important;
+}
+
+.artist .list .item-divider p{
+    margin-left: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: sans-serif !important;
+}
+
+.artist .list .favorite{
+    margin-top: 20px;
+    float: right;
+    display: inline-block;
+    left:20px;
+}
+
+.artist .list .favorite img{
+    height: 40px !important;
+    width: 40px !important;
 }
