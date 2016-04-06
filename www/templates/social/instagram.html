@@ -1,0 +1,6 @@
+<div class="row unlimited-items">
+    <div class="col" ng-repeat="p in view.pics | orderBy:orderBy">
+        <img ng-src="{{p.images.low_resolution.url}}">
+        <!--<span class="icon ion-heart">&nbsp;{{p.likes.count}}</span>-->
+    </div>
+</div>
