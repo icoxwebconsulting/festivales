@@ -2,11 +2,13 @@
   "name": "HelloIonic",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.2.4"
+    "ionic": "driftyco/ionic-bower#1.2.4",
+    "ngstorage": "https://github.com/gsklee/ngStorage.git#~0.3.10"
   },
   "dependencies": {
     "ng-cordova-oauth": "~0.2.3",
     "ngCordova": "~0.1.24-alpha",
-    "angular-spotify": "~1.2.1"
+    "angular-spotify": "~1.2.1",
+    "ngstorage": "~0.3.10"
   }
 }
