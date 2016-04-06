@@ -1,14 +1,41 @@
-<ion-content class="modal-login-content" scroll="false">
-    <div class="title">
-        <h4>Reg&iacute;strate ahora</h4>
-        <span>Te llevar&aacute; &uacute;nicamente unos minutos</span>
-    </div>
-    <div class="options">
-        <img src="img/login/facebook.png">
-        <img src="img/login/email.png">
-        <div class="later">
-            <a ng-click="later()">Registrarme mas tarde</a>
+<ion-content class="login-content" scroll="false">
+    <div ng-show="view.show_login === 'options'">
+        <div class="title">
+            <h4>Reg&iacute;strate ahora</h4>
+            <span>Te llevar&aacute; &uacute;nicamente unos minutos</span>
+        </div>
+        <div class="options">
+            <img src="img/login/facebook.png">
+            <img src="img/login/email.png" ng-click="view.show_login = 'form';">
+            <div class="later">
+                <a ng-click="later()">Registrarme m&aacute;s tarde</a>
+            </div>
         </div>
     </div>
+    <div ng-show="view.show_login === 'form'">
+        <div class="form">
+            <div class="field">
+                <div class="icon-field">
+                    <img src="img/login/icon/email.png">
+                </div>
+                <input ng-model="data.email" type="email" placeholder="Correo electrónico">
+            </div>
+            <div class="field">
+                <div class="icon-field">
+                    <img src="img/login/icon/lock.png">
+                </div>
+                <input ng-model="data.password" type="password" placeholder="Contraseña">
+            </div>
+            <div class="later">
+                <a>&iquest;Has olvidado la contraseña?</a>
+            </div>
+        </div>
+        <div class="login-footer">
+            <img src="img/login/sign-in.png" ng-click="view.show_login = 'options';">
+            <a>T&eacute;rminos y condiciones</a>
+            <a>Politica de privacidad</a>
+        </div>
+    </div>
+
 
 </ion-content>
