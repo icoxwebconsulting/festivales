@@ -1,5 +1,18 @@
 app.controller('RegisterController', function ($scope, $state, $ionicLoading, $ionicPopup) {
 
+
+    $scope.init = function()
+    {
+        $scope.view = {};
+        $scope.view.show = 'sign_up';
+        $scope.view.show_login = 'options';
+        $scope.data = {};
+        $scope.error = false;
+        $scope.view.loginEmail = false;
+    };
+
+    $scope.init();
+
     $scope.data = {
         privacy_police: false
     };

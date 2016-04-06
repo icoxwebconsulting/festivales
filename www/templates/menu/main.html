@@ -21,12 +21,8 @@
             </ion-nav-buttons>
         </ion-nav-bar>
         <ion-nav-view name="content"></ion-nav-view>
-        <ion-footer-bar align-title="left" class="bar-dark" ng-controller="PlayerController">
-            <!--<div class="buttons">-->
-            <!--<button class="button"></button>-->
-            <!--</div>-->
-            <button class="title button button-clear" ng-click="openPlayer()">Spotify preview track</button>
-            <!--<i style="float: right" class="ion-play"></i>-->
+        <ion-footer-bar align-title="left" class="bar-dark">
+            <div class="footer-menu" ng-include="'templates/menu/footer.html'"></div>
         </ion-footer-bar>
     </ion-side-menu-content>
 

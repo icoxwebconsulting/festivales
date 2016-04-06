@@ -1,4 +1,5 @@
 app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $ionicConfigProvider.backButton.text('').icon('ion-chevron-left');
 
     $stateProvider
         .state('base', {
@@ -11,7 +12,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: 'login',
             views: {
                 'content': {
-                    templateUrl: 'templates/user/login.html',
+                    templateUrl: 'templates/user/sign_in.html',
                     controller: 'LoginController'
                 }
             }
@@ -20,13 +21,13 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: 'register',
             views: {
                 'content': {
-                    templateUrl: 'templates/user/register.html',
+                    templateUrl: 'templates/user/sign_up.html',
                     controller: 'RegisterController'
                 }
             }
         })
         .state('menu', {
-            url: 'app/',
+            url: '/app/',
             abstract: true,
             templateUrl: 'templates/menu/main.html',
             controller: 'MenuController'
@@ -36,7 +37,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/artist/main.html',
-                    controller: 'MainController'
+                    controller: 'ArtistController'
                 }
             }
         })
@@ -58,12 +59,28 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 }
             }
         })
+        .state('menu.poster', {
+            url: 'poster',
+            views: {
+                'content': {
+                    templateUrl: 'templates/poster/main.html'
+                }
+            }
+        })
         .state('menu.schedule', {
             url: 'schedule',
             views: {
                 'content': {
                     templateUrl: 'templates/schedule/main.html',
                     controller: 'ScheduleController'
+                }
+            }
+        })
+        .state('menu.map', {
+            url: 'map',
+            views: {
+                'content': {
+                    templateUrl: 'templates/map/main.html'
                 }
             }
         })
@@ -107,7 +124,16 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: 'organizer',
             views: {
                 'content': {
-                    templateUrl: 'templates/info/organizer.html'
+                    templateUrl: 'templates/info/organizer.html',
+                }
+            }
+        })
+        .state('menu.social', {
+            url: 'social',
+            views: {
+                'content': {
+                    templateUrl: 'templates/social/main.html',
+                    controller: 'SocialController'
                 }
             }
         });

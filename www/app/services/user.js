@@ -1,4 +1,5 @@
-app.directive('UserService', ['$window', '$q', function ($window, $q) {
+'use strict';
+app.factory('UserService', function ($rootScope, Spotify) {
     var service = {};
 
 
@@ -8,4 +9,4 @@ app.directive('UserService', ['$window', '$q', function ($window, $q) {
     };
 
     return service;
-}]);
+});

@@ -3,11 +3,14 @@ var app = angular.module('festival',
         'ionic',
         'ngCordova',
         'ngCordovaOauth',
+        'ngStorage',
+        'ngResource',
         'spotify'
     ]);
 
-app.run(function ($rootScope, $state, $stateParams, $ionicPlatform) {
+app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $cordovaSplashscreen, $state, DBService) {
     $ionicPlatform.ready(function () {
+        DBService.init();
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins.Keyboard) {

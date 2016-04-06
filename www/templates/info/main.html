@@ -1,24 +1,26 @@
 <ion-view>
-    <ion-content>
+    <ion-content class="info">
+        <div class="row filters" scroll="false">
+            <h3>Informaci&oacute;n Basica</h3>
+        </div>
         <ion-list>
             <ion-item>
-                1 Cómo llegar
+                1. Cómo llegar
             </ion-item>
             <ion-item>
-                2 Tiempo
+                2. Tiempo
             </ion-item>
-            <ion-item ui-sref="menu.organizer">
-                3 Organizador de
-                maleta
-            </ion-item>
-            <ion-item>
-                4 Patrocinadores
+            <ion-item ng-click="go('menu.organizer')">
+                3. Organizador de maleta
             </ion-item>
             <ion-item>
-                5 Web Arenal Sound
+                4. Patrocinadores
             </ion-item>
             <ion-item>
-                6 Política de privacidad
+                5. Web
+            </ion-item>
+            <ion-item>
+                6. Política de privacidad
             </ion-item>
         </ion-list>
     </ion-content>

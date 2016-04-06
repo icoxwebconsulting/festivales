@@ -10,11 +10,10 @@ app.factory('TimeService', function ($rootScope, GLOBAL, $http, $q, $localStorag
             minutes = Math.floor(t / 60) % 60;
             t -= minutes * 60;
             seconds = t % 60;
+            var hoursTotal = hours + (days * 24);
             return [
-                days + 'd',
-                hours + 'h',
-                minutes + 'm',
-                seconds + 's'
+                hoursTotal + ' horas',
+                minutes + ' minutos'
             ].join(' ');
         }
     };

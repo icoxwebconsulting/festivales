@@ -1,10 +1,10 @@
 app.controller('LoginController', function ($scope, $state, $http, $ionicLoading, $ionicPopup, $cordovaOauth) {
 
-
-
     $scope.init = function()
     {
         $scope.view = {};
+        $scope.view.show = 'sign_in';
+        $scope.view.show_login = 'options';
         $scope.data = {};
         $scope.error = false;
         $scope.view.loginEmail = false;
@@ -12,6 +12,11 @@ app.controller('LoginController', function ($scope, $state, $http, $ionicLoading
     };
 
     $scope.init();
+
+
+    $scope.later = function(){
+      $state.go('menu.artist-discover');
+    };
 
     $scope.loginFacebook = function () {
         $cordovaOauth.facebook("1671907443037216", ["email"]).then(function (result) {

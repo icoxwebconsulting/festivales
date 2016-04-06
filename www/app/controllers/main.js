@@ -25,7 +25,7 @@ app.controller('MainController', function($scope, $timeout, playerService) {
 
 
 
-    $scope.playTrack = function(track) {
+    $scope.playTrack = function(spotifyId) {
         $scope.audio.src = track.preview_url;
         $scope.audio.play();
     };

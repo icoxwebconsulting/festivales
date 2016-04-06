@@ -1,27 +1,41 @@
-<ion-modal-view>
+<ion-modal-view class="modal-settings">
     <ion-header-bar>
-        <h1 class="title">Settings</h1>
         <div class="buttons">
-            <button class="button button-clear" ng-click="closeSettings()">Close</button>
+            <button class="button button-clear" ng-click="closeSettings()">Cerrar</button>
+        </div>
+        <div class="logo">
+            <img src="img/festival_arts.png">
         </div>
     </ion-header-bar>
     <ion-content>
-        <ion-toggle ng-model="view.setting.notifications">Notificaciones</ion-toggle>
-        <h4>Cambiar contrase&ntilde;a</h4>
-        <form ng-submit="changePassword()">
-            <div class="list">
-                <label class="item item-input">
-                    <span class="input-label">Contrase&ntilde;a actual</span>
-                    <input type="password" ng-model="loginData.password.old">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">Nueva contrase&ntilde;a</span>
-                    <input type="password" ng-model="loginData.password.new">
-                </label>
-                <label class="item">
-                    <button class="button button-block button-positive" type="submit">Actualizar</button>
-                </label>
-            </div>
-        </form>
-    </ion-content>
+        <ion-list>
+            <ion-item class="item-divider">Notificaciones</ion-item>
+        </ion-list>
+        <div class="list input-list">
+            <ion-toggle toggle-class="toggle-light" name="Notificaciones">Activar</ion-toggle>
+        </div>
+        <ion-list class="input-list">
+            <ion-item class="item-divider item-title">Contraseña</ion-item>
+            <label class="item item-input">
+                <span class="input-label">Actual contraseña</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Nueva contraseña</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Repetir contraseña</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+                <button class="button button-stable button-100">Actualizar</button>
+            </label>
+        </ion-list>
+        <ion-list>
+            <ion-item class="item-divider">Cuenta</ion-item>
+        </ion-list>
+        <div class="list input-list">
+            <button class="button button-stable button-100">Cerrar sesi&oacute;n</button>
+        </div>
 </ion-modal-view>

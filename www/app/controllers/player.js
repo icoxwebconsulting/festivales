@@ -1,8 +1,8 @@
-app.controller('PlayerController', function ($scope, $state, $ionicModal, $ionicPlatform, $cordovaOauth, Spotify) {
+app.controller('PlayerController', function ($scope, $state, $ionicModal, $ionicPlatform, $cordovaOauth, $localStorage, Spotify) {
 
     $scope.performLogin = function() {
         $cordovaOauth.spotify($scope.clientId, ['user-read-private', 'playlist-read-private']).then(function(result) {
-            window.localStorage.setItem('spotify-token', result.access_token);
+            $localStorage.spotify_token = result.access_token;
             Spotify.setAuthToken(result.access_token);
             $scope.updateInfo();
         }, function(error) {
@@ -23,7 +23,7 @@ app.controller('PlayerController', function ($scope, $state, $ionicModal, $ionic
         }
     };
 
-    $ionicModal.fromTemplateUrl('templates/player/login.html', {
+    $ionicModal.fromTemplateUrl('templates/player/main.html', {
         scope: $scope
     }).then(function(modal) {
         $scope.modal = modal;
@@ -32,7 +32,7 @@ app.controller('PlayerController', function ($scope, $state, $ionicModal, $ionic
     // Open the player modal
     $scope.openPlayer = function() {
         //$scope.modal.show();
-        var storedToken = window.localStorage.getItem('spotify-token');
+        var storedToken = $localStorage.spotify_token;
         if (storedToken !== null) {
             Spotify.setAuthToken(storedToken);
             $scope.updateInfo();
@@ -55,8 +55,8 @@ app.controller('PlayerController', function ($scope, $state, $ionicModal, $ionic
     };
 
 
-    $scope.getUserPlaylists = function(userid) {
-        Spotify.getUserPlaylists(userid).then(function (data) {
+    $scope.getUserPlayLists = function(userId) {
+        Spotify.getUserPlaylists(userId).then(function (data) {
             $scope.playlists = data.items;
         });
     };

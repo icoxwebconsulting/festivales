@@ -1,13 +1,13 @@
 <ion-view>
-    <ion-content has-bouncing="true" scroll="false">
-        <div class="row subtitle" scroll="false">
+    <ion-content has-bouncing="false" class="discover">
+        <div class="row subtitle filter" scroll="false">
             <div class="col col-100">
                 <div class="left">
                     <img src="img/chair/1.png">
                     <img src="img/chair/2.png">
                 </div>
                 <div class="center">
-                    <span>120 horas 43 minutos</span>
+                    <span countdown date='June 10, 2016 00:00:00'>&nbsp Cargando... </span>
                 </div>
                 <div class="right">
                     <img src="img/chair/3.png">
@@ -16,10 +16,15 @@
 
             </div>
         </div>
-        <div class="row row-stick" ng-repeat="tracks in view.tracks" scroll="true">
-            <div class="col col-50 col-stick" ng-repeat="track in tracks">
-                <img ng-src="http://placehold.it/100x100" width="100%" />
-                <span class="ion-play" ng-click="playTrack(track)"></span>
+        <div class="row row-stick unlimited-items" scroll="true" ng-show="view.ready">
+            <div class="col col-stick" ng-repeat="item in view.artists">
+                <img ng-click="showDetail({{item.id}})" ng-src="{{view.server_image}}artists/{{item.id}}/200/{{item.image_profile}}" width="100%" alt="item.name" />
+                <button class="button button-clear btn-action" ng-if="item.spotify_id.length" ng-click="playTrack(item.spotify_id)">
+                    <img ng-src="img/player/play.png">
+                </button>
+                <div class="legend">
+                    <p>{{item.name|parseName}}</p>
+                </div>
             </div>
         </div>
     </ion-content>

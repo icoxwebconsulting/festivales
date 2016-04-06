@@ -2,42 +2,34 @@
     <ion-content has-bouncing="false" class="artist-detail">
         <div class="header" scroll="false">
             <div class="picture">
-                <img src="img/artist/front.jpg">
+                <img ng-src="{{view.server_image}}artists/{{view.artist.id}}/cover/{{view.artist.image_cover}}">
             </div>
             <div class="legend">
-                <p>Perro</p>
-                <img src="img/favorite/on_.png">
+                <p>{{view.artist.name|parseName}}</p>
+                <img src="img/favorite/on.png">
             </div>
         </div>
         <div class="row body">
             <div class="col col-100">
                 <p class="date">Viernes, 10 Junio</p>
                 <p class="time"><i class="ion-clock"> </i> 21:00 - 22:00</p>
-                <p class="stage-name"><i class="ion-location"> Escenario Coolway</i></p>
+                <p class="stage-name"><i class="ion-location">&nbsp;{{view.artist.stage_name}}</i></p>
                 <hr>
                 <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                    dicta sunt explicabo.
+                    {{view.artist.description}}
                 </p>
-                <button class="button button-clear listen">
+                <button class="button button-clear listen" ng-if="view.artist.spotify_id.length">
                     <img src="img/coolway/social-network/spotify_.png">
                     <p>Escucha r&aacute;pida </p>
                 </button>
                 <hr>
                 <p class="social-title">Social</p>
                 <div class="social">
-                    <img src="img/coolway/social-network/facebook_.png">
-                    <img src="img/coolway/social-network/twitter_.png">
-                    <img src="img/coolway/social-network/instagram_.png">
-                    <img src="img/coolway/social-network/youtube_.png">
-                    <img src="img/coolway/social-network/share_.png">
+                    <img src="img/coolway/social-network/facebook_.png" ng-if="view.artist.facebook.length">
+                    <img src="img/coolway/social-network/twitter_.png" ng-if="view.artist.twitter.length">
+                    <img src="img/coolway/social-network/instagram_.png" ng-if="view.artist.instagram.length">
+                    <img src="img/coolway/social-network/youtube_.png" ng-if="view.artist.youtube.length">
+                    <img src="img/coolway/social-network/share_.png" ng-if="view.artist.facebook.length">
                 </div>
             </div>
         </div>

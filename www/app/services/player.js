@@ -1,9 +1,9 @@
 'use strict';
-app.factory('playerService', function ($rootScope, Spotify) {
+app.factory('playerService', function ($rootScope, Spotify, GLOBAL) {
     var service = {};
 
-    service.getTopTracks = function(spotifyId, countryIso){
-        Spotify.getArtistTopTracks('4wLXwxDeWQ8mtUIRPxGiD6', 'ES').then(function (data) {
+    service.getTopTracks = function(spotifyId){
+        Spotify.getArtistTopTracks(spotifyId, GLOBAL.spotify.country_iso).then(function (data) {
             $rootScope.$broadcast('top_tracks', data.tracks);
         });
     };
