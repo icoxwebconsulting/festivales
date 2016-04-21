@@ -1,8 +1,11 @@
-app.controller('ArtistController', function ($scope, $state, $ionicScrollDelegate, filterFilter, $location, $anchorScroll, $ionicModal, ArtistService, GLOBAL, $ionicLoading, $stateParams) {
+app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicScrollDelegate, filterFilter, $anchorScroll, ArtistService, SpotifyService, GLOBAL, $ionicActionSheet, $ionicLoading, $stateParams, $cordovaSocialSharing, MusicService) {
 
     $scope.init = function () {
         $scope.view = {};
-        $scope.view.server_image = GLOBAL.server.image
+        $scope.view.ready = false;
+        $scope.view.server_image = GLOBAL.server.image;
+        $scope.audio = new Audio();
+        $scope.pause = true;
     };
 
     $scope.init();
@@ -25,7 +28,7 @@ app.controller('ArtistController', function ($scope, $state, $ionicScrollDelegat
             showDelay: 0
         });
 
-        // Get all the documents
+        // Get all the artists
         ArtistService.getAll().then(function(artists){
 
             if(artists.length > 0)
@@ -37,6 +40,7 @@ app.controller('ArtistController', function ($scope, $state, $ionicScrollDelegat
 
                 $ionicLoading.hide();
                 $scope.view.ready = true;
+                $scope.$emit('artist:ready', true);
             }
             else{
                 ArtistService.resource.getAll().$promise.then(function(artists){
@@ -48,6 +52,11 @@ app.controller('ArtistController', function ($scope, $state, $ionicScrollDelegat
                     angular.forEach(artists.data, function (value, key) {
                         ArtistService.add(value);
                     });
+                    $ionicLoading.hide();
+                    $scope.view.ready = true;
+                    $scope.$emit('artist:ready', true);
+                },function(error) {
+                    console.info('error', error);
                     $ionicLoading.hide();
                     $scope.view.ready = true;
                 });
@@ -170,20 +179,100 @@ app.controller('ArtistController', function ($scope, $state, $ionicScrollDelegat
 
     if ($state.current.name == 'menu.artist-discover') {
         self.getArtists(false);
+
+        $scope.playTrack = function(artist) {
+            $rootScope.$broadcast('music:clear', true);
+            if($scope.view.isPause && $scope.view.currentTrack.spotify_id == artist.spotify_id)
+            {
+                MusicService.play();
+            }else{
+                SpotifyService.getTopTracks(artist.spotify_id).then(function(tracks){
+                    var track = {};
+                    track.spotify_id = artist.spotify_id;
+                    track.artist  = tracks[0].artists[0].name;
+                    track.name = tracks[0].name;
+                    track.url = tracks[0].preview_url;
+                    MusicService.clear();
+                    MusicService.add(track, false);
+                    MusicService.play();
+                });
+            }
+
+        };
+
+        $scope.pauseTrack = function(){
+            MusicService.pause();
+        };
+
+
+        $scope.$on('music:play', function(event, args) {
+            $scope.view.isPlaying = true;
+            $scope.view.isPause = false;
+            $scope.view.currentTrack = args;
+        });
+
+        $scope.$on('music:pause', function(event, args) {
+            $scope.view.isPlaying = false;
+            $scope.view.isPause = true;
+            $scope.view.currentTrack = args;
+        });
+
     }
 
     if ($state.current.name == 'menu.artist-detail') {
         ArtistService.getById($stateParams.id).then(function(artist){
             $scope.view.artist = artist;
+            $scope.view.ready = true;
         });
+
+
+        $scope.playTrack = function(artist) {
+            $rootScope.$broadcast('music:clear', true);
+            if($scope.view.isPause && $scope.view.currentTrack.spotify_id == artist.spotify_id)
+            {
+                MusicService.play();
+            }else{
+                SpotifyService.getTopTracks(artist.spotify_id).then(function(tracks){
+                    var track = {};
+                    track.spotify_id = artist.spotify_id;
+                    track.artist  = tracks[0].artists[0].name;
+                    track.name = tracks[0].name;
+                    track.url = tracks[0].preview_url;
+                    MusicService.clear();
+                    MusicService.add(track, false);
+                    MusicService.play();
+                });
+            }
+
+        };
+
+        //$scope.showShareMenu = function() {
+        //
+        //    $ionicActionSheet.show({
+        //        titleText: 'Share',
+        //        buttons: [
+        //            {text: "Share on Facebook"},
+        //            {text: "Share on Twitter"},
+        //            {text: "Send email"}
+        //        ],
+        //        cancelText: 'Cancel',
+        //        cancel: function () {
+        //            console.log('CANCELLED');
+        //        },
+        //        buttonClicked: function (index) {
+        //            console.log('BUTTON CLICKED', index);
+        //            return true;
+        //        }
+        //    });
+        //};
+        $scope.shareAnywhere = function(artist) {
+            console.info('artist', artist);
+            var name = artist.name;
+            var image = $scope.view.server_image+"artists/"+artist.id+"/cover/"+artist.image_cover;
+            $cordovaSocialSharing.share("Te recomiendo "+name+" en el #FestivalDeLesArts", "Festival de les arts", image, "http://www.festivaldelesarts.com/");
+        };
+
     }
 
 
-}).filter('parseName', function () {
-    return function (text) {
-        if(typeof text === "undefined")
-            return text;
-        else
-            return text.replace("!", "");
-    };
 });

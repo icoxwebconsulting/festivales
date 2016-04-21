@@ -17,6 +17,7 @@ app.factory('ArtistService', function ($rootScope, $resource, GLOBAL, DBService)
         if(artist.name.toUpperCase().charCodeAt(0) > 90 )
             artist.name = '!'+artist.name;
 
+
         var params = [artist.id, artist.name, artist.description, artist.image_profile, artist.image_cover, artist.stage_id, artist.stage_name, artist.schedule.date, artist.spotify_id, artist.facebook, artist.twitter, artist.instagram];
 
 
@@ -41,6 +42,26 @@ app.factory('ArtistService', function ($rootScope, $resource, GLOBAL, DBService)
             });
     }
 
+    function getFavorites(ids) {
+
+        var args = "";
+        for (i = 1; i <= ids.length; i++) {
+            args+="?";
+            if(i < ids.length)
+                args+=",";
+        }
+
+        console.info('ids', ids);
+
+        var sql = "SELECT * FROM artists WHERE id IN ("+args+")";
+
+        return DBService.query(sql, ids)
+            .then(function (result) {
+                console.log('result all', result);
+                return DBService.fetchAll(result);
+            }).catch(function(error){console.log(error)});
+    }
+
     function getById(id) {
         return DBService.query('SELECT * FROM artists WHERE id = ?', [id])
             .then(function (result) {
@@ -53,6 +74,7 @@ app.factory('ArtistService', function ($rootScope, $resource, GLOBAL, DBService)
         add: add,
         drop: drop,
         getAll: getAll,
-        getById: getById
+        getById: getById,
+        getFavorites:getFavorites
     };
 });
