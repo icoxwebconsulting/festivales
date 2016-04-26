@@ -11,6 +11,4 @@ app.controller('InfoController', function($scope, $state) {
         $state.go(state);
     };
 
-
-
 });

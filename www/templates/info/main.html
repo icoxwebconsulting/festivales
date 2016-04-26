@@ -4,23 +4,23 @@
             <h3>Informaci&oacute;n Basica</h3>
         </div>
         <ion-list>
-            <ion-item>
+            <ion-item ng-click="go('menu.map-how-get')">
                 1. Cómo llegar
             </ion-item>
-            <ion-item>
+            <ion-item ng-click="go('menu.weather')">
                 2. Tiempo
             </ion-item>
-            <ion-item ng-click="go('menu.organizer')">
-                3. Organizador de maleta
+            <!--<ion-item ng-click="go('menu.organizer')">-->
+                <!--3. Organizador de maleta-->
+            <!--</ion-item>-->
+            <ion-item ng-click="go('menu.sponsor')">
+                3. Patrocinadores
             </ion-item>
-            <ion-item>
-                4. Patrocinadores
+            <ion-item ng-click="openLink('http://www.festivaldelesarts.com/')">
+                4. Web
             </ion-item>
-            <ion-item>
-                5. Web
-            </ion-item>
-            <ion-item>
-                6. Política de privacidad
+            <ion-item ng-click="openLink('http://www.festivaldelesarts.com/wp-content/uploads/2015/10/Aviso_Legal_Festival_de_les_Arts_2016.pdf')">
+                5. Aviso legal
             </ion-item>
         </ion-list>
     </ion-content>

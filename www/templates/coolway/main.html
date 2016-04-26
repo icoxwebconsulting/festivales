@@ -1,25 +1,25 @@
 <ion-view>
-    <ion-content has-bouncing="true" class="coolway" scroll="false">
+    <ion-content has-bouncing="true" class="coolway" overflow-scroll="true">
         <div class="header">
             <div class="row">
                 <div class="col col-100 logo">
-                    <img src="img/coolway/coolway.png">
+                    <img src="img/coolway/coolway.png" ng-click="openLink('http://www.coolway.com')">
                 </div>
             </div>
             <div class="row">
                 <div class="col left">
-                    <img src="img/coolway/left.png" ng-click="openPage('BROWSER','http://www.coolway.com')">
+                    <img src="img/coolway/left.png" ng-click="openLink('http://www.coolway.com')">
                 </div>
                 <div class="col center">
-                    <img src="img/coolway/night_time.png">
+                    <img src="img/coolway/night_time.png" ng-click="openLink('http://www.coolway.com')">
                 </div>
                 <div class="col right">
-                    <img src="img/coolway/right.png">
+                    <img src="img/coolway/right.png" ng-click="openLink('http://www.coolway.com')">
                 </div>
             </div>
             <div class="row">
                 <div class="col col-100 social-network">
-                    <a class="social" ng-click="openPage('FACEBOOK', 'https://www.facebook.com/CoolwaySpain')">
+                    <a class="social" ng-click="openLink('https://www.facebook.com/CoolwaySpain')">
                         <img src="img/coolway/social-network/facebook.png">
                     </a>
                     <a class="social center" ng-click="openPage('TWITTER','https://twitter.com/coolwayspain')">
@@ -31,5 +31,13 @@
                 </div>
             </div>
         </div>
+
+        <div ng-show="!view.photos.length">Cargando imagenes...</div>
+        <div class="row unlimited-items">
+            <div class="col " ng-repeat="p in view.photos">
+                <img ng-src="{{view.server_image}}festivals/{{view.feast_id}}/concurso/{{p.image}}" zoom-src="{{view.server_image}}festivals/{{view.feast_id}}/concurso/{{p.image}}" zoom-view>
+            </div>
+        </div>
+
     </ion-content>
 </ion-view>

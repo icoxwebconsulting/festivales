@@ -1,15 +1,6 @@
 <ion-view>
     <ion-content has-bouncing="false" class="social">
         <div class="row filters" scroll="false">
-            <div class="col col-30" ng-click="view.show = 'twitter';" ng-class="{'active': view.show  === 'twitter'}">
-                <div class="twitter filter">
-                    <img src="img/coolway/social-network/twitter_white.png" ng-if="view.show  != 'twitter'">
-                    <img src="img/coolway/social-network/twitter_yellow.png" ng-if="view.show  === 'twitter'">
-                    <button class="button button-clear">
-                        Twitter
-                    </button>
-                </div>
-            </div>
             <div class="col col-40" ng-click="view.show = 'facebook';" ng-class="{'active': view.show  === 'facebook'}">
                 <div class="facebook filter">
                     <img src="img/coolway/social-network/facebook_white.png" ng-if="view.show  != 'facebook'">
@@ -28,9 +19,18 @@
                     </button>
                 </div>
             </div>
+            <div class="col col-30" ng-click="loadTwitter()" ng-class="{'active': view.show  === 'twitter'}">
+                <div class="twitter filter">
+                    <img src="img/coolway/social-network/twitter_white.png" ng-if="view.show  != 'twitter'">
+                    <img src="img/coolway/social-network/twitter_yellow.png" ng-if="view.show  === 'twitter'">
+                    <button class="button button-clear">
+                        Twitter
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="twitter" ng-show="view.show === 'twitter'" ng-include="'templates/social/twitter.html'"></div>
         <div class="facebook" ng-show="view.show === 'facebook'" ng-include="'templates/social/facebook.html'"></div>
         <div class="instagram" ng-show="view.show === 'instagram'" ng-include="'templates/social/instagram.html'"></div>
+        <div class="twitter" ng-show="view.show === 'twitter'" ng-include="'templates/social/twitter.html'"></div>
     </ion-content>
 </ion-view>

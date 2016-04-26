@@ -3,6 +3,7 @@ app.constant('DB_CONFIG', {
     tables: [
         {
             name: 'artists',
+            erasable: true,
             columns: [
                 {name: 'id', type: 'integer'},
                 {name: 'name', type: 'text'},
@@ -16,6 +17,45 @@ app.constant('DB_CONFIG', {
                 {name: 'facebook', type: 'text'},
                 {name: 'twitter', type: 'text'},
                 {name: 'instagram', type: 'text'}
+            ]
+        },
+        {
+            name: 'favorites',
+            erasable: false,
+            columns: [
+                {name: 'artist_id', type: 'integer'},
+                {name: 'user_id', type: 'integer'}
+            ]
+        },
+        {
+            name: 'posters',
+            erasable: true,
+            columns: [
+                {name: 'id', type: 'integer'},
+                {name: 'image', type: 'text'}
+            ]
+        },
+        {
+            name: 'maps',
+            erasable: true,
+            columns: [
+                {name: 'id', type: 'integer PRIMARY KEY AUTOINCREMENT'},
+                {name: 'name', type: 'text'},
+                {name: 'image', type: 'text'},
+                {name: 'latitude', type: 'text'},
+                {name: 'longitude', type: 'text'}
+            ]
+        },
+        {
+            name: 'locations',
+            erasable: true,
+            columns: [
+                {name: 'id', type: 'integer PRIMARY KEY AUTOINCREMENT'},
+                {name: 'name', type: 'text'},
+                {name: 'detail', type: 'text'},
+                {name: 'image', type: 'text'},
+                {name: 'latitude', type: 'text'},
+                {name: 'longitude', type: 'text'}
             ]
         }
     ]

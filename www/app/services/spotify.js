@@ -1,5 +1,5 @@
 'use strict';
-app.factory('PlayerService', function ($rootScope, Spotify, GLOBAL, $q) {
+app.factory('SpotifyService', function ($rootScope, Spotify, GLOBAL, $q) {
 
     function getTopTracks(spotifyId){
         return Spotify.getArtistTopTracks(spotifyId, GLOBAL.spotify.country_iso).then(function (data) {

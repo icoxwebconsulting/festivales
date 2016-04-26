@@ -1,35 +1,36 @@
 <ion-view>
-    <ion-content has-bouncing="false" class="artist-detail">
+    <ion-content has-bouncing="false" class="artist-detail" ng-show="view.ready">
         <div class="header" scroll="false">
             <div class="picture">
                 <img ng-src="{{view.server_image}}artists/{{view.artist.id}}/cover/{{view.artist.image_cover}}">
             </div>
             <div class="legend">
-                <p>{{view.artist.name|parseName}}</p>
-                <img src="img/favorite/on.png">
+                <p>{{view.artist.name|cleanName}}</p>
+                <!--<img src="img/favorite/on.png">-->
+                <favorite artist="view.artist" ng-if="view.ready" />
             </div>
         </div>
         <div class="row body">
             <div class="col col-100">
-                <p class="date">Viernes, 10 Junio</p>
-                <p class="time"><i class="ion-clock"> </i> 21:00 - 22:00</p>
+                <p class="date">{{view.artist.schedule | parseDate: 'EEEE, d MMMM'}}</p>
+                <p class="time"><i class="ion-clock"> </i>&nbsp;{{view.artist.schedule | parseDate: 'HH:mm'}}</p>
                 <p class="stage-name"><i class="ion-location">&nbsp;{{view.artist.stage_name}}</i></p>
                 <hr>
                 <p class="description">
                     {{view.artist.description}}
                 </p>
-                <button class="button button-clear listen" ng-if="view.artist.spotify_id.length">
+                <button class="button button-clear listen" ng-if="view.artist.spotify_id.length" ng-click="playTrack(view.artist)">
                     <img src="img/coolway/social-network/spotify_.png">
                     <p>Escucha r&aacute;pida </p>
                 </button>
                 <hr>
                 <p class="social-title">Social</p>
                 <div class="social">
-                    <img src="img/coolway/social-network/facebook_.png" ng-if="view.artist.facebook.length">
-                    <img src="img/coolway/social-network/twitter_.png" ng-if="view.artist.twitter.length">
-                    <img src="img/coolway/social-network/instagram_.png" ng-if="view.artist.instagram.length">
+                    <img src="img/coolway/social-network/facebook_.png" ng-if="view.artist.facebook.length" ng-click="openLink('{{view.artist.facebook}}')">
+                    <img src="img/coolway/social-network/twitter_.png" ng-if="view.artist.twitter.length" ng-click="openLink('{{view.artist.twitter}}')">
+                    <img src="img/coolway/social-network/instagram_.png" ng-if="view.artist.instagram.length" ng-click="openLink('{{view.artist.instagram}}')">
                     <img src="img/coolway/social-network/youtube_.png" ng-if="view.artist.youtube.length">
-                    <img src="img/coolway/social-network/share_.png" ng-if="view.artist.facebook.length">
+                    <img src="img/coolway/social-network/share_.png" ng-click="shareAnywhere(view.artist)">
                 </div>
             </div>
         </div>

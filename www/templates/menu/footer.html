@@ -4,13 +4,22 @@
             <img ng-src="img/coolway/social-network/spotify_.png">
         </div>
         <div class="center">
-            <button class="button button-clear" ng-click="openPlayer()">
+            <button class="button button-clear" ng-click="openPlayList()" ng-if="!view.currentTrack.name.length">
                 Escuche la lista de reproducción del festival
+            </button>
+            <button class="button button-clear" ng-click="openPlaylistModal()" ng-if="view.currentTrack.name.length">
+                {{ view.currentTrack.name }} by {{ view.currentTrack.artist }}
             </button>
         </div>
         <div class="right">
-            <button class="button button-clear btn-action"  ng-click="playTrack(artist)">
+            <button class="button button-clear btn-action" ng-if="!view.isPause && !view.isPlaying" ng-click="openPlayList()">
                 <img ng-src="img/player/play.png">
+            </button>
+            <button class="button button-clear btn-action" ng-if="view.isPause" ng-click="playTrack()">
+                <img ng-src="img/player/play.png">
+            </button>
+            <button class="button button-clear btn-action" ng-if="view.isPlaying" ng-click="pauseTrack()">
+                <img ng-src="img/player/pause.png">
             </button>
         </div>
     </div>

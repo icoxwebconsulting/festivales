@@ -1,20 +1,22 @@
 <ion-view>
-    <ion-header-bar class="header-right-menu">
-        <button class="button button-clear pull-right" ng-click="openSettings()">
-            <img src="img/menu/setting.png">
-        </button>
-    </ion-header-bar>
-    <ion-item class="menu-tabs tabs tabs-secondary tabs-icon-top">
-        <a class="tab-item" ng-click="view.show_list = 'favorites';" ng-class="{'active': view.show_list  === 'favorites'}">
-            Favoritos
-        </a>
-        <a class="tab-item" ng-click="view.show_list = 'notifications';" ng-class="{'active': view.show_list  === 'notifications'}">
-            Notificaciones
-        </a>
-        <a class="tab-item tab-image">
-            <img src="img/menu/share.png">
-        </a>
-    </ion-item>
-    <div class="favorites" ng-show="view.show_list === 'favorites'" ng-include="'templates/user/favorites.html'"></div>
-    <div class="notifications" ng-show="view.show_list === 'notifications'" ng-include="'templates/user/notifications.html'"></div>
+    <ion-content has-bouncing="true">
+        <ion-header-bar class="header-right-menu">
+            <button class="button button-clear pull-right" ng-click="openSettings()">
+                <img src="img/menu/setting.png">
+            </button>
+        </ion-header-bar>
+            <ion-item class="menu-tabs tabs tabs-secondary tabs-icon-top">
+                <a class="tab-item" ng-click="view.show_list = 'favorites';" ng-class="{'active': view.show_list  === 'favorites'}">
+                    Favoritos
+                </a>
+                <a class="tab-item" ng-click="view.show_list = 'notifications';" ng-class="{'active': view.show_list  === 'notifications'}">
+                    Notificaciones
+                </a>
+                <a class="tab-item tab-image active" ng-disabled="view.show_list === 'notifications' || !view.favorites.length" ng-click="shareFavorites()">
+                    <img src="img/menu/share.png">
+                </a>
+            </ion-item>
+            <div class="favorites" ng-show="view.show_list === 'favorites'" ng-include="'templates/user/favorites.html'" ></div>
+            <div class="notifications" ng-show="view.show_list === 'notifications'" ng-include="'templates/user/notifications.html'"></div>
+    </ion-content>
 </ion-view>

@@ -1,7 +1,7 @@
 <ion-modal-view class="modal-settings">
     <ion-header-bar>
         <div class="buttons">
-            <button class="button button-clear" ng-click="closeSettings()">Cerrar</button>
+            <button class="button button-clear ion-close" ng-click="closeSettings()"></button>
         </div>
         <div class="logo">
             <img src="img/festival_arts.png">
@@ -18,24 +18,27 @@
             <ion-item class="item-divider item-title">Contraseña</ion-item>
             <label class="item item-input">
                 <span class="input-label">Actual contraseña</span>
-                <input type="text" placeholder="">
+                <input type="password" placeholder="" ng-model="view.pass.current_password">
             </label>
             <label class="item item-input">
                 <span class="input-label">Nueva contraseña</span>
-                <input type="text" placeholder="">
+                <input type="password" placeholder="" ng-model="view.pass.new_password">
             </label>
             <label class="item item-input">
                 <span class="input-label">Repetir contraseña</span>
-                <input type="text" placeholder="">
+                <input type="password" placeholder="" ng-model="view.pass.confirm">
             </label>
+            <small class="later" style="color: #ffffff; padding:5px">
+                <a>La contraseña debe tener al menos 8 caracteres</a>
+            </small>
             <label class="item item-input">
-                <button class="button button-stable button-100">Actualizar</button>
+                <button class="button button-stable button-100" ng-disabled="!view.pass.current_password.length || !view.pass.new_password.length || !view.pass.confirm" ng-click="changePassword()">Actualizar</button>
             </label>
         </ion-list>
         <ion-list>
             <ion-item class="item-divider">Cuenta</ion-item>
         </ion-list>
         <div class="list input-list">
-            <button class="button button-stable button-100">Cerrar sesi&oacute;n</button>
+            <button class="button button-stable button-100" ng-click="logout()">Cerrar sesi&oacute;n</button>
         </div>
 </ion-modal-view>

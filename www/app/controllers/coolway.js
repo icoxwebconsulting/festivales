@@ -1,11 +1,43 @@
-app.controller('CoolwayController', function($scope, $cordovaAppAvailability) {
+app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $ionicLoading, $state, $stateParams, $cordovaSocialSharing){
+
+    $scope.loadPhotos = function(){
+        $ionicLoading.show({
+            content: 'Cargando',
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: 0
+        });
+        // Get all the Coolway Photos
+        CoolwayService.resource.getAll().$promise.then(function(photos){
+            console.info('photos', photos.data);
+            $scope.view.photos = photos.data;
+            $ionicLoading.hide();
+            $scope.view.ready = true;
+        });
+    };
 
     $scope.init = function()
     {
         $scope.view = {};
+        $scope.view.photos = {};
+        $scope.view.server_image = GLOBAL.server.image;
+        $scope.view.feast_id = GLOBAL.api.feast;
+        $scope.loadPhotos();
     };
 
     $scope.init();
+
+
+    $scope.showDetail = function(image){
+        $state.go('menu.coolway-detail', {'image': image});
+    };
+
+    if ($state.current.name == 'menu.coolway-detail') {
+        console.info('$stateParams.image',$stateParams.image);
+        $scope.view.image = $stateParams.image;
+    }
+
 
     $scope.openPage = function(type, url){
 
@@ -19,7 +51,7 @@ app.controller('CoolwayController', function($scope, $cordovaAppAvailability) {
             switch(type)
             {
                 case 'FACEBOOK':
-                    link = 'fb://profile/CoolwaySpain';
+                    link = 'fb://publish/profile/345546062072';
                     if(ionic.Platform.isAndroid())
                         scheme = 'com.facebook.katana';
                     else
@@ -45,15 +77,21 @@ app.controller('CoolwayController', function($scope, $cordovaAppAvailability) {
                 scheme, // URI Scheme
                 function() {  // Success callback
                     window.open(link, '_system', 'location=no');
-                    console.log('Twitter is available');
                 },
                 function() {  // Error callback
                     window.open(url, '_system', 'location=yes');
-                    console.log('Twitter is not available');
                 }
             );
         }
 
     };
+
+
+    $scope.shareImage = function(image)
+    {
+        console.info('image', image);
+        $cordovaSocialSharing.share(null, null, image, null);
+    };
+
 
 });

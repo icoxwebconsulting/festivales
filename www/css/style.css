@@ -47,6 +47,10 @@
     opacity: 1 !important;
 }
 
+.my-back-button {
+    content: url('../img/menu/back.png');
+    height: 30px;
+}
 
 .col{
     padding: 4px !important;
@@ -65,6 +69,11 @@
 .row.unlimited-items .col img{
     display: block;
     margin: auto;
+}
+
+.coolway .row.unlimited-items .col img{
+    width: 100%;
+    height: 100px !important;
 }
 
 .bar{
@@ -180,6 +189,29 @@
     color: #ffffff;
 }
 
+.menu-left .temperature{
+    position: absolute;
+    width: auto;
+    float: right;
+    color: #fff;
+    vertical-align: middle;
+    margin: 10px 202px;
+    width: 60px;
+}
+
+.menu-left .temperature img{
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.menu-left .temperature p{
+    display: inline-block;
+}
+
+
+
 .sidebar-right .button-clear, .category{
     display: block !important;
     margin-top: -5px !important;
@@ -253,8 +285,10 @@
 }
 
 .menu-right .favorites .pane, .menu-right .notifications .pane{
-    margin-top: 100px !important;
+    margin-top: 70px !important;
+    position: relative !important;
 }
+
 
 .menu-right .favorites .not-found .image {
     position:relative;
@@ -278,10 +312,30 @@
     font-family: ITC-ClearfaceStd-Regular  !important;
 }
 
+.menu-right .list.disable-user-behavior{
+    display: block !important;
+    padding: 0 !important;
+    margin: 1px !important;
+}
+
 .menu-right .favorites .item-content{
     background-color: #F5E5C1 !important;
     color: #04041B;
     border: none !important;
+}
+
+.favorites .list .item{
+    padding-top: 5px !important;
+}
+
+.favorites .list .item .time, .favorites .list .item .stage-name, .notifications .list .item .stage-name, .notifications .list .item .time{
+    font-family: ITC-ClearfaceStd-Regular!important;
+    font-weight: lighter !important;
+    font-size: 13px !important;
+}
+
+.notifications .list .center{
+    width: 96% !important;
 }
 
 .subtitle{
@@ -348,6 +402,10 @@
     width: 100% !important;
 }
 
+.social{
+    background-color: #ffffff !important;
+}
+
 .social .filters{
     margin-top: 5px !important;
 }
@@ -356,15 +414,16 @@
     padding: 0 !important;
 }
 
-.social .row.unlimited-items .col{
+.social .row.unlimited-items .col, .coolway .row.unlimited-items .col{
     width: 32%!important;
-    margin: 2px 2px !important;
+    margin: 2px !important;
     padding: 0!important;
+    display: inline-block !important;
 }
 
 .social .row.unlimited-items .col img{
     display: block;
-    max-width: 100px !important;
+    width: 100% !important;
 }
 
 .filters .filter{
@@ -417,18 +476,24 @@
 
 .list .left{
     background-color: #FFA700 !important;
-    width:80px;
+    width:20%;
     height:80px;
 }
 
 .list .center{
-    margin-left: 10px;
-    width: 180px !important;
+    margin-left: 20px;
+    width: 60% !important;
+}
+
+.favorites .list .center{
+    margin-left: 35px !important;
+    width: 60% !important;
 }
 
 .list .right{
     position: absolute;
-    margin: 20px 30px;
+    margin: 20px 5px;
+    width: 20%;
 }
 
 .list .artist-cover{
@@ -476,6 +541,10 @@
 
 .coolway .center img{
     height: 80px;
+}
+
+.coolway .social{
+    background: none !important;
 }
 
 .coolway .social img{
@@ -554,7 +623,7 @@
     border-bottom: none !important;
 }
 
-.artist .list .item-divider{
+.artist .list .item-divider, .schedule .list .item-divider{
     background-color: #008D61 !important;
     border-style: none !important;
     border-top: none !important;
@@ -645,6 +714,10 @@
     display: inline-block;
     margin-right: 10px;
     margin-top: 8px;
+}
+
+.artist-detail .legend .button{
+    float: right !important;
 }
 
 .artist-detail .body{
@@ -856,7 +929,7 @@
     /* For IE 8*/
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5E5C1, endColorstr=#F5E5C1)";
     border: none !important;
-    width: 90%;
+    width: 87%;
     font-size: 18px;
     line-height: 18px;
 }
@@ -1036,4 +1109,297 @@
     font-family:  ITC-ClearfaceStd-Regular!important;
     font-size: 16px !important;
     font-weight: 600;
+}
+
+
+.schedule .stage .list, .schedule .stage .list .item-divider{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.schedule .stage .list .item-divider p{
+    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-size: 14px !important;
+    color: #ffffff;
+    padding: 5px;
+}
+
+.schedule .stage .list .item{
+    margin: 0 8px !important;
+}
+
+.platform-android .action-sheet-backdrop.active {
+    background-color: rgba(0, 0, 0, 0.2); }
+.platform-android .action-sheet {
+    margin: 0; }
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+    text-align: left;
+    border-color: transparent;
+    font-size: 16px;
+    color: inherit;
+    padding: 0 15px;
+}
+.platform-android .action-sheet .action-sheet-title {
+    font-size: 14px;
+    padding: 16px;
+    color: #666; }
+.platform-android .action-sheet .button.active, .platform-android .action-sheet .button.activated {
+    background: #e8e8e8;
+}
+.platform-android .action-sheet-group {
+    margin: 0;
+    border-radius: 0;
+    background-color: #fafafa; }
+.platform-android .action-sheet-cancel {
+    display: none; }
+.platform-android .action-sheet-has-icons .button {
+    padding-left: 56px;
+}
+
+
+.modal-player, .modal-player .bar-header, .modal-player .list .item, .modal-player .scroll .item, .zoom-view, .zoom-view .bar-header {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(4, 4, 27) !important;
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(4, 4, 27, 0.9) !important;
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#04041B, endColorstr=#04041B) !important;
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#04041B, endColorstr=#04041B)" !important;
+    border: none !important;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.modal-player .list .item{
+    padding: 3px !important;
+}
+
+.modal-player .button{
+    text-align: center !important;
+    margin: auto !important;
+}
+
+
+.modal-player .track-name, .modal-player .track-duration, .modal-player .artist-name  {
+    color: #ffffff !important;
+    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-size: 14px !important;
+}
+
+.modal-player .track-name  {
+    font-weight: bold;
+}
+
+.modal-player .list{
+    margin: -30px 0 0 0 !important;
+    padding: 10px !important;
+}
+
+.modal-player .list-header .item{
+    border-bottom: 1px solid #ffffff !important;
+}
+
+.modal-player .list-header .left img{
+    width:80px !important;
+    height:80px !important;
+}
+
+.modal-player .list-header .center{
+    vertical-align: top !important;
+    margin-top: 12px !important;
+    max-width: 50% !important;
+}
+
+.modal-player .playlist{
+    height: 400px !important;
+}
+
+.modal-player .playlist .left img{
+    max-width: 60px !important;
+}
+
+.modal-player .scroll .left, .modal-player .scroll .center, .modal-player .scroll .right{
+    display: inline-block !important;
+    vertical-align: top;
+}
+
+.modal-player .scroll .item{
+    border-bottom: 1px solid #ffffff !important;
+    margin: 5px 7px !important;
+}
+
+.modal-player .scroll .center{
+    width: 60% !important;
+    padding-left: 20px !important;
+}
+
+.modal-player .scroll .left, .modal-player .scroll .right{
+    margin-top: 10px !important;
+    width: 20% !important;
+}
+
+.precinct-map .scroll, .map-how-get .scroll {
+    height: 100%;
+}
+
+.precinct-map #map, .map-how-get #map-how-get {
+    width: 100%;
+    height: 100%;
+}
+
+.precinct-map .cont_waiting, .map-how-get .cont_waiting {
+    position: absolute;
+    top: 22px;
+    right: 145px;
+    width: 70px;
+    text-align: center;
+    z-index: 999999;
+    visibility: hidden;
+}
+.precinct-map .cont_trigger, .map-how-get .cont_trigger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    z-index: 999999;
+    padding-left: 5px;
+    padding-right: 5px;
+    visibility: hidden;
+}
+.precinct-map .trigger_mylocation, .map-how-get .trigger_mylocation {
+    margin-top: 5px;
+    float: left;
+    cursor: pointer;
+}
+.precinct-map .trigger_directions, .map-how-get .trigger_directions {
+    margin-top: 3px;
+    float: right;
+    cursor: pointer;
+}
+
+.sponsor h3, .weather h3{
+    font-family: Ruina, ITC-ClearfaceStd-Regular!important;
+    font-weight: lighter !important;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.sponsor .subtitle, .weather .subtitle{
+    width: 100% !important;
+    height: 30px !important;
+    background-color: #FFA700 !important;
+    padding: 0px !important;
+    color: #ffffff !important;
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 1px !important;
+}
+
+.sponsor .images{
+    background-color: #ffffff !important;
+    padding: 0 !important;
+}
+
+.sponsor .images .col-50{
+    border-left: 1px solid #04041B;
+    border-bottom: 1px solid #04041B;
+    padding: 0 !important;
+}
+
+.sponsor .images img{
+    width: 100%;
+}
+
+.twitter .item-avatar img{
+    display: block !important;
+    position: initial !important;
+}
+
+.facebook .item-avatar, .facebook .item-body, .twitter .item-avatar, .twitter .item-body {
+    background-color: #ffffff !important;
+}
+
+
+
+.weather .list{
+    display: block;
+    padding: 1px;
+    margin: 1px;
+    width: 100%;
+}
+
+.weather .left{
+    padding: 5px;
+    background-color: #F5E5C1 !important;
+}
+
+.weather .condition-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.weather .time{
+    font-family: ITC-ClearfaceStd-Regular!important;
+    color: #04041B;
+    font-size: 14px;
+}
+
+.weather .condition-name{
+    font-family: Ruina, ITC-ClearfaceStd-Regular!important;
+    color: #04041B;
+    font-size: 18px;
+}
+
+.weather .temperature{
+    font-family: Ruina, ITC-ClearfaceStd-Regular!important;
+    color: #04041B;
+    font-size: 20px;
+}
+
+.precinct-map .my-location{
+    position: absolute;
+    z-index: 12;
+    display: block;
+    float: right;
+    left: 88%;
+    top: 10px;
+    width: 40px;
+}
+
+.precinct-map .my-location img{
+    width: 100%;
+}
+
+
+.map-how-get .driving, .map-how-get .walking{
+    position: absolute;
+    z-index: 12;
+    display: block;
+    float: right;
+    left: 88%;
+    width: 40px;
+}
+
+.map-how-get .walking{
+    top: 10px;
+}
+
+.map-how-get .driving{
+    top: 60px;
+}
+
+
+.share-legend{
+    position: relative;
+    margin-left: 70%;
+    margin-top: 65%;
+}
+
+.share-image{
+    height: 40px !important;
+    padding: 4% !important;
+    margin-top: 2px !important;
 }

@@ -1,8 +1,23 @@
-<ion-view>
-    <!--<ion-content ng-if="view.notifications.length > 0">-->
-        <!--<ion-list>-->
-            <!--<ion-item nav-clear class="item-icon-left" collection-repeat="notification in view.notifications" href="#/app/tab/journal/{{friend.user.username}}" ng-click="conf.current = friend.user.username" ng-class="{active: friend.user.username == conf.current}">-->
-                <!--<img class="icon menu-icon-avatar" ng-src="{{notification.name}}">{{notification.name}}</ion-item>-->
-        <!--</ion-list>-->
-    <!--</ion-content>-->
+<ion-view overflow-scroll="true">
+    <div ng-if="view.notifications.length > 0">
+        <ion-list class="list">
+            <ion-item ng-repeat="item in view.notifications | orderBy:'date'" overflow-scroll="true">
+                <div class="center" ng-click="showDetail({{item.id}})">
+                    <p class="artist-name">{{item.name}}</p>
+                    <p class="time">&nbsp;{{item.text}}</p>
+                    <p class="stage-name" ng-if="item.date.date"><i class="ion-clock"></i>&nbsp;{{item.date.date| parseDate: 'EEEE, d MMMM'}}</p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+    <div ng-if="view.favorites.length < 1">
+        <div class="not-found" scroll="false">
+            <div class="image">
+                </br>
+            </div>
+            <div class="text">
+                <p>Aún no tienes notificaciones</p>
+            </div>
+        </div>
+    </div>
 </ion-view>

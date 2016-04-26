@@ -5,26 +5,26 @@
                 <div class="icon-field">
                     <img src="img/login/icon/user.png">
                 </div>
-                <input ng-model="data.name" type="text" placeholder="Nombre y Apellidos">
+                <input ng-model="view.user.name" type="text" placeholder="Nombre y Apellidos" name="fullname" required>
             </div>
             <div class="field">
                 <div class="icon-field">
                     <img src="img/login/icon/email.png">
                 </div>
-                <input ng-model="data.email" type="email" placeholder="Correo electrónico">
+                <input ng-model="view.user.email" type="email" placeholder="Correo electrónico" name="email" required>
             </div>
             <div class="field">
                 <div class="icon-field">
                     <img src="img/login/icon/lock.png">
                 </div>
-                <input ng-model="data.password" type="password" placeholder="Contraseña">
+                <input ng-model="view.user.password" type="password" placeholder="Contraseña" required>
             </div>
             <div class="later">
                 <a>La contraseña debe tener al menos 8 caracteres</a>
             </div>
         </div>
         <div class="login-footer">
-            <img src="img/login/sign-up.png" ng-click="view.show_login = 'options';">
+            <img src="img/login/sign-up.png" ng-click="signUp()">
             <a>T&eacute;rminos y condiciones</a>
             <a>Politica de privacidad</a>
         </div>

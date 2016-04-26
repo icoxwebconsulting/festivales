@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-content overflow-scroll="true" class="weather" ng-init="getWeather()">
+        <div class="row filters">
+            <div class="col col-100">
+                <h3>Tiempo</h3>
+            </div>
+        </div>
+        <ion-list class="list">
+            <ion-item ng-repeat="item in view.weathers">
+                <div class="left">
+                    <img ng-src="img/weather/{{item.condition_day}}.png" class="condition-icon">
+                </div>
+                <div class="center">
+                    <p class="condition-name">{{item.condition_day}}</p>
+                    <p class="time"><i class="ion-clock"></i>&nbsp;{{item.forecast_date.date | parseDate: 'd MMMM'}}</p>
+                </div>
+                <div class="right">
+                    <p class="temperature">&nbsp;{{ ( (item.min_temp + item.max_temp) / 2 ) | number:0}} &deg;</p>
+                </div>
+            </ion-item>
+        </ion-list>
+     </ion-content>
+</ion-view>

@@ -1,5 +1,5 @@
 app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-    $ionicConfigProvider.backButton.text('').icon('ion-chevron-left');
+    $ionicConfigProvider.backButton.text('').icon('my-back-button');
 
     $stateProvider
         .state('base', {
@@ -13,7 +13,18 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/user/sign_in.html',
-                    controller: 'LoginController'
+                    controller: 'LoginController',
+                    resolve: {
+                        data: function ($ionicPlatform, UserService, $state) {
+                            $ionicPlatform.ready(function() {
+                                if (UserService.isLogged()) {
+                                    $state.go('menu.artist-discover');
+                                    console.info('is logged');
+                                } else
+                                    console.info('is not logged');
+                            });
+                        }
+                    }
                 }
             }
         })
@@ -22,7 +33,18 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/user/sign_up.html',
-                    controller: 'RegisterController'
+                    controller: 'RegisterController',
+                    resolve: {
+                        data: function ($ionicPlatform, UserService, $state) {
+                            $ionicPlatform.ready(function() {
+                                if (UserService.isLogged()) {
+                                    $state.go('menu.artist-discover');
+                                    console.info('is logged');
+                                } else
+                                    console.info('is not logged');
+                            });
+                        }
+                    }
                 }
             }
         })
@@ -33,7 +55,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             controller: 'MenuController'
         })
         .state('menu.artist-discover', {
-            url: 'artist/discover',
+            url: 'artists/discover',
             views: {
                 'content': {
                     templateUrl: 'templates/artist/main.html',
@@ -42,7 +64,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             }
         })
         .state('menu.artist-list', {
-            url: 'artist',
+            url: 'artists',
             views: {
                 'content': {
                     templateUrl: 'templates/artist/list.html',
@@ -63,7 +85,8 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: 'poster',
             views: {
                 'content': {
-                    templateUrl: 'templates/poster/main.html'
+                    templateUrl: 'templates/poster/main.html',
+                    controller: 'PosterController'
                 }
             }
         })
@@ -80,7 +103,8 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             url: 'map',
             views: {
                 'content': {
-                    templateUrl: 'templates/map/main.html'
+                    templateUrl: 'templates/map/main.html',
+                    controller: 'MapController'
                 }
             }
         })
@@ -120,11 +144,28 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 }
             }
         })
-        .state('menu.organizer', {
-            url: 'organizer',
+        .state('menu.map-how-get', {
+            url: 'map-how-get',
             views: {
                 'content': {
-                    templateUrl: 'templates/info/organizer.html',
+                    templateUrl: 'templates/info/map.html',
+                    controller: 'MapHowGetController'
+                }
+            }
+        })
+        .state('menu.sponsor', {
+            url: 'sponsor',
+            views: {
+                'content': {
+                    templateUrl: 'templates/info/sponsor.html'
+                }
+            }
+        })
+        .state('menu.weather', {
+            url: 'weather',
+            views: {
+                'content': {
+                    templateUrl: 'templates/info/weather.html'
                 }
             }
         })
@@ -139,6 +180,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/app/artists/discover');
     $ionicConfigProvider.views.maxCache(0);
 });

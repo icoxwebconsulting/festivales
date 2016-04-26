@@ -1,11 +1,15 @@
-app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicScrollDelegate, filterFilter, $anchorScroll, ArtistService, SpotifyService, GLOBAL, $ionicActionSheet, $ionicLoading, $stateParams, $cordovaSocialSharing, MusicService) {
+app.controller('ArtistController', function ($rootScope, $scope,DBService,  $state, $filter, $ionicPopup, $ionicScrollDelegate, filterFilter, $anchorScroll, ArtistService, SpotifyService, GLOBAL, $ionicActionSheet, $ionicLoading, $stateParams, $cordovaSocialSharing, MusicService, VersionService, $localStorage) {
 
     $scope.init = function () {
         $scope.view = {};
         $scope.view.ready = false;
         $scope.view.server_image = GLOBAL.server.image;
+        $scope.view.feast_id = GLOBAL.api.feast;
         $scope.audio = new Audio();
         $scope.pause = true;
+
+        $scope.view.currentDate = $filter('date')(new Date(), 'yyyy-MM-dd');
+        $scope.view.feastDate =  $filter('date')(new Date('2016-06-10'), 'yyyy-MM-dd');
     };
 
     $scope.init();
@@ -18,33 +22,30 @@ app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicS
     };
 
     self.getArtists = function(sort){
-        $scope.view.ready = false;
-        // Setup the loader
-        $ionicLoading.show({
-            content: 'Cargando',
-            animation: 'fade-in',
-            showBackdrop: true,
-            maxWidth: 200,
-            showDelay: 0
-        });
-
         // Get all the artists
         ArtistService.getAll().then(function(artists){
 
             if(artists.length > 0)
             {
-                console.info('database', artists);
+               // console.info('database', artists);
                 $scope.view.artists = artists;
                 if(sort === true)
                     self.sort();
 
-                $ionicLoading.hide();
                 $scope.view.ready = true;
                 $scope.$emit('artist:ready', true);
             }
             else{
+                // Setup the loader
+                $ionicLoading.show({
+                    content: 'Cargando',
+                    animation: 'fade-in',
+                    showBackdrop: true,
+                    maxWidth: 200,
+                    showDelay: 0
+                });
                 ArtistService.resource.getAll().$promise.then(function(artists){
-                    console.info('api', artists);
+                  //  console.info('api', artists);
                     $scope.view.artists = artists.data;
                     if(sort === true)
                         self.sort();
@@ -56,7 +57,7 @@ app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicS
                     $scope.view.ready = true;
                     $scope.$emit('artist:ready', true);
                 },function(error) {
-                    console.info('error', error);
+                   // console.info('error', error);
                     $ionicLoading.hide();
                     $scope.view.ready = true;
                 });
@@ -119,7 +120,6 @@ app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicS
     if ($state.current.name == 'menu.artist-list') {
         var letters = $scope.letters = [];
         var artists = $scope.artists = [];
-
         self.getArtists(true);
 
         //Letters are shorter, everything else is 52 pixels
@@ -136,7 +136,7 @@ app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicS
         };
 
         var letterHasMatch = {};
-        $scope.getArtists = function() {
+        $scope.getArtistsList = function() {
             letterHasMatch = {};
             //Filter contacts by $scope.search.
             //Additionally, filter letters so that they only show if there
@@ -178,7 +178,40 @@ app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicS
     }
 
     if ($state.current.name == 'menu.artist-discover') {
-        self.getArtists(false);
+        if($localStorage.lastUpdate != $scope.view.currentDate)
+        {
+            VersionService.resource.get().$promise.then(function(response){
+                if(response.data.version != $localStorage.version)
+                {
+                    var confirmPopup = $ionicPopup.confirm({
+                        title: 'Nueva actualización',
+                        template: '¿Desea descargar los nuevos datos?'
+                    });
+
+                    confirmPopup.then(function(confirm) {
+                        if(confirm)
+                        {
+                            DBService.init(true);
+                            self.getArtists(false);
+                            $localStorage.version = response.data.version;
+                            $localStorage.lastUpdate = $filter('date')(new Date(), 'yyyy-MM-dd');
+                        }else
+                        {
+                            self.getArtists(false);
+                            $localStorage.lastUpdate = $filter('date')(new Date(), 'yyyy-MM-dd');
+                        }
+                    });
+                }else{
+                    self.getArtists(false);
+                }
+            },function(error) {
+                self.getArtists(false);
+            });
+        }else{
+            self.getArtists(false);
+        }
+
+
 
         $scope.playTrack = function(artist) {
             $rootScope.$broadcast('music:clear', true);
@@ -266,7 +299,7 @@ app.controller('ArtistController', function ($rootScope, $scope, $state, $ionicS
         //    });
         //};
         $scope.shareAnywhere = function(artist) {
-            console.info('artist', artist);
+            //console.info('artist', artist);
             var name = artist.name;
             var image = $scope.view.server_image+"artists/"+artist.id+"/cover/"+artist.image_cover;
             $cordovaSocialSharing.share("Te recomiendo "+name+" en el #FestivalDeLesArts", "Festival de les arts", image, "http://www.festivaldelesarts.com/");

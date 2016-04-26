@@ -1,15 +1,21 @@
 app.constant('GLOBAL', {
     'api':{
-        'url': 'http://coolway.dev/app_dev.php/api/',
+        'url' : 'http://gravedadprod.mobi/app_dev.php/api/',
+        //'url': 'http://coolway.dev/app_dev.php/api/',
+        //'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
         'version': 'v1',
         'feast': 1
     },
     'server':{
-        'image': 'http://coolway.dev/uploads/'
+        'image': 'http://gravedadprod.mobi/uploads/'
+        //'image': 'http://coolway.dev/uploads/'
+        //'image': 'http://festivales.icox.mobi/uploads/'
     },
     'spotify':{
         'country_iso': 'ES',
-        'client_id': '1706543149628857'
+        'user_id': 'festivaldelesarts',
+        'client_id': '77b0545674984c768ed449759d5911c8',
+        'playlist_id': '4wGfReMLNIEHqJ3dySeKnQ'
     },
     'facebook':{
         'api_version': 'v2.5',

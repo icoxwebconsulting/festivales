@@ -1,0 +1,21 @@
+<ion-view>
+    <ion-content class="map-how-get">
+        <img src="img/map/loading.gif" class="cont_trigger" id="id_waiting" />
+
+        <!--<div class="tabs tabs-icon-only">-->
+        <!--<a class="tab-item" ng-click="showMyLocation();" title="Mi ubicación">-->
+        <!--<i class="icon ion-home"></i>-->
+        <!--</a>-->
+        <!--<a class="tab-item" ng-click="showEventLocation();" title="Ubicación del evento">-->
+        <!--<i class="icon ion-star"></i>-->
+        <!--</a>-->
+        <a class="walking" ng-click="goFromMyLocation('WALKING')" title="Llegar caminando">
+            <img src="img/map/walk.png" width="40px" />
+        </a>
+        <a class="driving" ng-click="goFromMyLocation('DRIVING')" title="Llegar en coche">
+            <img src="img/map/car.png" width="40px" />
+        </a>
+        <!--</div>-->
+        <div id="map-how-get" data-tap-disabled="true"></div>
+    </ion-content>
+</ion-view>

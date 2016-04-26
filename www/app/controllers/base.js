@@ -1,6 +1,5 @@
 app.controller('BaseController', function ($scope, $state) {
 
-
     $scope.init = function()
     {
         $scope.state = $state;

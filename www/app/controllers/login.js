@@ -1,12 +1,11 @@
-app.controller('LoginController', function ($scope, $state, $http, $ionicLoading, $ionicPopup, $cordovaOauth) {
+app.controller('LoginController', function ($scope, $state, $http, $ionicLoading, GLOBAL, $ionicPopup, $cordovaOauth, UserService) {
 
     $scope.init = function()
     {
         $scope.view = {};
         $scope.view.show = 'sign_in';
         $scope.view.show_login = 'options';
-        $scope.data = {};
-        $scope.error = false;
+        $scope.view.user = new UserService.resource();
         $scope.view.loginEmail = false;
 
     };
@@ -19,82 +18,45 @@ app.controller('LoginController', function ($scope, $state, $http, $ionicLoading
     };
 
     $scope.loginFacebook = function () {
-        $cordovaOauth.facebook("1671907443037216", ["email"]).then(function (result) {
+        $cordovaOauth.facebook(GLOBAL.facebook.client_id, ["email"]).then(function (result) {
             $ionicLoading.show({
                 template: 'Verificando ...'
             });
 
-        //    $http.get("https://graph.facebook.com/v2.2/me", {
-        //        params: {
-        //            access_token: result.access_token,
-        //            fields: "id,email",
-        //            format: "json"
-        //        }
-        //    }).then(function (result) {
-        //        user.loginSocial(result.data.email, result.data.id).then(function () {
-        //            $ionicLoading.hide();
-        //
-        //            $state.go('mainLayout.main');
-        //        }, function (error) {
-        //            $ionicLoading.hide();
-        //
-        //            $ionicPopup.alert({
-        //                title: error.message
-        //            });
-        //        });
-        //    }, function () {
-        //        $ionicLoading.hide();
-        //
-        //        $ionicPopup.alert({
-        //            title: 'Error Intente Nuevamente'
-        //        });
-        //    });
-        //}, function () {
-        //    $ionicLoading.hide();
-        //
-        //    $ionicPopup.alert({
-        //        title: 'Error Intente Nuevamente'
-        //    });
-        });
-    };
+            $http.get("https://graph.facebook.com/"+GLOBAL.facebook.api_version+"/me", {
+                params: {
+                    access_token: result.access_token,
+                    fields: "id,email,name",
+                    format: "json"
+                }
+            }).then(function (result) {
+                console.info('result', result);
+                $scope.view.user.email = result.data.email;
+                $scope.view.user.name = result.data.name;
+                $scope.view.user.social = true;
+                $scope.view.user.$login(function (response) {
+                    UserService.setUser(response);
+                    $state.go("menu.artist-discover");
+                    $ionicLoading.hide();
+                }, function (error) {
+                    $ionicLoading.hide();
+                    $ionicPopup.alert({
+                        title: error.data.message
+                    });
+                });
+            }, function () {
+                $ionicLoading.hide();
 
-    $scope.loginGoogle = function () {
-        $cordovaOauth.google("140186210091-bp9lgae3g52hvmro7gse1q2t20gba32v.apps.googleusercontent.com", ["email"]).then(function (result) {
-            $ionicLoading.show({
-                template: 'Verificando ...'
+                $ionicPopup.alert({
+                    title: 'Error Intente Nuevamente'
+                });
             });
+        }, function () {
+            $ionicLoading.hide();
 
-        //    $http.get("https://www.googleapis.com/plus/v1/people/me", {
-        //        params: {
-        //            access_token: result.access_token,
-        //            fields: "id,emails",
-        //            format: "json"
-        //        }
-        //    }).then(function (result) {
-        //        user.loginSocial(result.data.emails[0].value, result.data.id).then(function () {
-        //            $ionicLoading.hide();
-        //
-        //            $state.go('mainLayout.main');
-        //        }, function (error) {
-        //            $ionicLoading.hide();
-        //
-        //            $ionicPopup.alert({
-        //                title: error.message
-        //            });
-        //        });
-        //    }, function () {
-        //        $ionicLoading.hide();
-        //
-        //        $ionicPopup.alert({
-        //            title: 'Error Intente Nuevamente'
-        //        });
-        //    });
-        //}, function (error) {
-        //    $ionicLoading.hide();
-        //
-        //    $ionicPopup.alert({
-        //        title: 'Error Intente Nuevamente'
-        //    });
+            $ionicPopup.alert({
+                title: 'Error Intente Nuevamente'
+            });
         });
     };
 
@@ -107,34 +69,31 @@ app.controller('LoginController', function ($scope, $state, $http, $ionicLoading
 
 
     $scope.login = function () {
-        $scope.error = false;
-
-        if (!$scope.data.email) {
+        if (!$scope.view.user.email || !UserService.validateEmail($scope.view.user.email)) {
             $ionicPopup.alert({
-                title: "Ingrese su E-mail"
+                title: "Ingrese un email valido"
             });
         }
-        else if (!$scope.data.password) {
+        else if (!$scope.view.user.password) {
             $ionicPopup.alert({
-                title: "Ingrese su Contraseña"
+                title: "Ingrese su contraseña"
             });
         }
         else {
             $ionicLoading.show({
-                template: 'Verificando ...'
+                template: 'Iniciando...'
             });
 
-            //user.login($scope.data).then(function () {
-            //    $ionicLoading.hide();
-            //
-            //    $state.go('mainLayout.main');
-            //}, function (error) {
-            //    $ionicLoading.hide();
-            //
-            //    $ionicPopup.alert({
-            //        title: error.message
-            //    });
-            //});
+            $scope.view.user.$login(function (response){
+                UserService.setUser(response);
+                $state.go("menu.artist-discover");
+                $ionicLoading.hide();
+            }, function (error) {
+                $ionicLoading.hide();
+                $ionicPopup.alert({
+                    title: error.data.message
+                });
+            });
         }
     };
 
