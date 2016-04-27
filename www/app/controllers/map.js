@@ -12,6 +12,7 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
     $scope.init = function(){
         $scope.server_image = GLOBAL.server.image;
         $scope.view.ready = false;
+        $scope.mapData = {};
         // Setup the loader
         $ionicLoading.show({
             content: 'Cargando',

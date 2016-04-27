@@ -1,4 +1,4 @@
-app.controller('ScheduleController', function($scope,ArtistService, $ionicLoading, GLOBAL, $state) {
+app.controller('ScheduleController', function($scope,ArtistService, ScheduleService, $ionicLoading, GLOBAL, $state) {
 
     $scope.init = function()
     {
@@ -7,6 +7,11 @@ app.controller('ScheduleController', function($scope,ArtistService, $ionicLoadin
         $scope.view.show_list = 'time';
         $scope.view.show_day = 9;
         $scope.view.server_image = GLOBAL.server.image;
+        $scope.view.scheduleActive = false;
+
+        ScheduleService.resource.getAll().$promise.then(function(response){
+            $scope.view.scheduleActive = response.data.status;
+        });
     };
 
     $scope.init();

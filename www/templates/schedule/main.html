@@ -2,11 +2,6 @@
     <ion-content has-bouncing="true" class="bg-dark schedule">
         <div class="row subtitle filter">
             <div class="col col-100">
-                <!--<div class="landscape">-->
-                    <!--<button class="button button-clear">-->
-                        <!--<img src="img/schedule/landscape.png">-->
-                    <!--</button>-->
-                <!--</div>-->
                 <div class="days">
                     <button class="button button-clear" ng-click="view.show_day = 9;" ng-class="{'active': view.show_day  == 9}">
                         <img src="img/schedule/pro.png">
@@ -20,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="row filters">
+        <div class="row filters" ng-if="view.scheduleActive">
             <div class="col col-50" ng-class="{'active': view.show_list  === 'time'}" ng-click="view.show_list = 'time';">
                 <div class="time filter">
                     <button class="button button-clear">
@@ -35,6 +30,9 @@
                     </button>
                 </div>
             </div>
+        </div>
+        <div nng-show="!view.mapData.length"g-if="!view.scheduleActive" class="coming-soon">
+            <img src="img/coolway/coming_soon.png">
         </div>
         <div ng-include="'templates/schedule/by-time.html'" ng-if="view.show_list == 'time'"></div>
         <div ng-include="'templates/schedule/by-stage.html'" ng-if="view.show_list == 'stage'" ></div>

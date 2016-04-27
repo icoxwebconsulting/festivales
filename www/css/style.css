@@ -1403,3 +1403,8 @@
     padding: 4% !important;
     margin-top: 2px !important;
 }
+
+.coming-soon img{
+    height: 100% !important;
+    width: 100% !important;
+}
