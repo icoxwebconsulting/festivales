@@ -16,6 +16,11 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
             method: 'PUT',
             isArray: false,
             url: GLOBAL.api.url + GLOBAL.api.version + '/user/'
+        },
+        'recoverPassword': {
+            method: 'PUT',
+            isArray: false,
+            url: GLOBAL.api.url + GLOBAL.api.version + '/authentication/'
         }
     });
 
