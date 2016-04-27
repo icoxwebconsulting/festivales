@@ -12,13 +12,14 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
         $scope.view.feastDate =  $filter('date')(new Date('2016-06-10'), 'yyyy-MM-dd');
 
         $scope.view.scheduleActive = false;
-
-        ScheduleService.resource.getAll().$promise.then(function(response){
-            $scope.view.scheduleActive = response.data.status;
-        });
     };
 
     $scope.init();
+
+
+    $scope.$on('schedule:change', function(event, args) {
+        $scope.view.scheduleActive = args;
+    });
 
     $scope.showDetail = function(id){
         if(id > 0)

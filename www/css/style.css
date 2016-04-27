@@ -142,7 +142,7 @@
     font-family: Ruina, ITC-ClearfaceStd-Regular  !important;
 }
 
-.menu-left .pane, .poster, .map{
+.menu-left .pane, .poster, .map, .coming-soon{
     background-image: url('../img/menu/background.jpg') !important;
     background-repeat: no-repeat;
     background-size: cover;

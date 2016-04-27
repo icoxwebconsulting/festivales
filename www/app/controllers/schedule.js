@@ -8,13 +8,13 @@ app.controller('ScheduleController', function($scope,ArtistService, ScheduleServ
         $scope.view.show_day = 9;
         $scope.view.server_image = GLOBAL.server.image;
         $scope.view.scheduleActive = false;
-
-        ScheduleService.resource.getAll().$promise.then(function(response){
-            $scope.view.scheduleActive = response.data.status;
-        });
     };
 
     $scope.init();
+
+    $scope.$on('schedule:change', function(event, args) {
+        $scope.view.scheduleActive = args;
+    });
 
     $scope.showDetail = function(id){
         if(id > 0)

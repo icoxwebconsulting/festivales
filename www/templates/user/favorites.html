@@ -7,8 +7,14 @@
                 </div>
                 <div class="center" ng-click="showDetail({{item.id}})">
                     <p class="artist-name">{{item.name|cleanName}}</p>
-                    <p class="time"><i class="ion-clock"></i>&nbsp;{{item.schedule | parseDate: 'HH:mm'}}</p>
-                    <p class="stage-name"><i class="ion-location"></i>&nbsp;{{item.stage_name}}</p>
+                    <p class="time">
+                        <span ng-if="view.scheduleActive"><i class="ion-clock"></i>&nbsp;{{item.schedule | parseDate: 'HH:mm'}}</span>
+                        <span ng-if="!view.scheduleActive">&nbsp;</span>
+                    </p>
+                    <p class="stage-name">
+                        <span ng-if="view.scheduleActive"><i class="ion-location"></i>&nbsp;{{item.stage_name}}</span>
+                        <span ng-if="!view.scheduleActive">&nbsp;</span>
+                    </p>
                 </div>
                 <!--<div class="right">-->
                     <!--<img src="img/favorite/on.png">-->

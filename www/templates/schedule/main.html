@@ -1,6 +1,6 @@
 <ion-view>
     <ion-content has-bouncing="true" class="bg-dark schedule">
-        <div class="row subtitle filter">
+        <div class="row subtitle filter" ng-if="view.scheduleActive">
             <div class="col col-100">
                 <div class="days">
                     <button class="button button-clear" ng-click="view.show_day = 9;" ng-class="{'active': view.show_day  == 9}">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div nng-show="!view.mapData.length"g-if="!view.scheduleActive" class="coming-soon">
+        <div ng-if="!view.scheduleActive" class="coming-soon">
             <img src="img/coolway/coming_soon.png">
         </div>
         <div ng-include="'templates/schedule/by-time.html'" ng-if="view.show_list == 'time'"></div>

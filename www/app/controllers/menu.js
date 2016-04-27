@@ -1,4 +1,4 @@
-app.controller('MenuController', function($rootScope, $scope, $ionicModal, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter) {
+app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter) {
 
     $scope.init = function(){
         console.info('init db');
@@ -18,6 +18,14 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, $ioni
         {
             $scope.view.user = UserService.getUser();
         }
+
+        $scope.view.scheduleActive = false;
+
+        ScheduleService.resource.getAll().$promise.then(function(response){
+            $scope.view.scheduleActive = response.data.status;
+            $rootScope.$broadcast('schedule:change', response.data.status);
+            console.info('$scope.view.scheduleActive', $scope.view.scheduleActive);
+        });
 
     };
 
