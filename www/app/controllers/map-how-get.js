@@ -80,6 +80,7 @@ app.controller('MapHowGetController', function ($scope, $cordovaGeolocation, $io
         document.getElementById("id_waiting").style.visibility = 'visible';
         navigator.geolocation.getCurrentPosition(function(position) {
             var myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+           // var myLocation = new google.maps.LatLng(39.456673, -0.363268);
             var directionsService = new google.maps.DirectionsService;
             $scope.directionsDisplay.setMap($scope.map);
 

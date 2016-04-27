@@ -151,14 +151,15 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
 
             var myMarker = new google.maps.Marker({
                 position: mypos,
-                map: $scope.map
-            });
-            var myInfoWindow = new google.maps.InfoWindow({
                 map: $scope.map,
-                position: mypos,
-                content: 'Tú estás aquí',
-                pixelOffset: new google.maps.Size(0, -40)
+                icon: 'img/map/my-location-icon.png'
             });
+            //var myInfoWindow = new google.maps.InfoWindow({
+            //    map: $scope.map,
+            //    position: mypos,
+            //    content: 'Tú estás aquí',
+            //    pixelOffset: new google.maps.Size(0, -40)
+            //});
             $scope.map.setZoom(17);
             $scope.map.setCenter(mypos);
 

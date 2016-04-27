@@ -10,6 +10,9 @@ app.controller('BaseController', function ($scope, $state) {
 
     $scope.init();
 
+    $scope.openLink = function(link){
+        window.open(link, '_system', 'location=yes');
+    };
 
     $scope.login = function(){
         $scope.view.show = 'sign_in';

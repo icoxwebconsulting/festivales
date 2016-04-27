@@ -48,6 +48,26 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 }
             }
         })
+        .state('base.recover', {
+            url: 'recover',
+            views: {
+                'content': {
+                    templateUrl: 'templates/user/recover_password.html',
+                    controller: 'RecoverController',
+                    resolve: {
+                        data: function ($ionicPlatform, UserService, $state) {
+                            $ionicPlatform.ready(function() {
+                                if (UserService.isLogged()) {
+                                    $state.go('menu.artist-discover');
+                                    console.info('is logged');
+                                } else
+                                    console.info('is not logged');
+                            });
+                        }
+                    }
+                }
+            }
+        })
         .state('menu', {
             url: '/app/',
             abstract: true,

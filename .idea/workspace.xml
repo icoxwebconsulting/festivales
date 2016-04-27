@@ -5,121 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a493b6c-5ba1-40d7-901b-88c70ec1aa23" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/app/services/coolway.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/app/services/version.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/coolway/detail.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/splash.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-hdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-ldpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-mdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" afterPath="$PROJECT_DIR$/resources/android/icon/drawable-xxxhdpi-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-hdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-ldpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-mdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-land-xxxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-hdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-ldpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-mdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/icon.png" afterPath="$PROJECT_DIR$/resources/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-40@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-50@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-60@3x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-72@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-76@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon-small@3x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" afterPath="$PROJECT_DIR$/resources/ios/icon/icon@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-568h@2x~iphone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-667h.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-736h.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape-736h.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape@2x~ipad.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Landscape~ipad.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait@2x~ipad.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default-Portrait~ipad.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default@2x~iphone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" afterPath="$PROJECT_DIR$/resources/ios/splash/Default~iphone.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/app/controllers/recover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/templates/user/recover_password.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.xml" afterPath="$PROJECT_DIR$/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/app.js" afterPath="$PROJECT_DIR$/www/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/config.js" afterPath="$PROJECT_DIR$/www/app/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/artist.js" afterPath="$PROJECT_DIR$/www/app/controllers/artist.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/base.js" afterPath="$PROJECT_DIR$/www/app/controllers/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/coolway.js" afterPath="$PROJECT_DIR$/www/app/controllers/coolway.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/info.js" afterPath="$PROJECT_DIR$/www/app/controllers/info.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/login.js" afterPath="$PROJECT_DIR$/www/app/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/main.js" afterPath="$PROJECT_DIR$/www/app/controllers/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/map-how-get.js" afterPath="$PROJECT_DIR$/www/app/controllers/map-how-get.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/map.js" afterPath="$PROJECT_DIR$/www/app/controllers/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/menu.js" afterPath="$PROJECT_DIR$/www/app/controllers/menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/player.js" afterPath="$PROJECT_DIR$/www/app/controllers/player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/poster.js" afterPath="$PROJECT_DIR$/www/app/controllers/poster.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/register.js" afterPath="$PROJECT_DIR$/www/app/controllers/register.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/schedule.js" afterPath="$PROJECT_DIR$/www/app/controllers/schedule.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/controllers/social.js" afterPath="$PROJECT_DIR$/www/app/controllers/social.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/database.js" afterPath="$PROJECT_DIR$/www/app/database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/directives/favorite.js" afterPath="$PROJECT_DIR$/www/app/directives/favorite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/filters/clean-name.js" afterPath="$PROJECT_DIR$/www/app/filters/clean-name.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/filters/parse-date.js" afterPath="$PROJECT_DIR$/www/app/filters/parse-date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/global.js" afterPath="$PROJECT_DIR$/www/app/global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/database.js" afterPath="$PROJECT_DIR$/www/app/services/database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/facebook.js" afterPath="$PROJECT_DIR$/www/app/services/facebook.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/favorite.js" afterPath="$PROJECT_DIR$/www/app/services/favorite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/instagram.js" afterPath="$PROJECT_DIR$/www/app/services/instagram.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/map.js" afterPath="$PROJECT_DIR$/www/app/services/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/music.js" afterPath="$PROJECT_DIR$/www/app/services/music.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/notification.js" afterPath="$PROJECT_DIR$/www/app/services/notification.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/poster.js" afterPath="$PROJECT_DIR$/www/app/services/poster.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/spotify.js" afterPath="$PROJECT_DIR$/www/app/services/spotify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/twitter.js" afterPath="$PROJECT_DIR$/www/app/services/twitter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/user.js" afterPath="$PROJECT_DIR$/www/app/services/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/app/services/weather.js" afterPath="$PROJECT_DIR$/www/app/services/weather.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/res/main.min.css" afterPath="$PROJECT_DIR$/www/res/main.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/res/main.min.js" afterPath="$PROJECT_DIR$/www/res/main.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/artist/detail.html" afterPath="$PROJECT_DIR$/www/templates/artist/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/artist/list.html" afterPath="$PROJECT_DIR$/www/templates/artist/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/artist/main.html" afterPath="$PROJECT_DIR$/www/templates/artist/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/artist/main_old.html" afterPath="$PROJECT_DIR$/www/templates/artist/main_old.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/coolway/main.html" afterPath="$PROJECT_DIR$/www/templates/coolway/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/info/main.html" afterPath="$PROJECT_DIR$/www/templates/info/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/info/map.html" afterPath="$PROJECT_DIR$/www/templates/info/map.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/info/sponsor.html" afterPath="$PROJECT_DIR$/www/templates/info/sponsor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/info/weather.html" afterPath="$PROJECT_DIR$/www/templates/info/weather.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/map/main.html" afterPath="$PROJECT_DIR$/www/templates/map/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/footer.html" afterPath="$PROJECT_DIR$/www/templates/menu/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/left.html" afterPath="$PROJECT_DIR$/www/templates/menu/left.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/main.html" afterPath="$PROJECT_DIR$/www/templates/menu/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/menu/right.html" afterPath="$PROJECT_DIR$/www/templates/menu/right.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/player/main.html" afterPath="$PROJECT_DIR$/www/templates/player/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/poster/main.html" afterPath="$PROJECT_DIR$/www/templates/poster/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/schedule/by-stage.html" afterPath="$PROJECT_DIR$/www/templates/schedule/by-stage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/schedule/by-time.html" afterPath="$PROJECT_DIR$/www/templates/schedule/by-time.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/schedule/main.html" afterPath="$PROJECT_DIR$/www/templates/schedule/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/social/facebook.html" afterPath="$PROJECT_DIR$/www/templates/social/facebook.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/social/instagram.html" afterPath="$PROJECT_DIR$/www/templates/social/instagram.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/social/main.html" afterPath="$PROJECT_DIR$/www/templates/social/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/social/twitter.html" afterPath="$PROJECT_DIR$/www/templates/social/twitter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/user/favorites.html" afterPath="$PROJECT_DIR$/www/templates/user/favorites.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/user/notifications.html" afterPath="$PROJECT_DIR$/www/templates/user/notifications.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/user/settings.html" afterPath="$PROJECT_DIR$/www/templates/user/settings.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/user/sign_in.html" afterPath="$PROJECT_DIR$/www/templates/user/sign_in.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/user/sign_up.html" afterPath="$PROJECT_DIR$/www/templates/user/sign_up.html" />
     </list>
@@ -143,21 +37,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="map-how-get.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/app/controllers/map-how-get.js">
+      <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/app/controllers/map.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="71" selection-end-column="50" />
-              <folding />
+              <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="161" selection-end-column="17" />
+              <folding>
+                <marker date="1461761613588" expanded="true" signature="5575:5766" placeholder="{&quot;content&quot;: 'Tú estás aquí'...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/app/controllers/map.js">
+      <file leaf-file-name="map-how-get.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/app/controllers/map-how-get.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.96218485">
-              <caret line="139" column="50" selection-start-line="139" selection-start-column="50" selection-end-line="139" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.031512607">
+              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -171,10 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/lib/sha/sha.js" />
-        <option value="$PROJECT_DIR$/www/app/services/twitter.js" />
-        <option value="$PROJECT_DIR$/www/templates/user/settings.html" />
-        <option value="$PROJECT_DIR$/www/templates/schedule/by-stage.html" />
         <option value="$PROJECT_DIR$/www/templates/schedule/by-time.html" />
         <option value="$PROJECT_DIR$/www/app/directives/favorite.js" />
         <option value="$PROJECT_DIR$/www/templates/user/notifications.html" />
@@ -191,13 +83,11 @@
         <option value="$PROJECT_DIR$/www/templates/social/instagram.html" />
         <option value="$PROJECT_DIR$/www/templates/coolway/detail.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/app/controllers/base.js" />
         <option value="$PROJECT_DIR$/www/templates/map/main.html" />
         <option value="$PROJECT_DIR$/www/templates/user/favorites.html" />
         <option value="$PROJECT_DIR$/www/templates/info/weather.html" />
         <option value="$PROJECT_DIR$/www/templates/menu/left.html" />
         <option value="$PROJECT_DIR$/www/app/services/favorite.js" />
-        <option value="$PROJECT_DIR$/www/app/services/user.js" />
         <option value="$PROJECT_DIR$/www/app/controllers/coolway.js" />
         <option value="$PROJECT_DIR$/www/templates/artist/detail.html" />
         <option value="$PROJECT_DIR$/www/app/controllers/poster.js" />
@@ -210,18 +100,24 @@
         <option value="$PROJECT_DIR$/www/templates/user/zoom.html" />
         <option value="$PROJECT_DIR$/www/lib/ionic-zoom-view/dist/ionic-zoom-view.js" />
         <option value="$PROJECT_DIR$/www/templates/info/map.html" />
-        <option value="$PROJECT_DIR$/www/app/controllers/map-how-get.js" />
         <option value="$PROJECT_DIR$/www/css/style.css" />
         <option value="$PROJECT_DIR$/www/app/controllers/artist.js" />
         <option value="$PROJECT_DIR$/www/templates/artist/list.html" />
         <option value="$PROJECT_DIR$/www/app/global.js" />
         <option value="$PROJECT_DIR$/www/app/controllers/login.js" />
         <option value="$PROJECT_DIR$/www/app/controllers/schedule.js" />
-        <option value="$PROJECT_DIR$/www/app/config.js" />
         <option value="$PROJECT_DIR$/www/app/app.js" />
         <option value="$PROJECT_DIR$/www/templates/menu/main.html" />
         <option value="$PROJECT_DIR$/www/app/controllers/menu.js" />
+        <option value="$PROJECT_DIR$/www/templates/user/sign_up.html" />
+        <option value="$PROJECT_DIR$/www/app/controllers/base.js" />
+        <option value="$PROJECT_DIR$/www/app/config.js" />
+        <option value="$PROJECT_DIR$/www/templates/user/sign_in.html" />
+        <option value="$PROJECT_DIR$/www/app/services/user.js" />
+        <option value="$PROJECT_DIR$/www/templates/user/recover_password.html" />
+        <option value="$PROJECT_DIR$/www/app/controllers/recover.js" />
         <option value="$PROJECT_DIR$/www/app/controllers/map.js" />
+        <option value="$PROJECT_DIR$/www/app/controllers/map-how-get.js" />
       </list>
     </option>
   </component>
@@ -270,7 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -300,6 +195,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Festivales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Festivales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Festivales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Festivales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="map" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,6 +298,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -371,6 +307,7 @@
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
     <property name="LayoutCode.rearrangeEntriesJavaScript 1.5" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -479,41 +416,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/app/directives/favorite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="54" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/controllers/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22689076">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/player/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/user/notifications.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="10" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/controllers/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05672269">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/templates/info/weather.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.6666665">
@@ -525,13 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.0">
           <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/services/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -686,7 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.0">
           <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,15 +588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4541387">
           <caret line="197" column="20" selection-start-line="197" selection-start-column="20" selection-end-line="197" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/templates/user/sign_up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.037815128">
           <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64285713">
           <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4864865">
           <caret line="25" column="141" selection-start-line="25" selection-start-column="141" selection-end-line="25" selection-end-column="196" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,15 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="97" selection-start-line="0" selection-start-column="97" selection-end-line="0" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30252102">
-          <caret line="127" column="10" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6872964">
           <caret line="300" column="20" selection-start-line="300" selection-start-column="15" selection-end-line="300" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,7 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11344538">
           <caret line="6" column="45" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03891892">
           <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,7 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44756758">
           <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.05837838">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17513514">
           <caret line="9" column="96" selection-start-line="9" selection-start-column="96" selection-end-line="9" selection-end-column="103" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27243245">
           <caret line="14" column="152" selection-start-line="14" selection-start-column="138" selection-end-line="14" selection-end-column="152" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,30 +694,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8319328">
           <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/controllers/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/user/sign_in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/user/sign_up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/templates/user/recover_password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="110" selection-start-line="9" selection-start-column="95" selection-end-line="9" selection-end-column="110" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#ion-content#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/controllers/menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4723127">
-          <caret line="215" column="40" selection-start-line="215" selection-start-column="40" selection-end-line="215" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="171" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/app/controllers/map-how-get.js">
+    <entry file="file://$PROJECT_DIR$/www/app/controllers/recover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43487394">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/services/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3592437">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/controllers/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="71" selection-end-column="50" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/app/controllers/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.96218485">
-          <caret line="139" column="50" selection-start-line="139" selection-start-column="50" selection-end-line="139" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="161" selection-end-column="17" />
+          <folding>
+            <marker date="1461761613588" expanded="true" signature="5575:5766" placeholder="{&quot;content&quot;: 'Tú estás aquí'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/app/controllers/map-how-get.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.031512607">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
           <folding />
         </state>
       </provider>
