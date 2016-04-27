@@ -27,13 +27,12 @@
                 <input ng-model="view.user.password" type="password" placeholder="Contraseña">
             </div>
             <div class="later">
-                <a>&iquest;Has olvidado la contraseña?</a>
+                <a ui-sref="base.recover">&iquest;Has olvidado la contraseña?</a>
             </div>
         </div>
         <div class="login-footer">
             <img src="img/login/sign-in.png" ng-click="login()">
-            <a>T&eacute;rminos y condiciones</a>
-            <a>Politica de privacidad</a>
+            <a ng-click="openLink('http://www.festivaldelesarts.com/wp-content/uploads/2015/10/Condiciones_Generales_Arts_2016.pdf')">T&eacute;rminos y condiciones</a>
         </div>
     </div>
 
