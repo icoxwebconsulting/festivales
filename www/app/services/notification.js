@@ -10,29 +10,7 @@ app.factory('NotificationService', function ($rootScope, $resource, GLOBAL, $htt
     });
 
 
-    var base_url = 'http://{YOUR SERVER}';
-
-    function register(device_token){
-
-        var deferred = $q.defer();
-        $ionicLoading.show();
-
-        $http.post(base_url + '/register', {'device_token': device_token})
-            .success(function(response){
-                $ionicLoading.hide();
-                deferred.resolve(response);
-            })
-            .error(function(data){
-                deferred.reject();
-            });
-
-
-        return deferred.promise;
-
-    }
-
     return {
-        resource: resource,
-        register:register
+        resource: resource
     };
 });

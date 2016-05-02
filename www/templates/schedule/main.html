@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="row filters" ng-if="view.scheduleActive">
+        <div class="row filters" ng-if="view.scheduleActive && view.ready">
             <div class="col col-50" ng-class="{'active': view.show_list  === 'time'}" ng-click="view.show_list = 'time';">
                 <div class="time filter">
                     <button class="button button-clear">
@@ -31,10 +31,10 @@
                 </div>
             </div>
         </div>
-        <div ng-if="!view.scheduleActive" class="coming-soon">
+        <div ng-if="!view.scheduleActive && view.ready" class="coming-soon">
             <img src="img/coolway/coming_soon.png">
         </div>
-        <div ng-include="'templates/schedule/by-time.html'" ng-if="view.show_list == 'time'"></div>
-        <div ng-include="'templates/schedule/by-stage.html'" ng-if="view.show_list == 'stage'" ></div>
+        <div ng-include="'templates/schedule/by-time.html'" ng-if="view.show_list == 'time' && view.scheduleActive"></div>
+        <div ng-include="'templates/schedule/by-stage.html'" ng-if="view.show_list == 'stage' && view.scheduleActive" ></div>
     </ion-content>
 </ion-view>

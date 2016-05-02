@@ -24,7 +24,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
         ScheduleService.resource.getAll().$promise.then(function(response){
             $scope.view.scheduleActive = response.data.status;
             $rootScope.$broadcast('schedule:change', response.data.status);
-            console.info('$scope.view.scheduleActive', $scope.view.scheduleActive);
         });
 
     };

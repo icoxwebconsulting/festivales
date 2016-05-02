@@ -973,7 +973,7 @@
 }
 
 .ticket iframe{
-    max-height: 460px !important;
+    max-height: 760px !important;
 }
 
 .ticket .partner{
@@ -1322,6 +1322,13 @@
     background-color: #ffffff !important;
 }
 
+.facebook .item-body p, .twitter .item-body, .facebook .item-avatar, .twitter .item-avatar {
+    padding: 0 0 0 12px !important;
+}
+
+.facebook .item-body p, .twitter .item-body{
+    text-align: justify;
+}
 
 
 .weather .list{

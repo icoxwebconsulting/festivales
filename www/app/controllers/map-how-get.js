@@ -1,4 +1,4 @@
-app.controller('MapHowGetController', function ($scope, $cordovaGeolocation, $ionicLoading, GLOBAL, MapService, $cordovaDevice) {
+app.controller('MapHowGetController', function ($scope, $cordovaGeolocation, $ionicLoading, GLOBAL, MapService, $cordovaDevice, $ionicPopup) {
 
     self.getMapAndLocations = function(){
         return MapService.resource.getAll().$promise.then(function(map){
@@ -50,10 +50,11 @@ app.controller('MapHowGetController', function ($scope, $cordovaGeolocation, $io
 
         var mapOptions = {
             center: $scope.centroLatlng,
+            scrollwheel: false,
             zoom: 15,
             maxZoom: 19,
             streetViewControl: false,
-            zoomControl: false,
+            zoomControl: true,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map-how-get"), mapOptions);
@@ -77,8 +78,11 @@ app.controller('MapHowGetController', function ($scope, $cordovaGeolocation, $io
 
     $scope.goFromMyLocation = function(mode)
     {
-        document.getElementById("id_waiting").style.visibility = 'visible';
-        navigator.geolocation.getCurrentPosition(function(position) {
+        //document.getElementById("id_waiting").style.visibility = 'visible';
+        //navigator.geolocation.getCurrentPosition(function(position) {
+        var posOptions = {timeout: 10000, enableHighAccuracy: true, maximumAge: 1000 * 60 * 60};
+        $cordovaGeolocation.getCurrentPosition(posOptions)
+            .then(function (position) {
             var myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
            // var myLocation = new google.maps.LatLng(39.456673, -0.363268);
             var directionsService = new google.maps.DirectionsService;
@@ -95,11 +99,32 @@ app.controller('MapHowGetController', function ($scope, $cordovaGeolocation, $io
                     if (status === google.maps.DirectionsStatus.OK) {
                         $scope.directionsDisplay.setDirections(response);
                     } else {
-                        window.alert('No disponible para realizar el recorrido');
+                        $ionicPopup.show({
+                            template: '<p style="color:#000;">Desde tu ubicación no se puede realizar el recorrido.</p>',
+                            title: 'Recorrido no disponible',
+                            buttons: [
+                                {
+                                    text: '<b>Aceptar</b>',
+                                    type: 'button-positive'
+                                }
+                            ]
+                        });
                     }
                 });
-            document.getElementById("id_waiting").style.visibility = 'hidden';
-        });
+           // document.getElementById("id_waiting").style.visibility = 'hidden';
+        }, function (err) {
+
+                $ionicPopup.show({
+                    template: '<p style="color:#000;">Para poder usar tu ubicación debes tener activado tu gps.</p>',
+                    title: 'Activar GPS',
+                    buttons: [
+                        {
+                            text: '<b>Aceptar</b>',
+                            type: 'button-positive'
+                        }
+                    ]
+                });
+            });
 
         //var options = {timeout: 40000, enableHighAccuracy: false};
         //$cordovaGeolocation.getCurrentPosition(options).then(function(position)

@@ -1,4 +1,4 @@
-var app = angular.module('festival',
+var app = angular.module('lesarts',
     [
         'ionic',
         'ngCordova',
@@ -26,12 +26,11 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
         }
 
         $ionicPlatform.registerBackButtonAction(function (event) {
-            if( ($state.current.name=="base.login" || $state.current.name=="base.register") && (UserService.isLogged()) ){
-                event.preventDefault();
-                navigator.app.exitApp();
-            }
-            else if($state.current.name=="base.login" || $state.current.name=="base.register")
-            {
+            //if( ($state.current.name=="base.login" || $state.current.name=="base.register") && (UserService.isLogged()) ){
+            //    event.preventDefault();
+            //    navigator.app.exitApp();
+            //}
+            if($state.current.name=="base.login" || $state.current.name=="base.register" || $state.current.name=="menu.artist-discover") {
                 event.preventDefault();
                 navigator.app.exitApp();
             }
@@ -66,6 +65,10 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
                         $ionicHistory.clearHistory();
                         $state.go('menu.artist-discover');
                         break;
+                    case "menu.social":
+                        $ionicHistory.clearHistory();
+                        $state.go('menu.artist-discover');
+                        break;
                     default:
                         $ionicHistory.goBack();
                 }
@@ -79,7 +82,8 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
         if (!UserService.isLogged()) {
             $state.go('base.login');
             console.info('redirect login');
-        }
+        }else
+            UserService.registerNotifications();
 
         $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
             if( (toState.name == "base.login" || toState.name == "base.register"   ) && (UserService.isLogged()) )
@@ -90,53 +94,4 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
         });
 
     });
-    //pushNotification = window.plugins.pushNotification;
-    //pushNotification.register(
-    //    onNotification,
-    //    errorHandler,
-    //    {
-    //        'badge': 'true',
-    //        'sound': 'true',
-    //        'alert': 'true',
-    //        'ecb': 'onNotification',
-    //        'senderID': 'YOUR GOOGLE CONSOLE PROJECT NUMBER'
-    //    }
-    //);
-    //window.onNotification = function(e){
-    //
-    //    switch(e.event){
-    //        case 'registered':
-    //            if(e.regid.length > 0){
-    //
-    //                var device_token = e.regid;
-    //                NotificationService.register(device_token).then(function(response){
-    //                    alert('registered!');
-    //                });
-    //            }
-    //            break;
-    //
-    //        case 'message':
-    //            alert('msg received: ' + e.message);
-    //            /*
-    //             {
-    //             "message": "Hello this is a push notification",
-    //             "payload": {
-    //             "message": "Hello this is a push notification",
-    //             "sound": "notification",
-    //             "title": "New Message",
-    //             "from": "813xxxxxxx",
-    //             "collapse_key": "do_not_collapse",
-    //             "foreground": true,
-    //             "event": "message"
-    //             }
-    //             }
-    //             */
-    //            break;
-    //
-    //        case 'error':
-    //            alert('error occured');
-    //            break;
-    //
-    //    }
-    //};
 });

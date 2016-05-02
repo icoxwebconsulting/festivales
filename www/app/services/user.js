@@ -1,5 +1,5 @@
 'use strict';
-app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorage, $ionicPopup) {
+app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorage, $ionicPopup, DeviceService, $q) {
 
     var resource = $resource(GLOBAL.api.url + GLOBAL.api.version + '/users', {}, {
         'register': {
@@ -42,11 +42,12 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
 
     function setUser(user){
         $localStorage.user = user;
-        //registerNotifications();
+        registerNotifications();
     }
 
     function logout(){
         $localStorage.user = {};
+        unRegisterDevice();
     }
 
     function validateEmail(email) {
@@ -54,22 +55,31 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         return pattern.test(email);
     }
 
+    function unRegisterDevice() {
+        var deferred = $q.defer();
+
+        $scope.device = new DeviceService.resource();
+        $scope.device.$register(function (response){
+            deferred.resolve(response);
+        }, function (error) {
+            deferred.resolve(error);
+        });
+        return deferred.promise;
+    }
+
 
     function registerDevice(data) {
+        console.info('register device');
         var deferred = $q.defer();
-        $http({
-            method: "POST",
-            url: SERVER_CONF.HOST + 'device.json',
-            data: serialize(data),
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-        }).success(function (rsp) {
-            if (rsp.success) {
-                deferred.resolve(rsp);
-            }
-            else
-                deferred.reject(rsp);
-        }).error(function () {
-            deferred.reject({message: "El servidor no responde intente mas tarde"});
+        $scope.device = new DeviceService.resource();
+        $scope.access_token = data.access_token;
+        $scope.device_token = data.device_token;
+        $scope.device.os = data.os;
+
+        $scope.device.$register(function (response){
+            deferred.resolve(response);
+        }, function (error) {
+            deferred.resolve(error);
         });
 
         return deferred.promise;
@@ -80,9 +90,11 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         if (window.PushNotification) {
             var PushNotification = window.PushNotification;
 
+            console.info('push notification',PushNotification);
+
             var push = PushNotification.init({
                 android: {
-                    senderID: "140186210091",
+                    senderID: "les-arts",
                     icon: "festival",
                     iconColor: "lightgrey"
                 },
@@ -94,8 +106,11 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                 windows: {}
             });
 
-            if (getUser().device_token === null || getUser().device_token === undefined) {
+            console.info('getUser()', getUser());
+            if (getUser().device_token === null || getUser().device_token === undefined && (push !== null) ) {
+                console.info('entro en device');
                 push.on('registration', function (data) {
+                    console.info('data registration', data);
                     // android by default
                     var os = '0';
                     if (ionic.Platform.isIOS())
@@ -119,7 +134,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
 
             push.on('error', function (e) {
                 // e.message
-                console.log('error', e);
+                console.log('notification error', e);
             });
         }
     }
@@ -132,6 +147,8 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         getUserId:getUserId,
         setUser: setUser,
         logout: logout,
-        registerNotifications:registerNotifications
+        registerNotifications:registerNotifications,
+        registerDevice:registerDevice,
+        unRegisterDevice:unRegisterDevice
     };
 });

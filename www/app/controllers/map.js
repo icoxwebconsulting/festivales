@@ -1,4 +1,4 @@
-app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoading, $cordovaDevice, GLOBAL, MapService) {
+app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoading, $cordovaDevice, GLOBAL, MapService, $ionicPopup) {
 
     self.getMapAndLocations = function(){
        // console.info('getMapAndLocations');
@@ -88,9 +88,10 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
 
         var mapOptions = {
             center: $scope.centroLatlng,
+            scrollwheel: false,
             streetViewControl: false,
-            zoomControl: false,
-            zoom: 15,
+            zoomControl: true,
+            zoom: 17,
             maxZoom: 19,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -132,42 +133,56 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
         $scope.directionsDisplay = new google.maps.DirectionsRenderer({polylineOptions: { strokeColor: 'red' }});
 
         //var image = 'images/beachflag.png';
-        var beachMarker = new google.maps.Marker({
-            position: $scope.centroLatlng,
-            map: $scope.map
-            //icon: image
-        });
-        $scope.map.setZoom(15);
-        $scope.map.setCenter($scope.centroLatlng);
+        //var beachMarker = new google.maps.Marker({
+        //    position: $scope.centroLatlng,
+        //    map: $scope.map
+        //    //icon: image
+        //});
+        //$scope.map.setZoom(17);
+        //$scope.map.setCenter($scope.centroLatlng);
     };
 
 
 
-    $scope.showMyLocation = function()
-    {
-        document.getElementById("id_waiting").style.visibility = 'visible';
-        navigator.geolocation.getCurrentPosition(function(position) {
-            console.info('my location', position);
-            var mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    $scope.showMyLocation = function() {
+        //document.getElementById("id_waiting").style.visibility = 'visible';
+        //navigator.geolocation.getCurrentPosition(function(position) {
+        var posOptions = {timeout: 10000, enableHighAccuracy: true, maximumAge: 1000 * 60 * 60};
+        $cordovaGeolocation.getCurrentPosition(posOptions)
+            .then(function (position) {
 
-            var myMarker = new google.maps.Marker({
-                position: mypos,
-                map: $scope.map,
-                icon: 'img/map/my-location-icon.png'
+                console.info('my location', position);
+                var mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+                var myMarker = new google.maps.Marker({
+                    position: mypos,
+                    map: $scope.map,
+                    icon: 'img/map/my-location-icon.png'
+                });
+                //var myInfoWindow = new google.maps.InfoWindow({
+                //    map: $scope.map,
+                //    position: mypos,
+                //    content: 'Tú estás aquí',
+                //    pixelOffset: new google.maps.Size(0, -40)
+                //});
+                $scope.map.setZoom(17);
+                $scope.map.setCenter(mypos);
+
+                //document.getElementById("id_waiting").style.visibility = 'hidden';
+            }, function (err) {
+
+                $ionicPopup.show({
+                    template: '<p style="color:#000;">Para poder usar tu ubicación debes tener activado tu gps.</p>',
+                    title: 'Activar GPS',
+                    buttons: [
+                        {
+                            text: '<b>Aceptar</b>',
+                            type: 'button-positive'
+                        }
+                    ]
+                });
             });
-            //var myInfoWindow = new google.maps.InfoWindow({
-            //    map: $scope.map,
-            //    position: mypos,
-            //    content: 'Tú estás aquí',
-            //    pixelOffset: new google.maps.Size(0, -40)
-            //});
-            $scope.map.setZoom(17);
-            $scope.map.setCenter(mypos);
-
-            document.getElementById("id_waiting").style.visibility = 'hidden';
-        });
     };
-
 
     $scope.init();
 
