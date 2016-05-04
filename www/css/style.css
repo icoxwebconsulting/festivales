@@ -90,6 +90,9 @@
     height: 50px !important;
 }
 
+.platform-ios .bar-header{
+    height: 70px !important;
+}
 
 .logo{
     width: 100%;
@@ -814,6 +817,10 @@
     color: #ffffff !important;
 }
 
+.platform-ios .login-header{
+    height: 75px !important;
+}
+
 .login-header .button-clear, .login-header .button-clear{
     color: #ffffff !important;
 }
@@ -853,9 +860,17 @@
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3f5e5c1', endColorstr='#00f5e5c1',GradientType=0 );*/
 }
 
+.platform-ios .login-content{
+    margin-top:  -65px !important;
+}
+
+.platform-ios .div-form{
+    margin-top: 70px !important;
+}
+
 .login-content .title{
     text-align: center;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  ITC-ClearfaceStd-Regular !important;
     margin-top: 40px;
     margin-bottom: 30px;
 }
