@@ -4,8 +4,8 @@ app.factory('DBService', function ($q, DB_CONFIG) {
     self.db = null;
 
     self.init = function(drop) {
-        // Use self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name}); in production
-        self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', -1);
+        self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name, location: 1});
+        //self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', -1);
 
         //self.query('DROP TABLE IF EXISTS artists');
         angular.forEach(DB_CONFIG.tables, function(table) {

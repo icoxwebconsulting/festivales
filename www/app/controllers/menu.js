@@ -1,5 +1,5 @@
 app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter) {
-
+//app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter) {
     $scope.init = function(){
         console.info('init db');
         DBService.init();

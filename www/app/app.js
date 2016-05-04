@@ -17,14 +17,13 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins.Keyboard) {
-            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             cordova.plugins.Keyboard.disableScroll(true);
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
         }
-
+        
         $ionicPlatform.registerBackButtonAction(function (event) {
             //if( ($state.current.name=="base.login" || $state.current.name=="base.register") && (UserService.isLogged()) ){
             //    event.preventDefault();
@@ -82,9 +81,10 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
         if (!UserService.isLogged()) {
             $state.go('base.login');
             console.info('redirect login');
-        }else
+        }else{
             UserService.registerNotifications();
-
+        }
+        
         $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
             if( (toState.name == "base.login" || toState.name == "base.register"   ) && (UserService.isLogged()) )
             {

@@ -1,4 +1,5 @@
 app.controller('ArtistController', function ($rootScope, $scope,DBService,  $state, $filter, $ionicPopup, $ionicScrollDelegate, filterFilter, $anchorScroll, ArtistService, SpotifyService, ScheduleService, GLOBAL, $ionicActionSheet, $ionicLoading, $stateParams, $cordovaSocialSharing, MusicService, VersionService, $localStorage) {
+a//pp.controller('ArtistController', function ($rootScope, $scope, $state, $filter, $ionicPopup, $ionicScrollDelegate, filterFilter, $anchorScroll, ArtistService, SpotifyService, ScheduleService, GLOBAL, $ionicActionSheet, $ionicLoading, $stateParams, $cordovaSocialSharing, MusicService, VersionService, $localStorage) {
 
     $scope.init = function () {
         $scope.view = {};
