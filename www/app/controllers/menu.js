@@ -1,22 +1,19 @@
-app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter) {
+app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter, DeviceService, $localStorage) {
 
     $scope.init = function(){
-        console.info('init db');
         DBService.init();
         $scope.view = {};
         $scope.view.server_image = GLOBAL.server.image;
         $scope.view.show_list = 'favorites';
         $scope.view.favorites = false;
         $scope.view.notifications = false;
-
-        $scope.view.setting = {};
-        $scope.view.setting.notifications = true;
         $scope.view.pass = new UserService.resource();
         $scope.view.weathers = {};
 
         if(UserService.isLogged())
         {
             $scope.view.user = UserService.getUser();
+            $scope.view.notificationActive = UserService.notificationActive();
         }
 
         $scope.view.scheduleActive = false;
@@ -203,7 +200,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
             template: 'Cerrando...'
         });
         UserService.logout();
-        $state.go("base.login");
         $scope.closeSettings();
         $ionicLoading.hide();
     };
@@ -238,6 +234,23 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
             });
         }
     };
+
+
+    $scope.changeNotification = function(){
+        var data = {};
+        data.access_token = UserService.getUser().access_token;
+        data.device_token = $localStorage.device_token;
+        data.os = $localStorage.os;
+
+        if($scope.view.notificationActive)
+        {
+            UserService.registerDevice(data).then(function(response){
+            });
+        }else{
+            UserService.unRegisterDevice(data).then(function(response){
+            });
+        }
+    }
 
 
 });

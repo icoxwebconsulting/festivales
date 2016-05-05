@@ -25,7 +25,7 @@
     "cordova-plugin-inappbrowser",
     {
       "variables": {
-        "SENDER_ID": "les-arts"
+        "SENDER_ID": "1001556531635"
       },
       "locator": "phonegap-plugin-push",
       "id": "phonegap-plugin-push"

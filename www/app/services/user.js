@@ -1,5 +1,5 @@
 'use strict';
-app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorage, $ionicPopup, DeviceService, $q) {
+app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorage, $ionicPopup, DeviceService, $q, $state) {
 
     var resource = $resource(GLOBAL.api.url + GLOBAL.api.version + '/users', {}, {
         'register': {
@@ -40,14 +40,24 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         return isLogged() ? getUser().id : 0;
     }
 
+    function notificationActive(){
+        return isLogged() ? getUser().notification : false;
+    }
+
     function setUser(user){
         $localStorage.user = user;
         registerNotifications();
     }
 
     function logout(){
-        $localStorage.user = {};
-        unRegisterDevice();
+        var data = {};
+        data.access_token = $localStorage.user.access_token;
+        data.device_token = $localStorage.device_token;
+        data.os = $localStorage.os;
+        unRegisterDevice(data).then(function(response){
+            $localStorage.user = {};
+            $state.go("base.login");
+        });
     }
 
     function validateEmail(email) {
@@ -55,11 +65,10 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         return pattern.test(email);
     }
 
-    function unRegisterDevice() {
+    function unRegisterDevice(data) {
         var deferred = $q.defer();
-
-        $scope.device = new DeviceService.resource();
-        $scope.device.$register(function (response){
+        var deviceResource = new DeviceService.resource();
+        deviceResource.$unRegister({access_token: data.access_token, device_token: data.device_token }, function (response){
             deferred.resolve(response);
         }, function (error) {
             deferred.resolve(error);
@@ -69,16 +78,17 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
 
 
     function registerDevice(data) {
-        console.info('register device');
         var deferred = $q.defer();
-        $scope.device = new DeviceService.resource();
-        $scope.access_token = data.access_token;
-        $scope.device_token = data.device_token;
-        $scope.device.os = data.os;
+        var deviceResource = new DeviceService.resource();
+        deviceResource.access_token = data.access_token;
+        deviceResource.device_token = data.device_token;
+        deviceResource.os = data.os;
 
-        $scope.device.$register(function (response){
+        deviceResource.$register(function (response){
+            console.info('register device response ', response);
             deferred.resolve(response);
         }, function (error) {
+            console.info('register device error ', error);
             deferred.resolve(error);
         });
 
@@ -94,8 +104,8 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
 
             var push = PushNotification.init({
                 android: {
-                    senderID: "les-arts",
-                    icon: "festival",
+                    senderID: "1001556531635",
+                    icon: "icon",
                     iconColor: "lightgrey"
                 },
                 ios: {
@@ -106,9 +116,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                 windows: {}
             });
 
-            console.info('getUser()', getUser());
             if (getUser().device_token === null || getUser().device_token === undefined && (push !== null) ) {
-                console.info('entro en device');
                 push.on('registration', function (data) {
                     console.info('data registration', data);
                     // android by default
@@ -117,6 +125,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                         os = '1';
 
                     $localStorage.device_token = data.registrationId;
+                    $localStorage.os = os;
                     registerDevice({
                         access_token: getUser().access_token,
                         os: os,
@@ -149,6 +158,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         logout: logout,
         registerNotifications:registerNotifications,
         registerDevice:registerDevice,
-        unRegisterDevice:unRegisterDevice
+        unRegisterDevice:unRegisterDevice,
+        notificationActive: notificationActive
     };
 });
