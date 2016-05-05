@@ -24,6 +24,8 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
             StatusBar.styleDefault();
         }
         
+        if(navigator && navigator.splashscreen) navigator.splashscreen.hide();
+        
         $ionicPlatform.registerBackButtonAction(function (event) {
             //if( ($state.current.name=="base.login" || $state.current.name=="base.register") && (UserService.isLogged()) ){
             //    event.preventDefault();
