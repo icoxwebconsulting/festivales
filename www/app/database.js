@@ -1,12 +1,12 @@
 app.constant('DB_CONFIG', {
-    name: 'DB',
+    name: 'LesArts',
     tables: [
         {
             name: 'artists',
             erasable: true,
             columns: [
                 {name: 'id', type: 'integer'},
-                {name: 'name', type: 'text'},
+                {name: 'name', type: 'text UNIQUE'},
                 {name: 'description', type: 'text'},
                 {name: 'image_profile', type: 'text'},
                 {name: 'image_cover', type: 'text'},
