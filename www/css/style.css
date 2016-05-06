@@ -57,12 +57,18 @@
 }
 
 .row.unlimited-items {
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;
     flex-wrap: wrap;
     margin-top: 0px !important;
 }
 
 .row.unlimited-items .col{
+    -webkit-flex: none; /* Safari 6.1+ */
+    -ms-flex: none; /* IE 10 */
     flex: none;
+    /*flex: none;*/
     width: 50%;
 }
 
@@ -361,6 +367,10 @@
     padding: 20px;
 }
 
+.discover .subtitle .center{
+    padding: 2% !important;
+}
+
 
 .subtitle .days{
     width: 100% !important;
@@ -371,6 +381,8 @@
     width: 20% !important;
     display: inline;
 }
+
+
 
 
 .subtitle .left img, .subtitle .right img{
