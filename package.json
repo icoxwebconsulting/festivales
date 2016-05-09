@@ -23,20 +23,20 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-statusbar",
     "ionic-plugin-keyboard",
-    {
-      "variables": {
-        "SENDER_ID": "les-arts"
-      },
-      "locator": "phonegap-plugin-push",
-      "id": "phonegap-plugin-push"
-    },
     "cordova-plugin-appavailability@0.4.2",
     "cordova-plugin-compat@1.0.0",
     "cordova-plugin-geolocation@2.1.0",
     "cordova-plugin-inappbrowser@1.2.1",
     "cordova-plugin-splashscreen@3.1.0",
     "cordova-plugin-x-socialsharing@5.0.12",
-    "cordova-sqlite-storage"
+    "cordova-sqlite-storage",
+    {
+      "variables": {
+        "SENDER_ID": "1001556531635"
+      },
+      "locator": "phonegap-plugin-push",
+      "id": "phonegap-plugin-push"
+    }
   ],
   "cordovaPlatforms": [
     "android",

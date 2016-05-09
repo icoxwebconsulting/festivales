@@ -12,7 +12,10 @@
             <ion-item class="item-divider">Notificaciones</ion-item>
         </ion-list>
         <div class="list input-list">
-            <ion-toggle toggle-class="toggle-light" name="Notificaciones">Activar</ion-toggle>
+            <ion-toggle ng-model="view.notificationActive" ng-change="changeNotification()">
+                <span ng-if="!view.notificationActive">Activar</span>
+                <span ng-if="view.notificationActive">Desactivar</span>
+            </ion-toggle>
         </div>
         <ion-list class="input-list">
             <ion-item class="item-divider item-title">Contraseña</ion-item>

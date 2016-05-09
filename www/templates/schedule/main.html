@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div ng-if="!view.scheduleActive && view.ready" class="coming-soon">
+        <div overflow-scroll="false" ng-if="!view.scheduleActive && view.ready" class="coming-soon">
             <img src="img/coolway/coming_soon.png">
         </div>
         <div ng-include="'templates/schedule/by-time.html'" ng-if="view.show_list == 'time' && view.scheduleActive"></div>

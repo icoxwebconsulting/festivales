@@ -29,15 +29,34 @@ app.directive('favorite', ['FavoriteService','UserService','$ionicPopup','$state
 
 
             function remove(artistId){
-                FavoriteService.remove(artistId);
-                $scope.data.status = 'off';
-                $scope.$emit('favorite:change', true);
+                var FavResource = new FavoriteService.resource();
+                FavResource.$delete({artist_id: artistId}, function (response){
+                    FavoriteService.remove(artistId);
+                    $scope.data.status = 'off';
+                    $scope.$emit('favorite:change', true);
+                }, function (error) {
+                    $ionicPopup.alert({
+                        title: "Error",
+                        template: "Sin conexión a internet"
+                    });
+                });
             }
 
             function add(artistId){
-                FavoriteService.add(artistId);
-                $scope.data.status = 'on';
-                $scope.$emit('favorite:change', true);
+                var FavResource = new FavoriteService.resource();
+                FavResource.artist_id = artistId;
+
+
+                FavResource.$create(function (response){
+                    FavoriteService.add(artistId);
+                    $scope.data.status = 'on';
+                    $scope.$emit('favorite:change', true);
+                }, function (error) {
+                    $ionicPopup.alert({
+                        title: "Error",
+                        template: "Sin conexión a internet"
+                    });
+                });
             }
 
             $scope.change = function(status){
