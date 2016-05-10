@@ -146,12 +146,21 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 }
             }
         })
-        .state('menu.streaming', {
-            url: 'streaming',
+        .state('menu.foodies', {
+            url: 'foodies',
             views: {
                 'content': {
-                    templateUrl: 'templates/streaming/main.html',
-                    controller: 'StreamingController'
+                    templateUrl: 'templates/foodies/main.html',
+                    controller: 'FoodiesController'
+                }
+            }
+        })
+        .state('menu.foodies-detail', {
+            url: 'foodies/:id',
+            views: {
+                'content': {
+                    templateUrl: 'templates/foodies/detail.html',
+                    controller: 'FoodiesController'
                 }
             }
         })

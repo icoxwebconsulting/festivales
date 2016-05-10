@@ -220,7 +220,7 @@
 
 .sidebar-right .button-clear, .category{
     display: block !important;
-    margin-top: -5px !important;
+    margin-top: -10px !important;
 }
 
 .categories li{
@@ -228,7 +228,7 @@
 }
 
 .category img{
-    height: 40px;
+    height: 38px;
     margin-left: 45px;
     vertical-align: middle;
 }
@@ -239,7 +239,7 @@
     text-align:left;
     color: #ffffff;
     font-family: Ruina, ITC-ClearfaceStd-Regular  !important;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 }
 
