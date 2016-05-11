@@ -154,7 +154,7 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
 
         //Letters are shorter, everything else is 52 pixels
         $scope.getItemHeight = function(item) {
-            return item.isLetter ? 40 : 100;
+            return item.isLetter ? 35 : 100;
         };
 
         $scope.scrollTop = function() {

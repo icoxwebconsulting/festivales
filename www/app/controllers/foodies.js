@@ -95,7 +95,7 @@ app.controller('FoodiesController', function ($rootScope, $scope,DBService,  $st
 
         //Letters are shorter, everything else is 52 pixels
         $scope.getItemHeight = function(item) {
-            return item.isLetter ? 40 : 100;
+            return item.isLetter ? 35 : 100;
         };
 
         $scope.scrollTop = function() {

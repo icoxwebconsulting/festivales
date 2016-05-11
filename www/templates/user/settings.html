@@ -9,7 +9,7 @@
     </ion-header-bar>
     <ion-content>
         <ion-list>
-            <ion-item class="item-divider">Notificaciones</ion-item>
+            <ion-item class="item-divider"><span>Notificaciones</span></ion-item>
         </ion-list>
         <div class="list input-list">
             <ion-toggle ng-model="view.notificationActive" ng-change="changeNotification()">
@@ -18,7 +18,7 @@
             </ion-toggle>
         </div>
         <ion-list class="input-list">
-            <ion-item class="item-divider item-title">Contraseña</ion-item>
+            <ion-item class="item-divider item-title"><span>Contraseña</span></ion-item>
             <label class="item item-input">
                 <span class="input-label">Actual contraseña</span>
                 <input type="password" placeholder="" ng-model="view.pass.current_password">
@@ -39,7 +39,7 @@
             </label>
         </ion-list>
         <ion-list>
-            <ion-item class="item-divider">Cuenta</ion-item>
+            <ion-item class="item-divider"><span>Cuenta</span></ion-item>
         </ion-list>
         <div class="list input-list">
             <button class="button button-stable button-100" ng-click="logout()">Cerrar sesi&oacute;n</button>

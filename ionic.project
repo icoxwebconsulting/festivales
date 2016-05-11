@@ -1,11 +1,8 @@
 {
   "name": "Les Arts",
   "app_id": "com.gravedad.lesarts",
-  "browsers": [
-    {
-      "platform": "android",
-      "browser": "crosswalk",
-      "version": "12.41.296.5"
-    }
+  "gulpStartupTasks": [
+    "default",
+    "watch"
   ]
 }

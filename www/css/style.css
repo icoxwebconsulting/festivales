@@ -664,14 +664,17 @@
     border-top: none !important;
     margin: 0px !important;
     vertical-align: middle;
-    padding: 4px;
     max-height: 20px !important;
     cursor: default !important;
 }
 
+.schedule .list .item-divider{
+    padding: 4px;
+
+}
+
 .artist .list .item-divider p{
-    margin-top: -5px;
-    margin-left: 5px;
+    margin-left: 5px !important;
     color: #ffffff;
     font-size: 14px;
     font-family: ITC-ClearfaceStd-Regular !important;
@@ -1045,6 +1048,7 @@
     color:#04041B !important;
     font-family:  ITC-ClearfaceStd-Regular!important;
     height: 40px !important;
+    padding: 12px !important;
 }
 
 .modal-settings .list{
@@ -1068,13 +1072,12 @@
     background-color: #ffffff !important;
     border-color: #ffffff !important;
     height: 45px !important;
-    margin: 5px !important;
 }
 
 .modal-settings .input-list .item-title{
     background-color: #F5E5C1 !important;
     border-color: #F0E0BC !important;
-    padding: 15px;
+    padding: 12px;
     height: 40px !important;
     margin: 0 !important;
 }
