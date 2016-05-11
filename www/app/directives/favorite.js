@@ -30,7 +30,7 @@ app.directive('favorite', ['FavoriteService','UserService','$ionicPopup','$state
 
             function remove(artistId){
                 var FavResource = new FavoriteService.resource();
-                FavResource.$delete({artist_id: artistId}, function (response){
+                FavResource.$delete({user_id : UserService.getUserId(), artist_id: artistId}, function (response){
                     FavoriteService.remove(artistId);
                     $scope.data.status = 'off';
                     $scope.$emit('favorite:change', true);
@@ -47,7 +47,7 @@ app.directive('favorite', ['FavoriteService','UserService','$ionicPopup','$state
                 FavResource.artist_id = artistId;
 
 
-                FavResource.$create(function (response){
+                FavResource.$create({user_id : UserService.getUserId()},function (response){
                     FavoriteService.add(artistId);
                     $scope.data.status = 'on';
                     $scope.$emit('favorite:change', true);

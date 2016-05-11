@@ -273,6 +273,10 @@
     margin-top: 3px !important;
 }
 
+.platform-ios .header-right-menu .button-clear{
+    margin-top: 25px !important;
+}
+
 .sidebar-right .menu-tabs{
     background-color: #FFA700 !important;
     border: none !important;

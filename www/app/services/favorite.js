@@ -5,17 +5,26 @@ app.factory('FavoriteService', function ($rootScope, $resource, GLOBAL, DBServic
         'getAll': {
             method: 'GET',
             isArray: false,
-            url: GLOBAL.api.url + GLOBAL.api.version + '/favorites/' + UserService.getUserId()
+            url: GLOBAL.api.url + GLOBAL.api.version + '/favorites/:user_id',
+            params: {
+                user_id: '@user_id'
+            }
         },
         'create': {
             method: 'POST',
             isArray: false,
-            url: GLOBAL.api.url + GLOBAL.api.version + '/favorites/' + UserService.getUserId()
+            url: GLOBAL.api.url + GLOBAL.api.version +'/favorites/:user_id',
+            params: {
+                user_id: '@user_id'
+            }
         },
         'delete': {
             method: 'DELETE',
             isArray: false,
-            url: GLOBAL.api.url + GLOBAL.api.version + '/favorites/' + UserService.getUserId()
+            url: GLOBAL.api.url + GLOBAL.api.version +'/favorites/:user_id',
+            params: {
+                user_id: '@user_id'
+            }
         }
     });
 
