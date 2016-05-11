@@ -110,8 +110,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                 ios: {
                     alert: "true",
                     badge: "true",
-                    sound: "true",
-                    senderID: "1001556531635" // GCM Sender ID (project ID)
+                    sound: "true"
                 }
             });
 

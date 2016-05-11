@@ -21,7 +21,7 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
-            StatusBar.styleDefault();
+            StatusBar.styleLightContent();
         }
         
         if(navigator && navigator.splashscreen) navigator.splashscreen.show();

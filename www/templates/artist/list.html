@@ -22,7 +22,8 @@
                           item-height="getItemHeight(item)"
                           id="{{ item.isLetter ? (item.letter + '_divider') : item.id}}"
                           ng-style="{'line-height': getItemHeight(item) + 'px'}"
-                          ng-class="{'item-divider': item.isLetter}">
+                          ng-class="{'item-divider' : item.isLetter, 'item-divider-artist' : lastArtist(item.isLetter)}" >
+
                     <img ng-if="!item.isLetter" ng-src="{{view.server_image}}artists/{{item.id}}/100/{{item.image_profile}}" alt="item.name" ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">
                     <p ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">{{item.letter || item.name|cleanName}}</p>
                     <favorite ng-if="!item.isLetter" artist="item"/>

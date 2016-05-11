@@ -125,6 +125,29 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
 
 
     if ($state.current.name == 'menu.artist-list') {
+        var show = false;
+        var last = false;
+
+        $scope.lastArtist = function(letter){
+
+            if(letter == true)
+            {
+                show = false;
+                last = false;
+            }
+            else
+            {
+                if(last)
+                    show = true;
+                else
+                    last = true;
+            }
+
+            console.info('show', show);
+
+            return show;
+        };
+
         var letters = $scope.letters = [];
         var artists = $scope.artists = [];
         self.getArtists(true);
