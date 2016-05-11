@@ -643,14 +643,17 @@
     border-top: none !important;
     margin: 0px !important;
     vertical-align: middle;
-    padding: 4px;
     max-height: 20px !important;
     cursor: default !important;
 }
 
+.schedule .list .item-divider{
+    padding: 4px;
+
+}
+
 .artist .list .item-divider p{
-    margin-top: -5px;
-    margin-left: 5px;
+    margin-left: 5px !important;
     color: #ffffff;
     font-size: 14px;
     font-family: ITC-ClearfaceStd-Regular !important;
