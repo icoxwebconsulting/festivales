@@ -54,7 +54,5 @@ platforms/
 plugins/
 development_tools/
 hooks/
-www/lib/
-www/res/
-www/lib
-www/res
+www/lib/*
+www/res/*
