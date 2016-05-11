@@ -71,7 +71,7 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
             }
             else{
                 console.info('api favs 1');
-                FavoriteService.resource.getAll().$promise.then(function(favorites){
+                FavoriteService.resource.getAll({user_id : UserService.getUserId()}).$promise.then(function(favorites){
                     if(favorites.data.length > 0)
                     {
                         var ids = [];

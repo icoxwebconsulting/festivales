@@ -110,9 +110,9 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                 ios: {
                     alert: "true",
                     badge: "true",
-                    sound: "true"
-                },
-                windows: {}
+                    sound: "true",
+                    senderID: "1001556531635" // GCM Sender ID (project ID)
+                }
             });
 
             if (getUser().device_token === null || getUser().device_token === undefined && (push !== null) ) {
