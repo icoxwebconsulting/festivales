@@ -71,6 +71,7 @@ app.controller('FoodiesController', function ($rootScope, $scope,DBService,  $st
             showDelay: 0
         });
         FoodiesService.resource.getAll().$promise.then(function(foodies){
+            $localStorage.foodies = [];
             $scope.view.foodies = foodies.data;
             if(sort === true)
                 self.sort();
