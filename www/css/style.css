@@ -1008,6 +1008,7 @@
     color:#04041B !important;
     font-family:  ITC-ClearfaceStd-Regular!important;
     height: 40px !important;
+    padding: 12px !important;
 }
 
 .modal-settings .list{
@@ -1031,13 +1032,12 @@
     background-color: #ffffff !important;
     border-color: #ffffff !important;
     height: 45px !important;
-    margin: 5px !important;
 }
 
 .modal-settings .input-list .item-title{
     background-color: #F5E5C1 !important;
     border-color: #F0E0BC !important;
-    padding: 15px;
+    padding: 12px;
     height: 40px !important;
     margin: 0 !important;
 }
