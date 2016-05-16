@@ -1,6 +1,6 @@
 <ion-view>
     <ion-content has-bouncing="true" class="artist">
-        <div class="row subtitle filter" scroll="false">
+        <div class="row subtitle filter" scroll="false" ng-if="view.foodies.length">
             <div class="col col-100">
                 <input type="search"
                        ng-model="view.search"
@@ -28,6 +28,9 @@
                     <!--<favorite ng-if="!item.isLetter" artist="item"/>-->
                 </ion-item>
             </ion-list>
+        </div>
+        <div ng-if="!view.foodies.length && view.ready" class="coming-soon">
+            <img src="img/coolway/coming_soon.png">
         </div>
     </ion-content>
 </ion-view>
