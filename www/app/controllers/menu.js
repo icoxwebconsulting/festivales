@@ -28,7 +28,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
     $scope.init();
 
     $scope.$on('favorite:change', function(event, args) {
-        console.info('favorite change');
         if(UserService.isLogged())
             self.getFavorites();
 
@@ -37,11 +36,9 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
     $scope.$on('artist:ready', function(event, args) {
         if(UserService.isLogged())
         {
-            console.info('entro favoritos logeados');
             self.getFavorites();
             self.getNotifications();
-        }else
-            console.info("no logged");
+        }
 
     });
 
@@ -55,7 +52,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
         //});
         // Get all the favorites
         FavoriteService.getAll().then(function(favorites){
-            console.info('database favs out', favorites);
             if(favorites.length > 0)
             {
                 var ids = [];
@@ -63,14 +59,12 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
                     ids.push(value.artist_id);
                 });
                 ArtistService.getFavorites(ids).then(function(favorites){
-                    console.info('database favs', favorites);
                     $scope.view.favorites = favorites;
                     $scope.view.ready = true;
                     //$ionicLoading.hide();
                 });
             }
             else{
-                console.info('api favs 1');
                 FavoriteService.resource.getAll({user_id : UserService.getUserId()}).$promise.then(function(favorites){
                     if(favorites.data.length > 0)
                     {
@@ -80,7 +74,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
                             ids.push(value.id);
                         });
                         ArtistService.getFavorites(ids).then(function(favorites){
-                            console.info('api favs final', favorites);
                             $scope.view.favorites = favorites;
                             $scope.view.ready = true;
                             //$ionicLoading.hide();
@@ -92,7 +85,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
                     }
 
                 },function(error) {
-                    console.info('error', error);
                     $scope.view.ready = true;
                     //$ionicLoading.hide();
                 });
@@ -104,7 +96,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
     self.getNotifications = function(){
         // Get all the notifications
         NotificationService.resource.getAll().$promise.then(function(notifications){
-            console.info('notifications', notifications);
             if(notifications.data.length > 0)
             {
                 $scope.view.notifications = notifications.data;
@@ -114,7 +105,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
             }
 
         },function(error) {
-            console.info('error', error);
             $scope.view.ready = true;
             //$ionicLoading.hide();
         });
@@ -130,7 +120,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
 
     // Open the login modal
     $scope.openSettings = function() {
-        console.info($scope.view.user);
 
         if(UserService.isLogged())
             $scope.modalSettings.show();
@@ -225,11 +214,9 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
     };
 
     $scope.getWeather = function(){
-        console.info('weather afuera', $scope.view.weathers.length);
         if($scope.view.weathers)
         {
             WeatherService.resource.getAll().$promise.then(function(weathers){
-                console.info('weather', weathers);
                 $scope.view.weathers = weathers.data;
             });
         }

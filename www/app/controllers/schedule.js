@@ -42,7 +42,6 @@ app.controller('ScheduleController', function($scope,ArtistService, ScheduleServ
 
             if(artists.length > 0)
             {
-                console.info('database', artists);
                 $scope.view.artists = artists;
             }
             else{
@@ -55,14 +54,12 @@ app.controller('ScheduleController', function($scope,ArtistService, ScheduleServ
                     showDelay: 0
                 });
                 ArtistService.resource.getAll().$promise.then(function(artists){
-                    console.info('api', artists);
                     $scope.view.artists = artists.data;
                     angular.forEach(artists.data, function (value, key) {
                         ArtistService.add(value);
                     });
                     $ionicLoading.hide();
                 },function(error) {
-                    console.info('error', error);
                     $ionicLoading.hide();
                 });
             }

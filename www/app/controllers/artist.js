@@ -143,8 +143,6 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
                     last = true;
             }
 
-            console.info('show', show);
-
             return show;
         };
 
@@ -309,25 +307,6 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
 
         };
 
-        //$scope.showShareMenu = function() {
-        //
-        //    $ionicActionSheet.show({
-        //        titleText: 'Share',
-        //        buttons: [
-        //            {text: "Share on Facebook"},
-        //            {text: "Share on Twitter"},
-        //            {text: "Send email"}
-        //        ],
-        //        cancelText: 'Cancel',
-        //        cancel: function () {
-        //            console.log('CANCELLED');
-        //        },
-        //        buttonClicked: function (index) {
-        //            console.log('BUTTON CLICKED', index);
-        //            return true;
-        //        }
-        //    });
-        //};
         $scope.shareAnywhere = function(artist) {
             //console.info('artist', artist);
             var name = artist.name;

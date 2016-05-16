@@ -85,10 +85,8 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         deviceResource.os = data.os;
 
         deviceResource.$register(function (response){
-            console.info('register device response ', response);
             deferred.resolve(response);
         }, function (error) {
-            console.info('register device error ', error);
             deferred.resolve(error);
         });
 
@@ -99,9 +97,6 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
     function registerNotifications() {
         if (window.PushNotification) {
             var PushNotification = window.PushNotification;
-
-            console.info('push notification',PushNotification);
-
             var push = PushNotification.init({
                 android: {
                     senderID: "1001556531635",
@@ -118,7 +113,6 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
 
             if (getUser().device_token === null || getUser().device_token === undefined && (push !== null) ) {
                 push.on('registration', function (data) {
-                    console.info('data registration', data);
                     // android by default
                     var os = '0';
                     if (ionic.Platform.isIOS())
@@ -143,7 +137,6 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
 
             push.on('error', function (e) {
                 // e.message
-                console.log('notification error', e);
             });
         }
     }

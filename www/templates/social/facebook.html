@@ -1,35 +1,47 @@
-<div ng-repeat="data in view.facebookFeed">
-    <div class="list card" ng-if="data.hasOwnProperty('message')">
+<div class="gray-background">
+
+    <div class="list card fb-profile" >
+        <div class="header" scroll="false">
+            <div class="picture">
+                <img ng-src="{{view.facebookProfile.cover.source}}">
+            </div>
+            <div class="legend">
+                <img ng-src="{{view.facebookProfile.picture.data.url}}"/>
+                <h2 style="margin:0 !important;">{{view.facebookProfile.name}}</h2>
+                <p>{{view.facebookProfile.category}}</p>
+            </div>
+        </div>
+        <div class="info">
+            <hr>
+            <p>{{view.facebookProfile.about}}</p>
+            <a ng-click="openLink('{{view.facebookProfile.website}}')">{{view.facebookProfile.website}}</a>
+        </div>
+    </div>
+
+    <div class="list card fbcard" ng-repeat="item in view.facebookFeed">
+
         <div class="item item-avatar title-facebook">
-            <img ng-src="{{view.facebookPicture}}">
-            <h2>{{data.from.name}}</h2>
-            <p>{{correctTimestring(data.created_time) | date:'medium'}}</p>
+            <img ng-src="https://graph.facebook.com/{{ item.from.id }}/picture"/>
+            <h2>{{item.from.name}}</h2>
+            <p class="date">{{item.created_time | date:'MMM d, y h:mma'}}</p>
         </div>
         <div class="item item-body">
-            <p>
-                {{data.message}}
-            </p>
-            <p>
-                <a href="#" class="subdued">{{data.likes.data.length}} Likes</a>
-                <!--<a href="#" class="subdued">{{data.comments.data.length}} Comments</a>-->
-            </p>
+            <p ng-if="item.story" style="color:default !important;">{{item.story}}</p>
+            <p style="color:default !important;">{{item.message}}</p>
+            <p ng-if="item.name">{{item.name}}</p>
+            <p ng-if="item.description" style="color:default !important;">{{item.description}}</p>
+            <img ng-if="item.full_picture" ng-src="{{ item.full_picture }}"
+                 style="width:100%; margin: 6px; box-shadow:5px 5px 5px grey"/>
         </div>
-        <!--<div class="item tabs tabs-secondary tabs-icon-left">-->
-            <!--<a class="tab-item" href="#">-->
-                <!--<i class="icon ion-thumbsup"></i>-->
-                <!--Like-->
-            <!--</a>-->
-            <!--<a class="tab-item" href="#">-->
-                <!--<i class="icon ion-chatbox"></i>-->
-                <!--Comment-->
-            <!--</a>-->
-            <!--<a class="tab-item" href="#">-->
-                <!--<i class="icon ion-share"></i>-->
-                <!--Share-->
-            <!--</a>-->
-        <!--</div>-->
+        <a class="item" ng-if="item.likes || item.comments || item.shares" style="background-color: white !important;">
+            <h4 style="display: inline-block!important;">
+                <span ng-if="item.likes" class="padding">{{item.likes.data.length}} Me gusta</span>
+                <span ng-if="item.comments" class="padding">{{item.comments.data.length}} comentarios</span>
+                <span ng-if="item.shares && item.shares.count > 1" class="padding">Compartida {{item.shares.count}} veces</span>
+                <span ng-if="item.shares && item.shares.count == 1" class="padding">Se ha compartido 1 vez</span>
+
+            </h4>
+        </a>
     </div>
+
 </div>
-
-
-<div ng-show="!view.facebookFeed.length">Cargando facebook...</div>

@@ -151,7 +151,6 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
         $cordovaGeolocation.getCurrentPosition(posOptions)
             .then(function (position) {
 
-                console.info('my location', position);
                 var mypos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
                 var myMarker = new google.maps.Marker({

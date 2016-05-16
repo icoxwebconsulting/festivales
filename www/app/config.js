@@ -15,8 +15,19 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                     templateUrl: 'templates/user/sign_in.html',
                     controller: 'LoginController',
                     resolve: {
-                        data: function ($ionicPlatform, UserService, $state) {
+                        data: function ($ionicPlatform, UserService, $state, $cordovaGoogleAnalytics) {
                             $ionicPlatform.ready(function() {
+                                function _waitForAnalytics(){
+                                    if(typeof analytics !== 'undefined'){
+                                        $cordovaGoogleAnalytics.trackView('Login screen');
+                                    }
+                                    else{
+                                        setTimeout(function(){
+                                            _waitForAnalytics();
+                                        },250);
+                                    }
+                                }
+                                _waitForAnalytics();
                                 if (UserService.isLogged()) {
                                     $state.go('menu.artist-discover');
                                     console.info('is logged');
@@ -35,7 +46,18 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                     templateUrl: 'templates/user/sign_up.html',
                     controller: 'RegisterController',
                     resolve: {
-                        data: function ($ionicPlatform, UserService, $state) {
+                        data: function ($ionicPlatform, UserService, $state, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Register screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
                             $ionicPlatform.ready(function() {
                                 if (UserService.isLogged()) {
                                     $state.go('menu.artist-discover');
@@ -79,7 +101,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/artist/main.html',
-                    controller: 'ArtistController'
+                    controller: 'ArtistController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Artist home screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -88,7 +125,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/artist/list.html',
-                    controller: 'ArtistController'
+                    controller: 'ArtistController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Artist list screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -97,7 +149,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/artist/detail.html',
-                    controller: 'ArtistController'
+                    controller: 'ArtistController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Artist detail screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -106,7 +173,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/poster/main.html',
-                    controller: 'PosterController'
+                    controller: 'PosterController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Poster screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -115,7 +197,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/schedule/main.html',
-                    controller: 'ScheduleController'
+                    controller: 'ScheduleController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Schedule screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -124,7 +221,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/map/main.html',
-                    controller: 'MapController'
+                    controller: 'MapController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Map screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -133,7 +245,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/ticket/main.html',
-                    controller: 'TicketController'
+                    controller: 'TicketController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Ticket screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -142,7 +269,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/coolway/main.html',
-                    controller: 'CoolwayController'
+                    controller: 'CoolwayController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Coolway screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -151,7 +293,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/foodies/main.html',
-                    controller: 'FoodiesController'
+                    controller: 'FoodiesController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Foodies list screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -160,7 +317,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/foodies/detail.html',
-                    controller: 'FoodiesController'
+                    controller: 'FoodiesController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Foodies detail screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -169,7 +341,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/info/main.html',
-                    controller: 'InfoController'
+                    controller: 'InfoController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Info screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -178,7 +365,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/info/map.html',
-                    controller: 'MapHowGetController'
+                    controller: 'MapHowGetController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Map Info screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         })
@@ -203,7 +405,22 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
             views: {
                 'content': {
                     templateUrl: 'templates/social/main.html',
-                    controller: 'SocialController'
+                    controller: 'SocialController',
+                    resolve: {
+                        data: function ($ionicPlatform, $cordovaGoogleAnalytics) {
+                            function _waitForAnalytics(){
+                                if(typeof analytics !== 'undefined'){
+                                    $cordovaGoogleAnalytics.trackView('Social screen');
+                                }
+                                else{
+                                    setTimeout(function(){
+                                        _waitForAnalytics();
+                                    },250);
+                                }
+                            }
+                            _waitForAnalytics();
+                        }
+                    }
                 }
             }
         });

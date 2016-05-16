@@ -22,10 +22,8 @@ app.directive('lazyLoad', ['$window', '$q', function ($window, $q) {
         link: function (scope, element, attrs) { // function content is optional
             // in this example, it shows how and when the promises are resolved
             if ($window.google && $window.google.maps) {
-                console.log('gmaps already loaded');
             } else {
                 lazyLoadApi().then(function () {
-                    console.log('promise resolved');
                     if ($window.google && $window.google.maps) {
                         console.log('gmaps loaded');
                     } else {

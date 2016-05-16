@@ -10,7 +10,6 @@ app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $io
         });
         // Get all the Coolway Photos
         CoolwayService.resource.getAll().$promise.then(function(photos){
-            console.info('photos', photos.data);
             $scope.view.photos = photos.data;
             $ionicLoading.hide();
             $scope.view.ready = true;
@@ -34,7 +33,6 @@ app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $io
     };
 
     if ($state.current.name == 'menu.coolway-detail') {
-        console.info('$stateParams.image',$stateParams.image);
         $scope.view.image = $stateParams.image;
     }
 
@@ -89,7 +87,6 @@ app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $io
 
     $scope.shareImage = function(image)
     {
-        console.info('image', image);
         $cordovaSocialSharing.share(null, null, image, null);
     };
 
