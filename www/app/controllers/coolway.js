@@ -13,6 +13,9 @@ app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $io
             $scope.view.photos = photos.data;
             $ionicLoading.hide();
             $scope.view.ready = true;
+        },function(error) {
+            $ionicLoading.hide();
+            $scope.view.ready = true;
         });
     };
 

@@ -18,7 +18,7 @@
         </div>
         <div class="row row-stick unlimited-items" scroll="true" ng-show="view.ready">
             <div class="col col-stick" ng-repeat="item in view.artists">
-                <img ng-click="showDetail(item.id)" ng-src="{{view.server_image}}artists/{{item.id}}/200/{{item.image_profile}}" width="100%" alt="item.name" />
+                <img ng-click="showDetail(item.id)" err-SRC="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{item.id}}/200/{{item.image_profile}}" width="100%" alt="item.name" />
                 <button class="button button-clear btn-action" ng-if="item.spotify_id.length || (view.isPause && view.currentTrack.spotify_id != item.spotify_id && !view.loader)" ng-click="playTrack(item)">
                     <img ng-src="img/player/play.png">
                 </button>

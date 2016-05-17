@@ -1,7 +1,6 @@
 app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter, DeviceService, $localStorage) {
 
     $scope.init = function(){
-        DBService.init();
         $scope.view = {};
         $scope.view.server_image = GLOBAL.server.image;
         $scope.view.show_list = 'favorites';
@@ -43,13 +42,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
     });
 
     self.getFavorites = function(){
-        //$ionicLoading.show({
-        //    content: 'Cargando',
-        //    animation: 'fade-in',
-        //    showBackdrop: true,
-        //    maxWidth: 200,
-        //    showDelay: 0
-        //});
         // Get all the favorites
         FavoriteService.getAll().then(function(favorites){
             if(favorites.length > 0)
@@ -76,17 +68,14 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
                         ArtistService.getFavorites(ids).then(function(favorites){
                             $scope.view.favorites = favorites;
                             $scope.view.ready = true;
-                            //$ionicLoading.hide();
                         });
                     }else{
                         $scope.view.favorites = {};
                         $scope.view.ready = true;
-                        //$ionicLoading.hide();
                     }
 
                 },function(error) {
                     $scope.view.ready = true;
-                    //$ionicLoading.hide();
                 });
             }
 
@@ -106,7 +95,6 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
 
         },function(error) {
             $scope.view.ready = true;
-            //$ionicLoading.hide();
         });
     };
 
@@ -237,6 +225,15 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
             UserService.unRegisterDevice(data).then(function(response){
             });
         }
+    }
+
+    $scope.getImage = function(url, type)
+    {
+        if(window.Connection) {
+            if(navigator.connection.type == Connection.NONE)
+                url = 'img/src/'+type+'.png';
+        }
+        return url;
     }
 
 

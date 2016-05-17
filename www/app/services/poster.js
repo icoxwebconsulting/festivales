@@ -12,7 +12,7 @@ app.factory('PosterService', function ($rootScope, $resource, GLOBAL, DBService)
     function add(poster) {
 
         var sql = "INSERT OR IGNORE INTO posters (id, image) VALUES(?,?)";
-        var params = [poster.id, poster.name];
+        var params = [poster.id, poster.image];
 
         return DBService.query(sql, params)
             .then(function (response) {

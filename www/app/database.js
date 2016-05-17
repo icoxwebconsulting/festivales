@@ -31,8 +31,8 @@ app.constant('DB_CONFIG', {
             name: 'posters',
             erasable: true,
             columns: [
-                {name: 'id', type: 'integer'},
-                {name: 'image', type: 'text'}
+                {name: 'id', type: 'integer PRIMARY KEY UNIQUE'},
+                {name: 'image', type: 'text UNIQUE'}
             ]
         },
         {
