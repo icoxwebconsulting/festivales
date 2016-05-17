@@ -1,32 +1,23 @@
 'use strict';
 app.factory('DBService', function ($q, DB_CONFIG) {
     var self = this;
-    self.db = null;
+    self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name, location: 1});
 
     self.init = function(drop) {
-        // Wait for Cordova to load
-        document.addEventListener("deviceready", onDeviceReady, false);
-        // Cordova is ready
-        function onDeviceReady() {
-            self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name, location: 1});
-            //self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'database', -1);
+        // Use self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name}); in production
+        self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name, location: 1});
 
-            //self.query('DROP TABLE IF EXISTS artists');
-            angular.forEach(DB_CONFIG.tables, function(table) {
-                var columns = [];
-                if(drop && table.erasable)
-                    self.query('DROP TABLE IF EXISTS '+table.name);
 
-                angular.forEach(table.columns, function(column) {
-                    columns.push(column.name + ' ' + column.type);
-                });
+        //self.query('DROP TABLE IF EXISTS artists');
+        angular.forEach(DB_CONFIG.tables, function(table) {
+            var columns = [];
+            if(drop && table.erasable)
+                self.query('DROP TABLE IF EXISTS '+table.name);
 
-               var query = 'CREATE TABLE IF NOT EXISTS ' + table.name + ' (' + columns.join(',') + ')';
-               //var query = 'CREATE TABLE ' + table.name + ' (' + columns.join(',') + ')';
-               self.query(query);
-               //console.log('Table ' + table.name + ' initialized');
+            angular.forEach(table.columns, function(column) {
+                columns.push(column.name + ' ' + column.type);
             });
-        }    
+        });   
     };
 
     self.query = function(query, bindings) {

@@ -2,7 +2,7 @@
     <ion-content has-bouncing="false" class="artist-detail" ng-show="view.ready">
         <div class="header" scroll="false">
             <div class="picture">
-                <img ng-src="{{view.server_image}}artists/{{view.artist.id}}/cover/{{view.artist.image_cover}}">
+                <img ng-src="{{view.server_image}}artists/{{view.artist.id}}/cover/{{view.artist.image_cover}}" err-SRC="img/artist/front.png">
             </div>
             <div class="legend">
                 <p>{{view.artist.name|cleanName}}</p>

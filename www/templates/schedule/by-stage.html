@@ -6,7 +6,7 @@
             </li>
             <li class="item" ng-repeat="artist in value  | orderBy:'schedule'"  ng-if="(artist.schedule | parseDate: 'd') == view.show_day ">
                 <div class="left" ng-click="showDetail({{artist.id}})">
-                    <img ng-src="{{view.server_image}}artists/{{artist.id}}/100/{{artist.image_profile}}"  class="artist-cover">
+                    <img src="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{artist.id}}/100/{{artist.image_profile}}"  class="artist-cover">
                 </div>
                 <div class="center" ng-click="showDetail({{artist.id}})">
                     <p class="artist-name">{{artist.name|cleanName}}</p>

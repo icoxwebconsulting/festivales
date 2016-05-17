@@ -13,23 +13,28 @@ app.controller('PosterController', function ($scope, $cordovaGeolocation, $ionic
             showDelay: 0
         });
 
-        // Get the poster
-        //PosterService.get().then(function(poster){
-        //
-        //    if(poster.length > 0)
-        //    {
-        //        console.info('database', poster);
-        //        $scope.view.poster = poster;
-        //        $ionicLoading.hide();
-        //    }
-        //    else{
+        //Get the poster
+        PosterService.get().then(function(poster){
+
+            if(poster.length > 0)
+            {
+                console.info('database', poster);
+                $scope.view.poster = poster[0];
+                $ionicLoading.hide();
+                $scope.view.ready = true;
+            }
+            else{
                 PosterService.resource.getAll().$promise.then(function(poster){
                     $scope.view.poster = poster.data;
-                 //   PosterService.add(poster.data);
+                    PosterService.add(poster.data);
                     $ionicLoading.hide();
+                    $scope.view.ready = true;
+                },function(error) {
+                    $ionicLoading.hide();
+                    $scope.view.ready = true;
                 });
-            //}
-        //});
+            }
+        });
     };
 
     $scope.init();
