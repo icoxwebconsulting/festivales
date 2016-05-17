@@ -9,7 +9,6 @@ app.directive('favorite', ['FavoriteService','UserService','$ionicPopup','$state
         link: function($scope, elem, attrs) {
 
             $scope.data = {'artist':$scope.artist};
-            console.info('in', $scope.data.artist);
 
             if(UserService.isLogged())
             {

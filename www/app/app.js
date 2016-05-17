@@ -11,9 +11,24 @@ var app = angular.module('lesarts',
         'ionic-zoom-view'
     ]);
 
-app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, UserService, NotificationService) {
+app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, UserService, NotificationService, $cordovaGoogleAnalytics) {
     $ionicPlatform.ready(function () {
-        //DBService.init();
+
+        function _waitForAnalytics(){
+            if(typeof analytics !== 'undefined'){
+                $cordovaGoogleAnalytics.debugMode();
+                $cordovaGoogleAnalytics.startTrackerWithId('UA-57340953-2');
+                $cordovaGoogleAnalytics.trackView('Open app');
+            }
+            else{
+                setTimeout(function(){
+                    _waitForAnalytics();
+                },250);
+            }
+        }
+        _waitForAnalytics();
+
+
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
         if (window.cordova && window.cordova.plugins.Keyboard) {

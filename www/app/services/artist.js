@@ -51,13 +51,10 @@ app.factory('ArtistService', function ($rootScope, $resource, GLOBAL, DBService)
                 args+=",";
         }
 
-        console.info('ids', ids);
-
         var sql = "SELECT * FROM artists WHERE id IN ("+args+")";
 
         return DBService.query(sql, ids)
             .then(function (result) {
-                console.log('result all', result);
                 return DBService.fetchAll(result);
             }).catch(function(error){console.log(error)});
     }

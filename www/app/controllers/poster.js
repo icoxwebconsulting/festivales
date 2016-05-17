@@ -24,7 +24,6 @@ app.controller('PosterController', function ($scope, $cordovaGeolocation, $ionic
         //    }
         //    else{
                 PosterService.resource.getAll().$promise.then(function(poster){
-                    console.info('api', poster);
                     $scope.view.poster = poster.data;
                  //   PosterService.add(poster.data);
                     $ionicLoading.hide();

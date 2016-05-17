@@ -21,12 +21,12 @@ app.factory('DBService', function ($q, DB_CONFIG) {
                     columns.push(column.name + ' ' + column.type);
                 });
 
-               // var query = 'CREATE TABLE IF NOT EXISTS ' + table.name + ' (' + columns.join(',') + ')';
-                var query = 'CREATE TABLE ' + table.name + ' (' + columns.join(',') + ')';
-                self.query(query);
-                //console.log('Table ' + table.name + ' initialized');
+               var query = 'CREATE TABLE IF NOT EXISTS ' + table.name + ' (' + columns.join(',') + ')';
+               //var query = 'CREATE TABLE ' + table.name + ' (' + columns.join(',') + ')';
+               self.query(query);
+               //console.log('Table ' + table.name + ' initialized');
             });
-        } 
+        }    
     };
 
     self.query = function(query, bindings) {

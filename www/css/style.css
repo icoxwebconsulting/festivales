@@ -1034,6 +1034,10 @@
     margin: 12px;
 }
 
+.title-facebook{
+    border: none !important;
+}
+
 .title-facebook h2, .title-facebook p{
     margin-left: 65px !important;
 }
@@ -1374,6 +1378,8 @@
 
 .facebook .item-avatar, .facebook .item-body, .twitter .item-avatar, .twitter .item-body {
     background-color: #ffffff !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 .facebook .item-body p, .twitter .item-body, .facebook .item-avatar, .twitter .item-avatar {
@@ -1381,7 +1387,7 @@
 }
 
 .facebook .item-body p, .twitter .item-body{
-    text-align: justify;
+    color: #000000;
 }
 
 
@@ -1469,3 +1475,77 @@
     height: 100% !important;
     width: 100% !important;
 }
+
+.facebook{
+    font-family: helvetica, arial, sans-serif !important;
+}
+
+.title-facebook img{
+    border: 1px solid rgba(0, 0, 0, .1) !important;
+    box-sizing: border-box !important;
+    border-radius: 0 !important;
+}
+
+.title-facebook h2, .fb-profile .legend h2{
+    margin-top: 18px !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+    padding: 1px 0 3px !important;
+    font-weight: bold !important;
+}
+
+.title-facebook p, .fb-profile .legend p{
+    color: inherit !important;
+    font-weight: normal !important;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.facebook .fbnews .tab-item {
+    color: gray !important; }
+
+.facebook .fbnews .tab-item-active {
+    color: #5b93fc !important; }
+
+.facebook .fbsearch input {
+    background-color: transparent;
+    color: white; }
+
+.facebook .fbsearch {
+    background-color: #31487C; }
+
+.facebook .bar-fb-blue {
+    background-color: #4c6ba4 !important; }
+
+.facebook .small-font {
+    font-size: 13px !important;
+    color: #6A6A74 !important; }
+
+.facebook .gray-background {
+    background-color: #d2d5da; }
+
+.facebook .padding {
+    color: gray; }
+
+.facebook .rounded-image {
+    border-radius: 50%;
+    border: 3px #3b5998 solid;
+}
+
+.fbcard, .fb-profile{
+    margin: 0 2px 10px 2px !important;
+}
+
+.fb-profile .header .picture img{
+    width: 100%;
+}
+
+.fb-profile .header .legend{
+    margin-left: 5px;
+    margin-top: -30px;
+}
+
+.fb-profile .info{
+    padding: 5px;
+}
+

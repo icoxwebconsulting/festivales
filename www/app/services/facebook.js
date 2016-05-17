@@ -3,7 +3,8 @@ app.factory('FacebookService', function ($rootScope, GLOBAL, $http, $q, $localSt
     function fetchFeed() {
         var deferred = $q.defer();
 
-        $http.get('https://graph.facebook.com/'+ GLOBAL.facebook.user_id + '/feed?fields=likes,comments,link,from,message,created_time,picture&' + $localStorage.fbAccessToken)
+
+        $http.get('https://graph.facebook.com/'+ GLOBAL.facebook.user_id + '/feed?fields=full_picture,comments,likes,shares,description,from,story,message,name,created_time,link,picture&' + $localStorage.fbAccessToken)
             .success(function (response) {
                 deferred.resolve(response);
             }).error(function () {
@@ -24,11 +25,12 @@ app.factory('FacebookService', function ($rootScope, GLOBAL, $http, $q, $localSt
         return deferred.promise;
     }
 
-    function getProfilePicture() {
+
+    function getProfile() {
         var deferred = $q.defer();
-        $http.get('https://graph.facebook.com/' + GLOBAL.facebook.user_id + '?' + $localStorage.fbAccessToken + '&fields=picture&format=json')
+        $http.get('https://graph.facebook.com/' + GLOBAL.facebook.user_id + '?' + $localStorage.fbAccessToken + '&fields=id,name,picture,cover,about,category,website&format=json')
             .success(function (response) {
-                deferred.resolve(response.picture.data.url);
+                deferred.resolve(response);
             }).error(function () {
         });
         return deferred.promise;
@@ -37,7 +39,7 @@ app.factory('FacebookService', function ($rootScope, GLOBAL, $http, $q, $localSt
     return {
         fetchFeed:fetchFeed,
         getAccessToken:getAccessToken,
-        getProfilePicture:getProfilePicture
+        getProfile:getProfile
     };
 
 });

@@ -13,7 +13,6 @@ app.controller('PlayerController', function ($scope, $ionicModal, $cordovaOauth,
             Spotify.setAuthToken(result.access_token);
             $scope.updateInfo();
         }, function(error) {
-            console.log("Error -> " + error);
         });
     };
 

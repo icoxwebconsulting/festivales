@@ -7,7 +7,6 @@ app.controller('LoginController', function ($scope, $state, $http, $ionicLoading
         $scope.view.show_login = 'options';
         $scope.view.user = new UserService.resource();
         $scope.view.loginEmail = false;
-
     };
 
     $scope.init();
@@ -30,7 +29,6 @@ app.controller('LoginController', function ($scope, $state, $http, $ionicLoading
                     format: "json"
                 }
             }).then(function (result) {
-                console.info('result', result);
                 $scope.view.user.email = result.data.email;
                 $scope.view.user.name = result.data.name;
                 $scope.view.user.social = true;

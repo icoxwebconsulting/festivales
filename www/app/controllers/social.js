@@ -1,4 +1,4 @@
-app.controller('SocialController', function($scope, FacebookService, InstagramService, TwitterService, $localStorage) {
+app.controller('SocialController', function($scope, FacebookService, InstagramService, TwitterService, $localStorage, $ionicLoading) {
 
     $scope.init = function()
     {
@@ -18,7 +18,6 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
         for (var i=0; i<arr.length; i+=size) {
             newArr.push(arr.slice(i, i+size));
         }
-        console.info('return', newArr);
         return newArr;
     };
 
@@ -31,7 +30,6 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
         TwitterService.getTimeLine().then(function(data) {
             $scope.view.twTimeline = data;
         }, function(error) {
-            console.info(error);
         });
     };
     $scope.doRefresh = function() {
@@ -55,25 +53,23 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
 
 
     $scope.getData = function() {
-        //InstagramService.fetchImages(function(data) {
-        //    console.info('instagram', data);
-        //    for(var i=0; i<data.length; i++) {
-        //        if (typeof $scope.have[data[i].id]==="undefined") {
-        //            $scope.view.pics.push(data[i]) ;
-        //            $scope.have[data[i].id] = "1";
-        //        }
-        //    }
-        //});
+        $ionicLoading.show({
+            content: 'Cargando',
+            animation: 'fade-in',
+            showBackdrop: true,
+            maxWidth: 200,
+            showDelay: 0
+        });
         InstagramService.GetFeed().then(function(items) {
             $scope.view.pics = items.concat($scope.items);
         });
         if ($localStorage.hasOwnProperty("fbAccessToken") === true) {
             FacebookService.fetchFeed().then(function (response) {
                 $scope.view.facebookFeed = response.data;
-                console.info('facebook',$scope.view.facebookFeed);
+                $ionicLoading.hide();
             });
-            FacebookService.getProfilePicture().then(function (response) {
-                $scope.view.facebookPicture = response;
+            FacebookService.getProfile().then(function (response) {
+                $scope.view.facebookProfile = response;
             });
 
         }else{
@@ -81,16 +77,13 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
                 $localStorage.fbAccessToken = data;
                 FacebookService.fetchFeed().then(function (response) {
                     $scope.view.facebookFeed = response.data;
-                    console.info('facebook',$scope.view.facebookFeed);
+                    $ionicLoading.hide();
                 });
             });
         }
-
     };
 
     $scope.getData();
-
-
 
 
     $scope.doRefreshInstagram = function() {

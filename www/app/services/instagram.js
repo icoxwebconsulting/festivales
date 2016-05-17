@@ -17,7 +17,6 @@ app.factory('InstagramService', function ($rootScope,$q,  $http, GLOBAL) {
     return {
         GetFeed: function() {
             return $http.jsonp(endPoint).then(function(response) {
-                console.info('instagram', response.data.data);
                 items = response.data.data;
                 nextUrl = response.data.pagination.next_url;
                 NewInsta = response.data.pagination.next_max_id;
