@@ -14,6 +14,7 @@ var app = angular.module('lesarts',
 app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, DBService, UserService, NotificationService, $cordovaGoogleAnalytics) {
     $ionicPlatform.ready(function () {
         DBService.init();
+
         function _waitForAnalytics(){
             if(typeof analytics !== 'undefined'){
                 $cordovaGoogleAnalytics.debugMode();

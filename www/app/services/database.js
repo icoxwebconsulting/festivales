@@ -1,7 +1,7 @@
 'use strict';
 app.factory('DBService', function ($q, DB_CONFIG) {
     var self = this;
-    self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'les-arts database', 2 * 1024 * 1024);
+    self.db = null;
 
     self.init = function(drop) {
         // Use self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name}); in production
@@ -29,14 +29,29 @@ app.factory('DBService', function ($q, DB_CONFIG) {
         bindings = typeof bindings !== 'undefined' ? bindings : [];
         var deferred = $q.defer();
 
-        self.db.transaction(function(transaction) {
-            transaction.executeSql(query, bindings, function(transaction, result) {
-                deferred.resolve(result);
-            }, function(transaction, error) {
-                //console.info('error db', error);
-                deferred.reject(error);
+        if(self.db == null)
+        {
+            self.init();
+            setTimeout(function(){
+                self.db.transaction(function(transaction) {
+                    transaction.executeSql(query, bindings, function(transaction, result) {
+                        deferred.resolve(result);
+                    }, function(transaction, error) {
+                        //console.info('error db', error);
+                        deferred.reject(error);
+                    });
+                });
+            },500);
+        }else{
+            self.db.transaction(function(transaction) {
+                transaction.executeSql(query, bindings, function(transaction, result) {
+                    deferred.resolve(result);
+                }, function(transaction, error) {
+                    //console.info('error db', error);
+                    deferred.reject(error);
+                });
             });
-        });
+        }
 
         return deferred.promise;
     };
