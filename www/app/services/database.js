@@ -3,11 +3,7 @@ app.factory('DBService', function ($q, DB_CONFIG) {
     var self = this;
     self.db = null;
 
-    self.init = function(drop) {
-        // Use self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name}); in production
-        self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'les-arts database', 2 * 1024 * 1024);
-
-
+    self.initTables = function(drop){
         //self.query('DROP TABLE IF EXISTS artists');
         angular.forEach(DB_CONFIG.tables, function(table) {
             var columns = [];
@@ -19,10 +15,26 @@ app.factory('DBService', function ($q, DB_CONFIG) {
             });
 
             var query = 'CREATE TABLE IF NOT EXISTS ' + table.name + ' (' + columns.join(',') + ')';
-            //var query = 'CREATE TABLE ' + table.name + ' (' + columns.join(',') + ')';
             self.query(query);
-            //console.log('Table ' + table.name + ' initialized');
         });
+    };
+
+    self.init = function(drop) {
+
+
+        if(window.sqlitePlugin)
+        {
+            // Use self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name}); in production
+            self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'les-arts database', 2 * 1024 * 1024);
+            self.initTables(drop);
+        }else{
+            setTimeout(function(){
+                self.db = window.openDatabase(DB_CONFIG.name, '1.0', 'les-arts database', 2 * 1024 * 1024);
+                self.initTables(drop);
+            },500);
+        }
+
+
     };
 
     self.query = function(query, bindings) {
