@@ -1,4 +1,4 @@
-app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter, DeviceService, $localStorage) {
+app.controller('MenuController', function($rootScope, $scope, $ionicModal, ScheduleService, $ionicPopup, $ionicPlatform, DBService, $state, GLOBAL, Spotify, UserService, $ionicLoading, FavoriteService, ArtistService, NotificationService, WeatherService, $cordovaSocialSharing, $filter, DeviceService, $localStorage, $ionicActionSheet) {
 
     $scope.init = function(){
         $scope.view = {};
@@ -172,13 +172,41 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
 
 
 
-    $scope.logout = function(){
-        $ionicLoading.show({
-            template: 'Cerrando...'
+    //$scope.logout = function(){
+    //    $ionicLoading.show({
+    //        template: 'Cerrando...'
+    //    });
+    //    UserService.logout();
+    //    $scope.closeSettings();
+    //    $ionicLoading.hide();
+    //};
+
+    $scope.logout = function() {
+        var hideSheet = $ionicActionSheet.show({
+            destructiveText: 'Salir',
+            titleText: '¿Seguro que quieres salir?',
+            cancelText: 'Cancelar',
+            cancel: function() {},
+            buttonClicked: function(index) {
+                return true;
+            },
+            destructiveButtonClicked: function(){
+                $scope.closeSettings();
+                $ionicLoading.show({
+                    template: 'Cerrando...'
+                });
+
+                // Facebook logout
+                facebookConnectPlugin.logout(function(){
+                        $ionicLoading.hide();
+                        UserService.logout();
+                    },
+                    function(fail){
+                        $ionicLoading.hide();
+                        UserService.logout();
+                });
+            }
         });
-        UserService.logout();
-        $scope.closeSettings();
-        $ionicLoading.hide();
     };
 
     $scope.openLink = function(link){

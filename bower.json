@@ -4,7 +4,8 @@
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.2.4",
     "ngstorage": "https://github.com/gsklee/ngStorage.git#~0.3.10",
-    "google-analytics-plugin": "https://github.com/danwilson/google-analytics-plugin.git#~0.8.1"
+    "google-analytics-plugin": "https://github.com/danwilson/google-analytics-plugin.git#~0.8.1",
+    "phonegap-facebook-plugin": "https://github.com/Wizcorp/phonegap-facebook-plugin.git#~0.12.0"
   },
   "dependencies": {
     "ng-cordova-oauth": "~0.2.3",
