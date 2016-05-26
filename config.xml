@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.gravedad.lesarts" version="0.3.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Les Arts</name>
-    <description>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.gravedad.lesarts" version="0.3.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Les Arts</name>
+  <description>
         Festival de les arts
     </description>
   <author email="sanchez91nestor@gmail.com" href="">
@@ -35,8 +35,6 @@
     <icon src="resources/ios/icon/icon-72@2x.png" width="144" height="144"/>
     <icon src="resources/ios/icon/icon-76.png" width="76" height="76"/>
     <icon src="resources/ios/icon/icon-76@2x.png" width="152" height="152"/>
-    <icon src="resources/ios/icon/icon-167.png" width="167" height="167"/>
-    <icon src="resources/ios/icon/icon-167@2x.png" width="334" height="334"/>
     <icon src="resources/ios/icon/icon-small.png" width="29" height="29"/>
     <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58"/>
     <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87"/>
@@ -62,7 +60,7 @@
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
-  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+  <icon src="resources/ios/icon/icon-small@3x.png"/>
   <allow-navigation href="https://*/*"/>
   <allow-navigation href="data:*"/>
 </widget>

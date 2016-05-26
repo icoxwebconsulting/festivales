@@ -36,7 +36,8 @@
       },
       "locator": "phonegap-plugin-push",
       "id": "phonegap-plugin-push"
-    }
+    },
+    "cordova-plugin-google-analytics@0.8.1"
   ],
   "cordovaPlatforms": [
     "android",
