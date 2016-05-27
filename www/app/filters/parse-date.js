@@ -3,10 +3,10 @@ app.filter('parseDate', function ($filter) {
         if(typeof text === "undefined")
             return text;
         else{
-            var parts = text.match(/(\d+)/g);
-            var date = new Date(parts[0], parts[1]-1, parts[2]);
-            //var  date = new Date(text.replace(/-/g,"/"));
+            var dt  = text.split(/\-|\s/);
+            var dateString = dt.slice(0,3).join('-') + ' ' + dt[3];
+            var date = new Date(dateString.replace(' ', 'T'));
             return $filter('date')(date, type);
         }
     }
-});
+})

@@ -1,6 +1,6 @@
 <div class="row" overflow-scroll="true">
     <ion-list class="list">
-        <ion-item ng-repeat="item in view.artists | orderBy:'schedule'" ng-if="(item.schedule | parseDate: 'd') == view.show_day " >
+        <ion-item ng-repeat="item in view.artists | orderBy:'schedule'" ng-show="validateDate(item.schedule)">
             <div class="left" ng-click="showDetail({{item.id}})">
                 <img src="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{item.id}}/100/{{item.image_profile}}"  class="artist-cover">
             </div>
