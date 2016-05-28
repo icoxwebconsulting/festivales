@@ -8,7 +8,8 @@ var app = angular.module('lesarts',
         'ngResource',
         'ngTwitter',
         'spotify',
-        'ionic-zoom-view'
+        'ionic-zoom-view',
+        'angularMoment'
     ]);
 
 app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, DBService, UserService, NotificationService, $cordovaGoogleAnalytics) {

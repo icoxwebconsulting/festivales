@@ -12,7 +12,7 @@
         </div>
         <div class="row body">
             <div class="col col-100">
-                <p class="date" ng-if="view.scheduleActive" >{{view.artist.schedule | parseDate: 'EEEE, d MMMM'}}</p>
+                <p class="date" ng-if="view.scheduleActive" >{{view.artist.schedule | parseDate: 'dddd, D MMMM'}}</p>
                 <p class="time" ng-if="view.scheduleActive" ><i class="ion-clock"> </i>&nbsp;{{view.artist.schedule | parseDate: 'HH:mm'}}</p>
                 <p class="stage-name" ng-if="view.scheduleActive" ><i class="ion-location">&nbsp;{{view.artist.stage_name}}</i></p>
                 <hr>

@@ -172,42 +172,42 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
 
 
 
-    //$scope.logout = function(){
-    //    $ionicLoading.show({
-    //        template: 'Cerrando...'
-    //    });
-    //    UserService.logout();
-    //    $scope.closeSettings();
-    //    $ionicLoading.hide();
-    //};
-
-    $scope.logout = function() {
-        var hideSheet = $ionicActionSheet.show({
-            destructiveText: 'Salir',
-            titleText: '¿Seguro que quieres salir?',
-            cancelText: 'Cancelar',
-            cancel: function() {},
-            buttonClicked: function(index) {
-                return true;
-            },
-            destructiveButtonClicked: function(){
-                $scope.closeSettings();
-                $ionicLoading.show({
-                    template: 'Cerrando...'
-                });
-
-                // Facebook logout
-                facebookConnectPlugin.logout(function(){
-                        $ionicLoading.hide();
-                        UserService.logout();
-                    },
-                    function(fail){
-                        $ionicLoading.hide();
-                        UserService.logout();
-                });
-            }
+    $scope.logout = function(){
+        $ionicLoading.show({
+            template: 'Cerrando...'
         });
+        UserService.logout();
+        $scope.closeSettings();
+        $ionicLoading.hide();
     };
+
+    //$scope.logout = function() {
+    //    var hideSheet = $ionicActionSheet.show({
+    //        destructiveText: 'Salir',
+    //        titleText: '¿Seguro que quieres salir?',
+    //        cancelText: 'Cancelar',
+    //        cancel: function() {},
+    //        buttonClicked: function(index) {
+    //            return true;
+    //        },
+    //        destructiveButtonClicked: function(){
+    //            $scope.closeSettings();
+    //            $ionicLoading.show({
+    //                template: 'Cerrando...'
+    //            });
+    //
+    //            // Facebook logout
+    //            facebookConnectPlugin.logout(function(){
+    //                    $ionicLoading.hide();
+    //                    UserService.logout();
+    //                },
+    //                function(fail){
+    //                    $ionicLoading.hide();
+    //                    UserService.logout();
+    //            });
+    //        }
+    //    });
+    //};
 
     $scope.openLink = function(link){
         window.open(link, '_system', 'location=yes');
