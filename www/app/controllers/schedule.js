@@ -7,6 +7,8 @@ app.controller('ScheduleController', function($scope,ArtistService, ScheduleServ
         $scope.view.show_list = 'time';
         $scope.view.show_day = 9;
         $scope.view.server_image = GLOBAL.server.image;
+        $scope.view.show_day_from = '2016-06-09 00:00';
+        $scope.view.show_day_to = '2016-06-10 06:00';
         $scope.view.scheduleActive = false;
         $ionicLoading.show({
             content: 'Cargando',
@@ -26,6 +28,36 @@ app.controller('ScheduleController', function($scope,ArtistService, ScheduleServ
     };
 
     $scope.init();
+
+    $scope.setDay = function(day, from, to){
+        $scope.view.show_day = day;
+        $scope.view.show_day_from = from;
+        $scope.view.show_day_to = to;
+    };
+
+    $scope.validateDate = function(date){
+        if(date > $scope.view.show_day_from && $scope.view.show_day_to > date)
+            return true;
+        else
+            return false;
+    };
+
+
+    $scope.validateStage = function(artists){
+
+        var valid = false;
+
+        angular.forEach(artists, function (value, key) {
+            if(valid == false) {
+                if ($scope.validateDate(value.schedule)){
+                    valid = true;
+                }
+            }
+
+        });
+
+        return valid;
+    };
 
 
     $scope.showDetail = function(id){

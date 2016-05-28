@@ -1,10 +1,10 @@
 <div class="stage" overflow-scroll="true">
     <ion-list class="list">
         <ul ng-repeat="(key, value) in view.artists | groupBy: 'stage_name'">
-            <li class="item-divider">
+            <li class="item-divider" ng-show="validateStage(value)">
                 <p>{{key}}</p>
             </li>
-            <li class="item" ng-repeat="artist in value  | orderBy:'schedule'"  ng-if="(artist.schedule | parseDate: 'd') == view.show_day ">
+            <li class="item" ng-repeat="artist in value  | orderBy:'schedule'"  ng-show="validateDate(artist.schedule)">
                 <div class="left" ng-click="showDetail({{artist.id}})">
                     <img src="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{artist.id}}/100/{{artist.image_profile}}"  class="artist-cover">
                 </div>
