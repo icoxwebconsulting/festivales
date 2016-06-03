@@ -1,7 +1,6 @@
 app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoading, $cordovaDevice, GLOBAL, MapService, $ionicPopup) {
 
     self.getMapAndLocations = function(){
-       // console.info('getMapAndLocations');
         return MapService.resource.getAll().$promise.then(function(map){
             return map;
         },function(error) {
@@ -27,7 +26,6 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
 
             if(map.length > 0)
             {
-                //console.info('database', map);
                 $scope.mapData = map[0];
 
                 MapService.getAllLocations().then(function(locations){
@@ -125,8 +123,7 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
         var overlayOpts = {
             opacity: 1
         };
-        //imgOver = new google.maps.GroundOverlay($scope.server_image+'feast/'+$scope.mapData.image, imageBounds, overlayOpts);
-        imgOver = new google.maps.GroundOverlay('img/map/precint.png', imageBounds, overlayOpts);
+        imgOver = new google.maps.GroundOverlay($scope.server_image+'feast/'+$scope.mapData.image, imageBounds, overlayOpts);
         imgOver.setMap(map);
 
         $scope.map = map;
@@ -141,8 +138,6 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
         //$scope.map.setZoom(17);
         //$scope.map.setCenter($scope.centroLatlng);
     };
-
-
 
     $scope.showMyLocation = function() {
         //document.getElementById("id_waiting").style.visibility = 'visible';
