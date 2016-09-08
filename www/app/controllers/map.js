@@ -54,7 +54,7 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
             }
             else{
                 self.getMapAndLocations().then(function(map){
-                   // console.info('api', map);
+                    // console.info('api', map);
                     $scope.mapData = map.data;
                     $scope.locations = [];
                     MapService.add(map.data);

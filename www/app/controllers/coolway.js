@@ -1,4 +1,4 @@
-app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $ionicLoading, $state, $stateParams, $cordovaSocialSharing){
+app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $ionicLoading, $state, $stateParams, $cordovaSocialSharing, $ionicPopup){
 
     $scope.loadPhotos = function(){
         $ionicLoading.show({
@@ -16,6 +16,9 @@ app.controller('CoolwayController', function($scope, CoolwayService, GLOBAL, $io
         },function(error) {
             $ionicLoading.hide();
             $scope.view.ready = true;
+            $ionicPopup.alert({
+                title: "Sin conexión a internet"
+            });
         });
     };
 

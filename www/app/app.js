@@ -14,12 +14,12 @@ var app = angular.module('lesarts',
 
 app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, DBService, UserService, NotificationService, $cordovaGoogleAnalytics) {
     $ionicPlatform.ready(function () {
-        DBService.init(true);
+        DBService.init(false);
 
         function _waitForAnalytics(){
             if(typeof analytics !== 'undefined'){
                 $cordovaGoogleAnalytics.debugMode();
-                $cordovaGoogleAnalytics.startTrackerWithId('UA-57340953-2');
+                $cordovaGoogleAnalytics.startTrackerWithId('UA-15476597-2');
                 $cordovaGoogleAnalytics.trackView('Open app');
             }
             else{

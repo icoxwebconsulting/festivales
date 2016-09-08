@@ -9,7 +9,7 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
         $scope.pause = true;
 
         $scope.view.currentDate = $filter('date')(new Date(), 'yyyy-MM-dd');
-        $scope.view.feastDate =  $filter('date')(new Date('2016-06-10'), 'yyyy-MM-dd');
+        $scope.view.feastDate =  $filter('date')(new Date('2016-07-01'), 'yyyy-MM-dd');
 
         $scope.view.scheduleActive = false;
 
@@ -31,7 +31,6 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
     self.getArtists = function(sort){
         // Get all the artists
         ArtistService.getAll().then(function(artists){
-
             if(artists.length > 0)
             {
                // console.info('database', artists);
@@ -311,7 +310,7 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
             //console.info('artist', artist);
             var name = artist.name;
             var image = $scope.view.server_image+"artists/"+artist.id+"/cover/"+artist.image_cover;
-            $cordovaSocialSharing.share("Te recomiendo "+name+" en el #FestivalDeLesArts", "Festival de les arts", image, "http://www.festivaldelesarts.com/");
+            $cordovaSocialSharing.share("Te recomiendo "+name+" en el #festivaldelesarts", "Festival Les Arts", image, "http://www.festivaldelesarts.com/");
         };
 
     }

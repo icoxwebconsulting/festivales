@@ -1,5 +1,5 @@
 app.constant('DB_CONFIG', {
-    name: 'LesArts',
+    name: 'lesarts',
     tables: [
         {
             name: 'artists',
