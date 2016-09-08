@@ -1,15 +1,6 @@
 'use strict';
 app.factory('InstagramService', function ($rootScope,$q,  $http, GLOBAL) {
-    var service = {};
-
-    //function fetchImages(callback) {
-    //    var endPoint = 'https://api.instagram.com/v1/users/' + GLOBAL.instagram.user_id + '/media/recent/?client_id=' + GLOBAL.instagram.client_id + '&callback=JSON_CALLBACK';
-    //    $http.jsonp(endPoint).success(function (response) {
-    //        callback(response.data);
-    //    });
-    //};
-
-    var endPoint = 'https://api.instagram.com/v1/users/' + GLOBAL.instagram.user_id + '/media/recent/?client_id=' + GLOBAL.instagram.client_id + '&callback=JSON_CALLBACK';
+    var endPoint = 'https://api.instagram.com/v1/users/' + GLOBAL.instagram.user_id + '/media/recent/?access_token='+ GLOBAL.instagram.token + '&callback=JSON_CALLBACK';
     var items = [];
     var nextUrl = 0;  // next max tag id - for fetching older photos
     var NewInsta = 0; // min tag id - for fetching newer photos
@@ -17,6 +8,7 @@ app.factory('InstagramService', function ($rootScope,$q,  $http, GLOBAL) {
     return {
         GetFeed: function() {
             return $http.jsonp(endPoint).then(function(response) {
+                console.info('response instagram', response);
                 items = response.data.data;
                 nextUrl = response.data.pagination.next_url;
                 NewInsta = response.data.pagination.next_max_id;

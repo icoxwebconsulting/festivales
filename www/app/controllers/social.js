@@ -1,4 +1,4 @@
-app.controller('SocialController', function($scope, FacebookService, InstagramService, TwitterService, $localStorage, $ionicLoading) {
+app.controller('SocialController', function($scope, FacebookService, InstagramService, TwitterService, $localStorage, $ionicLoading, $ionicPopup) {
 
     $scope.init = function()
     {
@@ -60,9 +60,14 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
             maxWidth: 200,
             showDelay: 0
         });
-        InstagramService.GetFeed().then(function(items) {
-            $scope.view.pics = items.concat($scope.items);
-        });
+        //InstagramService.GetFeed().then(function(items) {
+        //    $scope.view.pics = items.concat($scope.items);
+        //},function(error) {
+        //    $ionicPopup.alert({
+        //        title: "Sin conexión a internet"
+        //    });
+        //    $ionicLoading.hide();
+        //});
         if ($localStorage.hasOwnProperty("fbAccessToken") === true) {
             FacebookService.fetchFeed().then(function (response) {
                 $scope.view.facebookFeed = response.data;

@@ -16,6 +16,10 @@
     "angular-soundmanager2": "~0.5.6",
     "ng-twitter-api": "~0.1.5",
     "ionic-zoom-view": "~2.0.0",
+<<<<<<< HEAD
     "angular-moment": "^0.10.3"
+=======
+    "angular-moment": "~0.10.3"
+>>>>>>> 60192b96cc9270f34bf63fc02142ac5cc6a486fb
   }
 }

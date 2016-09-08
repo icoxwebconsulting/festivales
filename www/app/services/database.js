@@ -2,9 +2,14 @@
 app.factory('DBService', function ($q, DB_CONFIG) {
     var self = this;
     self.db = null;
+<<<<<<< HEAD
     
     self.initTables = function(drop){
         //self.query('DROP TABLE IF EXISTS artists');
+=======
+
+    self.initTables = function(drop){
+>>>>>>> 60192b96cc9270f34bf63fc02142ac5cc6a486fb
         angular.forEach(DB_CONFIG.tables, function(table) {
             var columns = [];
             if(drop && table.erasable)
@@ -53,6 +58,21 @@ app.factory('DBService', function ($q, DB_CONFIG) {
                //console.log('Table ' + table.name + ' initialized');
             });
     };*/
+
+    self.init = function(drop) {
+
+        if(window.sqlitePlugin)
+        {
+            // Use self.db = window.sqlitePlugin.openDatabase({name: DB_CONFIG.name}); in production
+            self.db = window.openDatabase(DB_CONFIG.name, '1.0', DB_CONFIG.name+' db', 2 * 1024 * 1024);
+            self.initTables(drop);
+        }else{
+            setTimeout(function(){
+                self.db = window.openDatabase(DB_CONFIG.name, '1.0', DB_CONFIG.name+' db', 2 * 1024 * 1024);
+                self.initTables(drop);
+            },500);
+        }
+    };
 
     self.query = function(query, bindings) {
         bindings = typeof bindings !== 'undefined' ? bindings : [];
