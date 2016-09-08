@@ -125,8 +125,8 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
         var overlayOpts = {
             opacity: 1
         };
-        //imgOver = new google.maps.GroundOverlay($scope.server_image+'feast/'+$scope.mapData.image, imageBounds, overlayOpts);
-        imgOver = new google.maps.GroundOverlay('img/map/precint.png', imageBounds, overlayOpts);
+        imgOver = new google.maps.GroundOverlay($scope.server_image+'feast/'+$scope.mapData.image, imageBounds, overlayOpts);
+        //imgOver = new google.maps.GroundOverlay('img/map/precint.png', imageBounds, overlayOpts);
         imgOver.setMap(map);
 
         $scope.map = map;

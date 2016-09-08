@@ -117,8 +117,8 @@
 }
 
 .logo img{
-    max-width: 75% !important;
-    max-height: 40px;
+    max-width: 90% !important;
+    max-height: 50px;
     margin-top: 4px;
 }
 
@@ -1366,6 +1366,11 @@
     border-bottom: 1px solid #04041B;
     padding: 0 !important;
 }
+
+ .sponsor .images .col-100{
+    border-bottom: 1px solid #04041B;
+}
+
 
 .sponsor .images img{
     width: 100%;
