@@ -357,6 +357,17 @@
     font-size: 13px !important;
 }
 
+.notifications .list .item .time{
+    width: 100% !important;
+    word-wrap: break-word !important;
+    height: auto;
+    overflow: visible !important;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: inherit !important;
+    text-align: justify !important;
+}
+
 .notifications .list .center{
     width: 96% !important;
 }
