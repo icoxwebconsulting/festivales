@@ -27,10 +27,7 @@
                     <img ng-src="img/player/pause.png">
                 </button>
                 <div class="legend">
-                    <p>
-                        {{item.name|cleanName| uppercase | limitTo:15}}
-                        <span ng-if="item.name.length > 15">...</span>
-                    </p>
+                    <p>{{item.name|cleanName| uppercase}}</p>
                 </div>
             </div>
         </div>

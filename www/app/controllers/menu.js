@@ -226,7 +226,7 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
         angular.forEach($scope.view.favorites, function (value, key) {
                 message += " \r\n"+$filter('cleanName')(value.name)+" \r\n"+$filter('parseDate')(value.schedule)+" - "+$filter('parseDate')(value.schedule, 'HH:mm')+"\r\n"+value.stage_name+" \r\n";
         });
-        $cordovaSocialSharing.share("Mis artistas favoritos  en el #cabodeplata \r\n"+message, "Cabo de plata festival", '', "\r\n http://www.cabodeplata.com/");
+        $cordovaSocialSharing.share("Mis artistas favoritos  en el #FestivalDeLesArts: \r\n"+message, "Festival de les arts", '', "\r\n http://www.festivaldelesarts.com/");
     };
 
     $scope.getWeather = function(){
@@ -248,11 +248,9 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
         if($scope.view.notificationActive)
         {
             UserService.registerDevice(data).then(function(response){
-                $localStorage.user.notification = true;
             });
         }else{
             UserService.unRegisterDevice(data).then(function(response){
-                $localStorage.user.notification = false;
             });
         }
     };

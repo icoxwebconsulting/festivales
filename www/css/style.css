@@ -100,6 +100,9 @@
     height: 50px !important;
 }
 
+.platform-ios .bar-header{
+    height: 70px !important;
+}
 
 .logo{
     width: 100%;
@@ -192,45 +195,17 @@
     top: 45%;
 }
 
-@media screen and (min-height : 400px) and (max-height : 500px) {
-
-    .coming-soon .footer img{
-        top: 45%;
-    }
-}
-
-@media screen and (min-height : 501px) and (max-height : 626px) {
+@media screen and (min-height : 490px) and (max-height : 650px) {
 
     .coming-soon .footer img{
         top: 50%;
     }
 }
 
-@media screen and (min-height : 627px) and (max-height : 800px) {
+@media screen and (min-height : 651px) and (max-height : 1500px) {
 
     .coming-soon .footer img{
         top: 55%;
-    }
-}
-
-@media screen and (min-height : 801px) and (max-height : 1200px) {
-
-    .coming-soon .footer img{
-        top: 65%;
-    }
-}
-
-@media screen and (min-height : 1201px) and (max-height : 1500px) {
-
-    .coming-soon .footer img{
-        top: 70%;
-    }
-}
-
-@media screen and (min-height : 1501px) {
-
-    .coming-soon .footer img{
-        top: 75%;
     }
 }
 
@@ -255,30 +230,9 @@
     text-align: center;
 }
 
-
-
-
-@media screen and (min-height : 400px) and (max-height : 500px) {
-
-    .footer-left-menu {
-        margin-top: 5%;
-    }
+.footer-left-menu {
+    margin: 1px 0;
 }
-
-@media screen and (min-height : 501px) and (max-height : 626px) {
-
-    .footer-left-menu {
-        margin-top: 15%;
-    }
-}
-
-@media screen and (min-height : 627px){
-
-    .footer-left-menu {
-        margin-top: 20%;
-    }
-}
-
 
 .menu-left .header-left-menu img{
     width : 100%;
@@ -338,7 +292,7 @@
     text-align:left;
     color: #ffffff;
     font-family: GallowTree, Raleway-Regular  !important;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -357,6 +311,10 @@
 
 .header-right-menu .button-clear{
     margin-top: 3px !important;
+}
+
+.platform-ios .header-right-menu .button-clear{
+    margin-top: 25px !important;
 }
 
 .sidebar-right .menu-tabs{
@@ -472,6 +430,10 @@
     font-size: 14px;
     font-weight: 700;
     color: #ffffff;
+}
+
+.platform-ios .discover .subtitle .center{
+    padding: 2% !important;
 }
 
 .subtitle .center{
@@ -716,7 +678,7 @@
 .artist .my-item.item p{
     font-family: GallowTree, Raleway-Regular  !important;
     color: #04041B;
-    font-size:16px;
+    font-size:18px;
     display: inline-block;
 }
 
@@ -783,6 +745,10 @@
     width: 40px !important;
 }
 
+.platform-ios .artist .list .favorite img{
+    padding: 3px;
+}
+
 .discover .legend{
     width: 100%!important;
     height: 50px!important;
@@ -829,7 +795,7 @@
 
 .artist-detail .legend p{
     font-family: GallowTree,Raleway-Regular!important;
-    font-size: 14px;
+    font-size: 28px;
     display: inline-block;
     float: left;
     margin: 18px 10px;
@@ -943,6 +909,10 @@
     color: #ffffff !important;
 }
 
+.platform-ios .login-header{
+    height: 75px !important;
+}
+
 .login-header .button-clear, .login-header .button-clear{
     color: #ffffff !important;
 }
@@ -980,6 +950,14 @@
     /*background: -webkit-linear-gradient(top,  rgba(245,229,193,0.7) 99%,rgba(245,229,193,0) 100%,rgba(245,229,193,0) 101%);*/
     /*background: linear-gradient(to bottom,  rgba(245,229,193,0.7) 99%,rgba(245,229,193,0) 100%,rgba(245,229,193,0) 101%);*/
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3f5e5c1', endColorstr='#00f5e5c1',GradientType=0 );*/
+}
+
+.platform-ios .login-content{
+    margin-top:  -65px !important;
+}
+
+.platform-ios .div-form{
+    margin-top: 70px !important;
 }
 
 .login-content .title{
@@ -1102,7 +1080,7 @@
 }
 
 .ticket iframe{
-    max-height: 2000px !important;
+    max-height: 760px !important;
 }
 
 .ticket .partner{

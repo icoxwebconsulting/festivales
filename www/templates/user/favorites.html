@@ -6,10 +6,7 @@
                     <img ng-src="{{view.server_image}}artists/{{item.id}}/100/{{item.image_profile}}"  class="artist-cover">
                 </div>
                 <div class="center" ng-click="showDetail({{item.id}})">
-                    <p class="artist-name">
-                        {{item.name|cleanName| uppercase| limitTo:20}}
-                        <span ng-if="item.name.length > 20">...</span>
-                    </p>
+                    <p class="artist-name">{{item.name|cleanName| uppercase}}</p>
                     <p class="time">
                         <span ng-if="view.scheduleActive"><i class="ion-clock"></i>&nbsp;{{item.schedule | parseDate: 'HH:mm'}}</span>
                         <span ng-if="!view.scheduleActive">&nbsp;</span>

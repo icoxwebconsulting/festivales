@@ -1,11 +1,11 @@
 <ion-view>
     <ion-content class="precinct-map" overflow-scroll="false" scroll="false">
-            <a class="my-location" ng-click="showMyLocation();" title="Mi ubicación" ng-if="view.ready && mapData.image!==undefined">
+            <a class="my-location" ng-click="showMyLocation();" title="Mi ubicación" ng-if="view.ready">
                 <img src="img/map/my_location.png">
             </a>
         <div id="map" data-tap-disabled="true" scroll="false"></div>
     </ion-content>
-    <div ng-if="mapData.image==undefined && view.ready" class="coming-soon">
+    <div ng-if="!view.mapData.length" class="coming-soon">
         <div ng-include src="'templates/info/coming-soon.html'"></div>
     </div>
 </ion-view>

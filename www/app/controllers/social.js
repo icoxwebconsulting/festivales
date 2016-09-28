@@ -86,6 +86,8 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
                 });
             });
         }
+
+        $ionicLoading.hide();
     };
 
     $scope.getData();

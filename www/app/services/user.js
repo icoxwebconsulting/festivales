@@ -106,8 +106,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                 ios: {
                     alert: "true",
                     badge: "true",
-                    sound: "true",
-                    senderID: "706865749921" // GCM Sender ID (project ID)
+                    sound: "true"
                 }
             });
 
@@ -117,7 +116,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                     var os = '0';
                     if (ionic.Platform.isIOS())
                         os = '1';
-
+                    console.log(data.registrationId);
                     $localStorage.device_token = data.registrationId;
                     $localStorage.os = os;
                     registerDevice({
@@ -129,6 +128,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
             }
 
             push.on('notification', function (data) {
+                console.log(data.title);
                 $ionicPopup.alert({
                     title: data.title,
                     template: data.message

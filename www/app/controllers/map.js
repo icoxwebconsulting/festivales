@@ -27,6 +27,7 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
             if(map.length > 0)
             {
                 $scope.mapData = map[0];
+
                 MapService.getAllLocations().then(function(locations){
                     if(locations.length > 0)
                     {
@@ -34,6 +35,7 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
                         self.loadMap();
                     }else{
                         self.getMapAndLocations().then(function(map){
+                            //console.info('api', map);
                             $scope.mapData = map.data;
                             $scope.locations = [];
                             MapService.add(map.data);
@@ -46,14 +48,13 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
                             });
 
                             self.loadMap();
-
                         });
                     }
                 });
-
             }
             else{
                 self.getMapAndLocations().then(function(map){
+                   // console.info('api', map);
                     $scope.mapData = map.data;
                     $scope.locations = [];
                     MapService.add(map.data);

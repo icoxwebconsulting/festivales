@@ -25,10 +25,7 @@
                           ng-class="{'item-divider' : item.isLetter, 'item-divider-artist' : lastArtist(item.isLetter)}" >
 
                     <img ng-if="!item.isLetter"  err-SRC="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{item.id}}/100/{{item.image_profile}}" alt="item.name" ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">
-                    <p ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">
-                        {{item.letter || item.name|cleanName| uppercase | limitTo:14}}
-                        <span ng-if="item.name.length > 15">...</span>
-                    </p>
+                    <p ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">{{item.letter || item.name|cleanName| uppercase}}</p>
                     <favorite ng-if="!item.isLetter" artist="item"/>
                 </ion-item>
             </ion-list>

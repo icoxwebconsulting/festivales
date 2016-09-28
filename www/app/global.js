@@ -1,6 +1,6 @@
 app.constant('GLOBAL', {
     'api':{
-        'url' : 'http://gravedadprod.mobi/app_dev.php/api/',
+        'url' : 'http://gravedadprod.mobi/api/',
         //'url': 'http://coolway.dev/app_dev.php/api/',
         //'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
         'version': 'v1',
@@ -21,7 +21,7 @@ app.constant('GLOBAL', {
         'api_version': 'v2.5',
         'user_id': '904487902976625',
         'client_id': '140237593052216',
-        'client_secret': 'b5c770c9b33ff950fbb99dd14049e6d2'
+        'client_secret': '99a5617adda2ef35f914ab9f01dbc626'
     },
     'twitter':{
         'screen_name': 'cabodeplatafest',
