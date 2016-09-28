@@ -1,44 +1,53 @@
-app.controller('RegisterController', function ($scope, $state, $ionicLoading, $ionicPopup) {
+app.controller('RegisterController', function ($scope, $state, $ionicLoading, $ionicPopup, UserService) {
 
-    $scope.data = {
-        privacy_police: false
+
+    $scope.init = function()
+    {
+        $scope.view = {};
+        $scope.view.show = 'sign_up';
+        $scope.view.show_login = 'options';
+        $scope.view.user = new UserService.resource();
+        $scope.view.loginEmail = false;
     };
-    $scope.error = false;
+
+    $scope.init();
 
     $scope.signUp = function () {
-        $scope.error = false;
-
-        if (!$scope.data.email) {
+        if (!$scope.view.user.name) {
             $ionicPopup.alert({
-                title: "Ingrese su E-mail"
+                title: "Ingrese su nombre"
             });
         }
-        else if (!$scope.data.password) {
+        else if (!$scope.view.user.email || !UserService.validateEmail($scope.view.user.email)) {
             $ionicPopup.alert({
-                title: "Ingrese su Contraseña"
+                title: "Ingrese un email valido"
             });
         }
-        else if ($scope.data.password !== $scope.data.repassword) {
+        else if (!$scope.view.user.password) {
             $ionicPopup.alert({
-                title: "Confirme su Contraseña"
+                title: "Ingrese su contraseña"
+            });
+        }
+        else if ($scope.view.user.password.length < 8) {
+            $ionicPopup.alert({
+                title: "Las contraseña debe tener al menos 8 caracteres"
             });
         }
         else {
             $ionicLoading.show({
-                template: 'Creando Cuenta ...'
+                template: 'Registrando Cuenta ...'
             });
 
-            //user.signup($scope.data).then(function () {
-            //    $ionicLoading.hide();
-            //
-            //    $state.go('base.account.login');
-            //}, function (error) {
-            //    $ionicLoading.hide();
-            //
-            //    $ionicPopup.alert({
-            //        title: error.message
-            //    });
-            //});
+            $scope.view.user.$register(function (response) {
+                UserService.setUser(response);
+                $state.go("menu.artist-discover");
+                $ionicLoading.hide();
+            }, function (error) {
+                $ionicLoading.hide();
+                $ionicPopup.alert({
+                    title: error.data.message
+                });
+            });
         }
     };
 });

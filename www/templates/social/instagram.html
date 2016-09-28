@@ -1,0 +1,9 @@
+<div ng-show="!view.pics.length">Cargando instagram...</div>
+<ion-refresher on-refresh="doRefreshInstagram()"></ion-refresher>
+<div class="row unlimited-items">
+    <div class="col" ng-repeat="p in view.pics | orderBy:orderBy">
+        <img ng-src="{{p.images.low_resolution.url}}">
+        <!--<span class="icon ion-heart">&nbsp;{{p.likes.count}}</span>-->
+    </div>
+</div>
+<ion-infinite-scroll immediate-check="false" on-infinite="LoadMoreInstagram()" distance="5%" ng-if="!noMoreItemsAvailableIT"></ion-infinite-scroll>

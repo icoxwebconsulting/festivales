@@ -1,0 +1,43 @@
+<ion-view>
+    <ion-content has-bouncing="true" class="coolway" overflow-scroll="true">
+        <div class="header">
+            <div class="row">
+                <div class="col col-100 logo">
+                    <img src="img/coolway/coolway.png" ng-click="openLink('http://www.coolway.com')">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col left">
+                    <img src="img/coolway/left.png" ng-click="openLink('http://www.coolway.com')">
+                </div>
+                <div class="col center">
+                    <img src="img/coolway/night_time.png" ng-click="openLink('http://www.coolway.com')">
+                </div>
+                <div class="col right">
+                    <img src="img/coolway/right.png" ng-click="openLink('http://www.coolway.com')">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-100 social-network">
+                    <a class="social" ng-click="openLink('https://www.facebook.com/arenalsound')">
+                        <img src="img/coolway/social-network/facebook.png">
+                    </a>
+                    <a class="social center" ng-click="openPage('TWITTER','https://twitter.com/ArenalSound')">
+                        <img src="img/coolway/social-network/twitter.png">
+                    </a>
+                    <a class="social" ng-click="openPage('INSTAGRAM','https://www.instagram.com/arenal_sound/')" >
+                        <img src="img/coolway/social-network/instagram.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="!view.photos.length">Cargando imagenes...</div>
+        <div class="row unlimited-items">
+            <div class="col " ng-repeat="p in view.photos">
+                <img ng-src="{{view.server_image}}festivals/{{view.feast_id}}/concurso/{{p.image}}" zoom-src="{{view.server_image}}festivals/{{view.feast_id}}/concurso/{{p.image}}" zoom-view>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

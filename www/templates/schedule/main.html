@@ -1,0 +1,53 @@
+<ion-view>
+    <ion-content has-bouncing="true" class="bg-dark schedule">
+        <div class="row subtitle filter" ng-if="view.scheduleActive">
+            <div class="col col-100">
+                <ion-scroll direction="x" class="wide-as-needed">
+
+                <div class="days">
+                        <button class="button button-clear" ng-click="setDay(1,'2016-08-02 12:00','2016-08-03 08:00')" ng-class="{'active': view.show_day  == 1}">
+                            <img src="img/schedule/1.png">
+                        </button>
+                        <button class="button button-clear" ng-click="setDay(2,'2016-08-03 12:00','2016-08-04 08:00')" ng-class="{'active': view.show_day  == 2}">
+                            <img src="img/schedule/2.png">
+                        </button>
+                        <button class="button button-clear" ng-click="setDay(3,'2016-08-04 12:00','2016-08-05 08:00')" ng-class="{'active': view.show_day  == 3}">
+                            <img src="img/schedule/3.png">
+                        </button>
+                        <button class="button button-clear" ng-click="setDay(4,'2016-08-05 12:00','2016-08-06 08:00')" ng-class="{'active': view.show_day  == 4}">
+                            <img src="img/schedule/4.png">
+                        </button>
+                        <button class="button button-clear" ng-click="setDay(5,'2016-08-06 12:00','2016-08-07 08:00')" ng-class="{'active': view.show_day  == 5}">
+                            <img src="img/schedule/5.png">
+                        </button>
+                        <button class="button button-clear" ng-click="setDay(6,'2016-08-07 12:00','2016-08-08 08:00')" ng-class="{'active': view.show_day  == 6}">
+                            <img src="img/schedule/6.png">
+                        </button>
+                </div>
+                </ion-scroll>
+
+            </div>
+        </div>
+        <div class="row filters" ng-if="view.scheduleActive && view.ready">
+            <div class="col col-50" ng-class="{'active': view.show_list  === 'time'}" ng-click="view.show_list = 'time';">
+                <div class="time filter">
+                    <button class="button button-clear">
+                        Por hora
+                    </button>
+                </div>
+            </div>
+            <div class="col col-50" ng-class="{'active': view.show_list  === 'stage'}" ng-click="view.show_list = 'stage';">
+                <div class="stage filter">
+                    <button class="button button-clear">
+                        Por escenario
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div ng-include="'templates/schedule/by-time.html'" ng-if="view.show_list == 'time' && view.scheduleActive"></div>
+        <div ng-include="'templates/schedule/by-stage.html'" ng-if="view.show_list == 'stage' && view.scheduleActive" ></div>
+    </ion-content>
+    <div ng-if="!view.scheduleActive && view.ready" class="coming-soon">
+        <div ng-include src="'templates/info/coming-soon.html'"></div>
+    </div>
+</ion-view>
