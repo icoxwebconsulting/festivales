@@ -1,14 +1,37 @@
 <ion-view>
-    <ion-content has-bouncing="false">
-        <div class="row">
-            <div class="col">
-                <h2 class="text-center">Discover</h2>
+    <ion-content has-bouncing="false" class="discover">
+        <div class="row subtitle filter" scroll="false" ng-if="view.currentDate < view.feastDate">
+            <div class="col col-100">
+                <div class="left">
+                    <img src="img/main/left.png">
+                </div>
+                <div class="center">
+                    <span countdown date='July 01, 2016 00:00:00'>&nbsp Cargando... </span>
+                </div>
+                <div class="right">
+                    <img src="img/main/right.png">
+                </div>
+
             </div>
         </div>
-        <div class="row row-stick" ng-repeat="tracks in view.tracks">
-            <div class="col col-50 col-stick" ng-repeat="track in tracks">
-                <img ng-src="http://placehold.it/100x100" width="100%" />
-                <span class="ion-play" ng-click="playTrack(track)"></span>
+        <div class="row row-stick unlimited-items" scroll="true" ng-show="view.ready">
+            <div class="col col-stick" ng-repeat="item in view.artists | orderBy:'-schedule' ">
+                <img ng-click="showDetail(item.id)" err-SRC="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{item.id}}/200/{{item.image_profile}}" width="100%" alt="item.name" />
+                <button class="button button-clear btn-action" ng-if="item.spotify_id.length || (view.isPause && view.currentTrack.spotify_id != item.spotify_id && !view.loader)" ng-click="playTrack(item)">
+                    <img ng-src="img/player/play.png">
+                </button>
+                <!--<button class="button button-clear btn-action" ng-if="view.currentTrack.spotify_id == item.spotify_id && view.loader">-->
+                    <!--<img ng-src="img/player/loader.gif">-->
+                <!--</button>-->
+                <button class="button button-clear btn-action" ng-if="view.isPlaying && view.currentTrack.spotify_id == item.spotify_id && !view.loader" ng-click="pauseTrack()">
+                    <img ng-src="img/player/pause.png">
+                </button>
+                <div class="legend">
+                    <p>
+                        {{item.name|cleanName| uppercase | limitTo:15}}
+                        <span ng-if="item.name.length > 15">...</span>
+                    </p>
+                </div>
             </div>
         </div>
     </ion-content>

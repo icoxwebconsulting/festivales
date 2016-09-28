@@ -1,0 +1,17 @@
+<div class="row" overflow-scroll="true">
+    <ion-list class="list">
+        <ion-item ng-repeat="item in view.artists | orderBy:'schedule'" ng-show="validateDate(item.schedule)">
+            <div class="left" ng-click="showDetail({{item.id}})">
+                <img src="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{item.id}}/100/{{item.image_profile}}"  class="artist-cover">
+            </div>
+            <div class="center" ng-click="showDetail({{item.id}})">
+                <p class="artist-name">{{item.name|cleanName}}</p>
+                <p class="time"><i class="ion-clock"></i>&nbsp;{{item.schedule | parseDate: 'HH:mm'}}</p>
+                <p class="stage-name"><i class="ion-location"></i>&nbsp;{{item.stage_name}}</p>
+            </div>
+            <div class="right">
+                <favorite artist="item"/>
+            </div>
+        </ion-item>
+    </ion-list>
+</div>
