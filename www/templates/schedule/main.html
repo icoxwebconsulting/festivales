@@ -1,0 +1,40 @@
+<ion-view>
+    <ion-content has-bouncing="true" class="bg-dark schedule">
+        <div class="row subtitle filter" ng-if="view.scheduleActive">
+            <div class="col col-100">
+                <div class="days">
+                    <button class="button button-clear" ng-click="setDay(28,'2017-04-28 00:00','2017-04-29 07:00')" ng-class="{'active': view.show_day  == 28}">
+                        <img src="img/schedule/28.png">
+                    </button>
+                    <button class="button button-clear" ng-click="setDay(29,'2017-04-29 08:00','2017-04-30 07:00')" ng-class="{'active': view.show_day  == 29}">
+                        <img src="img/schedule/29.png">
+                    </button>
+                    <button class="button button-clear" ng-click="setDay(30,'2017-04-30 08:00','2016-05-01 07:00')" ng-class="{'active': view.show_day  == 30}">
+                        <img src="img/schedule/30.png">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row filters" ng-if="view.scheduleActive && view.ready">
+            <div class="col col-50" ng-class="{'active': view.show_list  === 'time'}" ng-click="view.show_list = 'time';">
+                <div class="time filter">
+                    <button class="button button-clear">
+                        Por hora
+                    </button>
+                </div>
+            </div>
+            <div class="col col-50" ng-class="{'active': view.show_list  === 'stage'}" ng-click="view.show_list = 'stage';">
+                <div class="stage filter">
+                    <button class="button button-clear">
+                        Por escenario
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div ng-if="!view.scheduleActive && view.ready" class="coming-soon">
+            <img src="img/coolway/coming_soon.jpg">
+        </div>
+        <div ng-include="'templates/schedule/by-time.html'" ng-if="view.show_list == 'time' && view.scheduleActive"></div>
+        <div ng-include="'templates/schedule/by-stage.html'" ng-if="view.show_list == 'stage' && view.scheduleActive" ></div>
+    </ion-content>
+</ion-view>

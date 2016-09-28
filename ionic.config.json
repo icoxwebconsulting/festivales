@@ -1,0 +1,8 @@
+{
+  "name": "Viña Rock",
+  "app_id": "com.gravedad.vinarock",
+  "gulpStartupTasks": [
+    "default",
+    "watch"
+  ]
+}

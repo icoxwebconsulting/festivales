@@ -1,0 +1,43 @@
+<ion-modal-view class="modal-player">
+    <ion-header-bar ng-click="closePlayer()">
+        <button class="button button-clear" ng-click="closePlayer()">
+            <i class="ion-chevron-down"></i>
+        </button>
+    </ion-header-bar>
+    <ion-list class="list list-header">
+        <ion-item>
+            <div class="left">
+                <img ng-src="img/player/icon.jpg"  class="artist-cover">
+            </div>
+            <div class="center">
+                <p class="track-name">{{ view.currentTrack.name }}</p>
+                <p class="artist-name">{{ view.currentTrack.artist }}</p>
+                <p class="track-duration">0:30</p>
+            </div>
+            <div class="right">
+                <button class="button button-clear btn-action" ng-if="!view.isPlaying" ng-click="playTrack()">
+                    <img ng-src="img/player/play.jpg">
+                </button>
+                <button class="button button-clear btn-action" ng-if="view.isPlaying" ng-click="pauseTrack()">
+                    <img ng-src="img/player/pause.jpg">
+                </button>
+            </div>
+        </ion-item>
+    </ion-list>
+    <ion-scroll direction="y" class="playlist" ng-if="view.playslist.length">
+        <ion-item ng-repeat="item in view.playslist" ng-click="playTrack($index)">
+            <div class="left">
+                <p ng-if="view.currentTrack.spotify_id != item.track.id">{{$index+1}}</p>
+                <img style="width:40px !important;" ng-src="img/player/playing.gif" ng-if="view.currentTrack.spotify_id == item.track.id">
+            </div>
+            <div class="center">
+                <p class="track-name">{{item.track.name}}</p>
+                <p class="artist-name">{{item.track.artists[0].name}}</p>
+            </div>
+            <div class="right">
+                <p class="track-duration">0:30</p>
+            </div>
+        </ion-item>
+    </ion-scroll>
+    </ion-content>
+</ion-modal-view>

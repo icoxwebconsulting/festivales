@@ -1,0 +1,33 @@
+<ion-content class="login-content" scroll="false">
+    <div>
+        <div class="form">
+            <div class="field">
+                <div class="icon-field">
+                    <img src="img/login/icon/user.png">
+                </div>
+                <input ng-model="view.user.name" type="text" placeholder="Nombre y Apellidos" name="fullname" required>
+            </div>
+            <div class="field">
+                <div class="icon-field">
+                    <img src="img/login/icon/email.png">
+                </div>
+                <input ng-model="view.user.email" type="email" placeholder="Correo electrónico" name="email" required>
+            </div>
+            <div class="field">
+                <div class="icon-field">
+                    <img src="img/login/icon/lock.png">
+                </div>
+                <input ng-model="view.user.password" type="password" placeholder="Contraseña" required>
+            </div>
+            <div class="later">
+                <a>La contraseña debe tener al menos 8 caracteres</a>
+            </div>
+        </div>
+        <div class="login-footer">
+            <img src="img/login/sign-up.png" ng-click="signUp()">
+            <a ng-click="openLink('http://www.vina-rock.com/wp-content/uploads/2015/09/Aviso-Legal-reaccion-Rock-S-L-2016.pdf')">T&eacute;rminos y condiciones</a>
+        </div>
+    </div>
+
+
+</ion-content>

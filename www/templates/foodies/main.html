@@ -1,0 +1,36 @@
+<ion-view>
+    <ion-content has-bouncing="true" class="artist">
+        <div class="row subtitle filter" scroll="false" ng-if="view.foodies.length">
+            <div class="col col-100">
+                <input type="search"
+                       ng-model="view.search"
+                       ng-focus="searchFocused = true"
+                       ng-blur="searchFocused = false"
+                       ng-change="scrollTop()"
+                       class="full-width">
+                <button ng-if="view.search.length"
+                        class="button button-icon ion-close input-button"
+                        ng-click="view.search = '' "> </button>
+                <button ng-if="!view.search.length"
+                        class="button button-icon ion-search input-button"> </button>
+            </div>
+        </div>
+        <div class="listed" scroll="true">
+            <ion-list>
+                <ion-item class="my-item"
+                          ng-repeat="item in getFoodiesList() | filter:view.search"
+                          item-height="getItemHeight(item)"
+                          id="{{ item.isLetter ? (item.letter + '_divider') : item.id}}"
+                          ng-style="{'line-height': getItemHeight(item) + 'px'}"
+                          ng-class="{'item-divider': item.isLetter}">
+                    <img ng-if="!item.isLetter" ng-src="{{view.server_image}}foodies/{{item.id}}/100/{{item.image_profile}}" alt="item.name" ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">
+                    <p ng-click="showDetail({{ item.isLetter ? 0 : item.id}})">{{item.letter || item.name|cleanName}}</p>
+                    <!--<favorite ng-if="!item.isLetter" artist="item"/>-->
+                </ion-item>
+            </ion-list>
+        </div>
+        <div ng-if="!view.foodies.length && view.ready" class="coming-soon">
+            <img src="img/coolway/coming_soon.jpg">
+        </div>
+    </ion-content>
+</ion-view>

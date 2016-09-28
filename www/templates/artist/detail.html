@@ -1,0 +1,38 @@
+<ion-view>
+    <ion-content has-bouncing="false" class="artist-detail" ng-show="view.ready">
+        <div class="header" scroll="false">
+            <div class="picture">
+                <img ng-src="{{view.server_image}}artists/{{view.artist.id}}/cover/{{view.artist.image_cover}}" err-SRC="img/artist/front.png">
+            </div>
+            <div class="legend">
+                <p>{{view.artist.name|cleanName}}</p>
+                <!--<img src="img/favorite/on.png">-->
+                <favorite artist="view.artist" ng-if="view.ready" />
+            </div>
+        </div>
+        <div class="row body">
+            <div class="col col-100">
+                <p class="date" ng-if="view.scheduleActive" >{{view.artist.schedule | parseDate: 'dddd, D MMMM'}}</p>
+                <p class="time" ng-if="view.scheduleActive" ><i class="ion-clock"> </i>&nbsp;{{view.artist.schedule | parseDate: 'HH:mm'}}</p>
+                <p class="stage-name" ng-if="view.scheduleActive" ><i class="ion-location">&nbsp;{{view.artist.stage_name}}</i></p>
+                <hr>
+                <p class="description">
+                    {{view.artist.description}}
+                </p>
+                <button class="button button-clear listen" ng-if="view.artist.spotify_id.length" ng-click="playTrack(view.artist)">
+                    <img src="img/coolway/social-network/spotify.jpg">
+                    <p>Escucha r&aacute;pida </p>
+                </button>
+                <hr>
+                <p class="social-title">Social</p>
+                <div class="social">
+                    <img src="img/coolway/social-network/facebook.jpg" ng-if="view.artist.facebook.length" ng-click="openLink('{{view.artist.facebook}}')">
+                    <img src="img/coolway/social-network/twitter.jpg" ng-if="view.artist.twitter.length" ng-click="openLink('{{view.artist.twitter}}')">
+                    <img src="img/coolway/social-network/instagram.jpg" ng-if="view.artist.instagram.length" ng-click="openLink('{{view.artist.instagram}}')">
+                    <img src="img/coolway/social-network/youtube.jpg" ng-if="view.artist.youtube.length">
+                    <img src="img/coolway/social-network/share.jpg" ng-click="shareAnywhere(view.artist)">
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

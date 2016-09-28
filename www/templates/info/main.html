@@ -1,0 +1,27 @@
+<ion-view>
+    <ion-content class="info">
+        <div class="row filters" scroll="false">
+            <h3>Informaci&oacute;n Basica</h3>
+        </div>
+        <ion-list>
+            <ion-item ng-click="go('menu.map-how-get')">
+                1. Cómo llegar
+            </ion-item>
+            <ion-item ng-click="go('menu.weather')">
+                2. Tiempo
+            </ion-item>
+            <!--<ion-item ng-click="go('menu.organizer')">-->
+                <!--3. Organizador de maleta-->
+            <!--</ion-item>-->
+            <ion-item ng-click="go('menu.sponsor')">
+                3. Patrocinadores
+            </ion-item>
+            <ion-item ng-click="openLink('http://www.vina-rock.com/')">
+                4. Web
+            </ion-item>
+            <ion-item ng-click="openLink('http://www.vina-rock.com/wp-content/uploads/2015/09/Aviso-Legal-reaccion-Rock-S-L-2016.pdf')">
+                5. Aviso legal
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
