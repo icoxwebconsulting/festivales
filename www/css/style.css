@@ -74,6 +74,10 @@
     margin-top: 0px !important;
 }
 
+.platform-ios .row.unlimited-items{
+    margin-top: -2px !important;
+}
+
 .row.unlimited-items .col{
     -webkit-flex: none; /* Safari 6.1+ */
     -ms-flex: none; /* IE 10 */
@@ -106,6 +110,10 @@
     height: 50px !important;
 }
 
+.platform-ios .bar-header{
+    height: 67px !important;
+}
+
 
 .logo{
     width: 100%;
@@ -122,6 +130,10 @@
 .menu-button{
     height: 30px;
     margin-top:5px;
+}
+
+.platform-ios .menu-button{
+    padding: 2px;
 }
 
 .buttons-left:hover, .buttons-right:hover{
@@ -254,6 +266,10 @@
     font-weight: 900;
 }
 
+.platform-ios .category a{
+    font-size: 22px !important;
+}
+
 .category a:hover{
     opacity: 0.8;
 }
@@ -267,8 +283,16 @@
     height: 35px;
 }
 
+.platform-ios .header-right-menu img{
+    padding: 2px;
+}
+
 .header-right-menu .button-clear{
     margin-top: 3px !important;
+}
+
+.platform-ios .header-right-menu .button-clear{
+    margin-top: 25px !important;
 }
 
 .sidebar-right .menu-tabs{
@@ -383,6 +407,10 @@
     font-size: 24px;
     font-weight: 700;
     color:#ffffff;
+}
+
+.platform-ios .discover .subtitle .center{
+    padding: 2% !important;
 }
 
 .subtitle .center{
@@ -549,6 +577,10 @@
     height: 40px;
 }
 
+.platform-ios .list .right img{
+    padding: 4px;
+}
+
 .coolway .header{
     background-color: #333333 !important;
 }
@@ -691,6 +723,11 @@
 .artist .list .favorite img{
     height: 40px !important;
     width: 40px !important;
+}
+
+
+.platform-ios .artist .list .favorite img{
+    padding: 5px;
 }
 
 .discover .legend{
@@ -853,6 +890,10 @@
     color: #ffffff !important;
 }
 
+.platform-ios .login-header{
+    height: 70px !important;
+}
+
 .login-header .button-clear, .login-header .button-clear{
     color: #ffffff !important;
 }
@@ -860,6 +901,10 @@
 .login-header .header-tabs{
     width: 100% !important;
     padding: 0 !important;
+}
+
+.platform-ios .login-header .header-tabs {
+    margin-top: 15px !important;
 }
 
 .login-header .left, .login-header .right{
@@ -891,6 +936,14 @@
     /*background: -webkit-linear-gradient(top,  rgba(245,229,193,0.7) 99%,rgba(245,229,193,0) 100%,rgba(245,229,193,0) 101%);*/
     /*background: linear-gradient(to bottom,  rgba(245,229,193,0.7) 99%,rgba(245,229,193,0) 100%,rgba(245,229,193,0) 101%);*/
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3FED6CF', endColorstr='#00FED6CF',GradientType=0 );*/
+}
+
+.platform-ios .login-content{
+    margin-top:  -65px !important;
+}
+
+.platform-ios .div-form{
+    margin-top: 70px !important;
 }
 
 .login-content .title{
