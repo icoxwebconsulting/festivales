@@ -1,49 +1,49 @@
 @font-face {
-    font-family: 'GallowTree';
-    src: url("../lib/ionic/fonts/GallowTree.eot");
-    src: url("../lib/ionic/fonts/GallowTree.eot")
+    font-family: 'Interestelar-Regular';
+    src: url("../lib/ionic/fonts/Interestelar-Regular.eot");
+    src: url("../lib/ionic/fonts/Interestelar-Regular.eot")
     format("embedded-opentype"),
-    url("../lib/ionic/fonts/GallowTree.woff") format("woff"),
-    url("../lib/ionic/fonts/GallowTree.ttf") format("truetype"),
-    url("../lib/ionic/fonts/GallowTree.svg") format("svg");
+    url("../lib/ionic/fonts/Interestelar-Regular.woff") format("woff"),
+    url("../lib/ionic/fonts/Interestelar-Regular.ttf") format("truetype"),
+    url("../lib/ionic/fonts/Interestelar-Regular.svg") format("svg");
 }
 
 @font-face {
-    font-family: 'Raleway-Regular';
-    src: url("../lib/ionic/fonts/Raleway-Regular.eot");
-    src: url("../lib/ionic/fonts/Raleway-Regular.eot")
+    font-family: 'Kollektif';
+    src: url("../lib/ionic/fonts/Kollektif.eot");
+    src: url("../lib/ionic/fonts/Kollektif.eot")
     format("embedded-opentype"),
-    url("../lib/ionic/fonts/Raleway-Regular.woff") format("woff"),
-    url("../lib/ionic/fonts/Raleway-Regular.ttf") format("truetype"),
-    url("../lib/ionic/fonts/Raleway-Regular.svg") format("svg");
+    url("../lib/ionic/fonts/Kollektif.woff") format("woff"),
+    url("../lib/ionic/fonts/Kollektif.ttf") format("truetype"),
+    url("../lib/ionic/fonts/Kollektif.svg") format("svg");
 }
 
 
 ::-webkit-input-placeholder{
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #121323 !important;
     opacity: 1 !important;
 }
 
 :-moz-placeholder{
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #121323 !important;
     opacity: 1 !important;
 }
 
 ::-moz-placeholder{
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #121323 !important;
     opacity: 1 !important;
 }
 
 :-ms-input-placeholder{
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #121323 !important;
     opacity: 1 !important;
 }
 
@@ -88,11 +88,11 @@
 }
 
 .nav-bar-block{
-    background-color: #efa35d !important;
+    background-color: #121323 !important;
 }
 
 .bar-footer{
-    background-color: #323230 !important;
+    background-color: #121323 !important;
 }
 
 .bar-header{
@@ -149,11 +149,14 @@
 }
 
 .menu{
-    font-family: GallowTree, Raleway-Regular  !important;
+    font-family: Interestelar-Regular, Kollektif  !important;
 }
 
 .menu-left .pane, .poster, .map, .coming-soon{
-    background-color: #323230;
+    background-image: url('../img/menu/background.png') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .coming-soon{
@@ -337,7 +340,7 @@
     margin:10px auto;
     text-align:left;
     color: #ffffff;
-    font-family: GallowTree, Raleway-Regular  !important;
+    font-family: Interestelar-Regular, Kollektif  !important;
     font-size: 20px;
     text-decoration: none;
 }
@@ -347,7 +350,7 @@
 }
 
 .header-right-menu{
-    background-color: #efa35d !important;
+    background-color: #B74E4A !important;
     height: 51px !important;
 }
 
@@ -360,14 +363,14 @@
 }
 
 .sidebar-right .menu-tabs{
-    background-color: #2786bb !important;
+    background-color: #5EA2BF !important;
     border: none !important;
     margin: 0 !important;
 }
 
 .sidebar-right .tab-item{
     margin-top: 18px !important;
-    font-family: Raleway-Regular  !important;
+    font-family: Kollektif  !important;
     color: #ffffff !important;
     font-size: 14px !important;
 }
@@ -386,7 +389,7 @@
 }
 
 .menu-right .pane{
-    background-color: #ffefcd !important;
+    background-color: #F6E8C8 !important;
 }
 
 .menu-right .favorites .pane, .menu-right .notifications .pane{
@@ -414,7 +417,7 @@
     position: inherit;
     padding: 0px 20px;
     text-align: center;
-    font-family: Raleway-Regular  !important;
+    font-family: Kollektif  !important;
 }
 
 .menu-right .list.disable-user-behavior{
@@ -424,8 +427,8 @@
 }
 
 .menu-right .favorites .item-content{
-    background-color: #ffefcd !important;
-    color: #04041B;
+    background-color: #F6E8C8 !important;
+    color: #121323;
     border: none !important;
 }
 
@@ -434,7 +437,7 @@
 }
 
 .favorites .list .item .time, .favorites .list .item .stage-name, .notifications .list .item .stage-name, .notifications .list .item .time{
-    font-family: Raleway-Regular!important;
+    font-family: Kollektif!important;
     font-weight: lighter !important;
     font-size: 13px !important;
 }
@@ -462,13 +465,17 @@
     margin-top: 5px;
 }
 
+.discover .subtitle{
+    background: url('../img/main/main.jpg') !important;
+}
+
 .discover .subtitle .col{
     padding: 0px !important;
-    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .discover .subtitle .col .center span{
-    font-family: Raleway-Regular  !important;
+    font-family: Kollektif  !important;
     font-size: 14px;
     font-weight: 700;
     color: #ffffff;
@@ -518,7 +525,7 @@
 }
 
 .filters{
-    background-color: #2786bb !important;
+    background-color: #5EA2BF !important;
     position: static !important;
     height: 50px !important;
     padding: 0px !important;
@@ -570,7 +577,7 @@
 
 .filters .active{
     border-style: solid;
-    border-bottom: 4px solid #04041B;
+    border-bottom: 4px solid #121323;
     width: 100%;
     height: 50px;
 }
@@ -581,12 +588,12 @@
 }
 
 .list .item{
-    color: #04041B;
-    background-color: #ffefcd !important;
+    color: #121323;
+    background-color: #F6E8C8 !important;
     border-top: none !important;
     border-right: none !important;
     border-left: none !important;
-    border-bottom: 1px solid #04041B;
+    border-bottom: 1px solid #121323;
     padding-bottom: 0 !important;
     padding-left: 0 !important;
     margin-bottom:2px;
@@ -625,13 +632,13 @@
 }
 
 .list .artist-name{
-    font-family: GallowTree, Raleway-Regular  !important;
-    color: #04041B !important;
+    font-family: Interestelar-Regular, Kollektif  !important;
+    color: #121323 !important;
     font-size: 14px;
 }
 
 .list .time, .list .stage-name{
-    color: #04041B;
+    color: #121323;
 }
 
 .list .right img{
@@ -714,15 +721,15 @@
 }
 
 .artist .my-item.item p{
-    font-family: GallowTree, Raleway-Regular  !important;
-    color: #04041B;
+    font-family: Interestelar-Regular, Kollektif  !important;
+    color: #121323;
     font-size:16px;
     display: inline-block;
 }
 
 .artist .subtitle{
     height: 50px !important;
-    background-color: #2786bb !important;
+    background-color: #5EA2BF !important;
 }
 
 .artist .full-width {
@@ -734,11 +741,11 @@
 }
 
 .artist .listed{
-    background-color: #ffefcd !important;
+    background-color: #F6E8C8 !important;
 }
 
 .artist .list .item{
-    background-color: #ffefcd !important;
+    background-color: #F6E8C8 !important;
     margin: 0 5px;
     height: 100px;
     max-height: 100px;
@@ -746,11 +753,11 @@
 }
 
 .artist .list .item-divider-artist{
-    border-top: 1px solid #04041B !important;
+    border-top: 1px solid #121323 !important;
 }
 
 .artist .list .item-divider, .schedule .list .item-divider{
-    background-color: #8b3e49 !important;
+    background-color: #B74E4A !important;
     border-style: none !important;
     border-top: none !important;
     margin: 0px !important;
@@ -768,7 +775,7 @@
     margin-left: 5px !important;
     color: #ffffff;
     font-size: 14px;
-    font-family: Raleway-Regular !important;
+    font-family: Kollektif !important;
 }
 
 .artist .list .favorite{
@@ -792,12 +799,12 @@
     background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(10,10,32,.33) 20%,rgba(10,10,32,.35) 21%,rgba(10,10,32,.7) 43%)!important;
     background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(10,10,32,.33) 20%,rgba(10,10,32,.35) 21%,rgba(10,10,32,.7) 43%)!important;
     background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(10,10,32,.33) 20%,rgba(10,10,32,.35) 21%,rgba(10,10,32,.7) 43%)!important;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#b30a0a20', GradientType=0)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#12132300', endColorstr='#b30a0a20', GradientType=0)!important;
 }
 
 
 .discover .legend p{
-    font-family: GallowTree,Raleway-Regular!important;
+    font-family: Interestelar-Regular,Kollektif!important;
     font-size: 16px;
     display: inline-block;
     float: left;
@@ -824,11 +831,11 @@
     background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(10,10,32,0.33) 20%, rgba(10,10,32,0.35) 21%, rgba(10,10,32,0.7) 43%) !important;
     background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(10,10,32,0.33) 20%,rgba(10,10,32,0.35) 21%,rgba(10,10,32,0.7) 43%) !important;
     background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(10,10,32,0.33) 20%,rgba(10,10,32,0.35) 21%,rgba(10,10,32,0.7) 43%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b30a0a20',GradientType=0 ) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#12132300', endColorstr='#b30a0a20',GradientType=0 ) !important;
 }
 
 .artist-detail .legend p{
-    font-family: GallowTree,Raleway-Regular!important;
+    font-family: Interestelar-Regular,Kollektif!important;
     font-size: 14px;
     display: inline-block;
     float: left;
@@ -852,9 +859,9 @@
 .artist-detail .body{
     height: auto;
     width: 100%;
-    font-family: Raleway-Regular  !important;
-    color: #04041B;
-    background-color: #ffefcd !important;
+    font-family: Kollektif  !important;
+    color: #121323;
+    background-color: #F6E8C8 !important;
     position: absolute;
     display: block;
     margin-top: 250px;
@@ -890,20 +897,20 @@
 }
 
 .artist-detail .body .listen p{
-    font-family: Raleway-Regular!important;
+    font-family: Kollektif!important;
     font-size: 12px;
     display: inline-block;
     font-weight: bold;
-    color: #04041B;
+    color: #121323;
     float:left;
     vertical-align: middle;
 }
 
 .artist-detail .body .social-title{
-    font-family:  GallowTree,Raleway-Regular!important;
+    font-family:  Interestelar-Regular,Kollektif!important;
     font-size: 28px;
     display: block;
-    color: #04041B;
+    color: #121323;
     float:left;
     width: 100%;
     margin-top:10px;
@@ -929,16 +936,16 @@
     /* RGBa with 0.6 opacity */
     background-color: rgba(245, 229, 193, 1);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#F6E8C8, endColorstr=#F6E8C8);
     /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F6E8C8, endColorstr=#F6E8C8)";
     padding: 0 !important;
 }
 
 .login-header{
     width: 100% !important;
     height: 70px !important;
-    background-color: #8b3e49 !important;
+    background-color: #B74E4A !important;
     padding: 0 !important;
     color: #ffffff !important;
 }
@@ -964,7 +971,7 @@
 
 .login-header .btn-action{
     color: #ffffff;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 25px !important;
     margin-top:20px;
     font-weight: lighter;
@@ -984,14 +991,14 @@
 
 .login-content .title{
     text-align: center;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     margin-top: 40px;
     margin-bottom: 30px;
 }
 
 .login-content .title h4{
     font-size: 30px;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
 }
 
 .login-content .title span{
@@ -1008,7 +1015,7 @@
 
 .login-content .options .later{
     text-align: center;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-weight: bold;
     font-size: 15px;
     margin: 100px 0;
@@ -1016,7 +1023,7 @@
 }
 
 .login-content .options .later a{
-    color: #2786bb !important;
+    color: #5EA2BF !important;
 }
 
 .login-content .form {
@@ -1024,7 +1031,7 @@
 }
 
 .login-content .form .field{
-    border-bottom: 2px solid #04041B !important;
+    border-bottom: 2px solid #121323 !important;
     margin-top:10px;
     width: 100%;
 }
@@ -1050,13 +1057,13 @@
 
 .login-content .form .field input{
     /* Fallback for web browsers that don't support RGBa */
-    background-color: rgb(255, 239, 205);
+    background-color: rgb(246, 232, 200);
     /* RGBa with 0.6 opacity */
-    background-color: rgba(255, 239, 205, 0.9);
+    background-color: rgba(246, 232, 200, 0.9);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#F6E8C8, endColorstr=#F6E8C8);
     /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F6E8C8, endColorstr=#F6E8C8)";
     border: none !important;
     width: 87%;
     font-size: 18px;
@@ -1065,7 +1072,7 @@
 
 .login-content .form .later{
     text-align: center;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 11px;
     margin-top: 5px;
     width: 100%;
@@ -1077,7 +1084,7 @@
     width: 100%;
     float: left;
     display: block;
-    color: #04041B !important;
+    color: #121323 !important;
 }
 
 .login-footer{
@@ -1089,7 +1096,7 @@
 
 .login-footer a{
     display: block;
-    color: #2786bb !important;
+    color: #5EA2BF !important;
 }
 
 
@@ -1122,10 +1129,10 @@
 }
 
 .modal-settings .list .item{
-    background-color: #ffefcd !important;
+    background-color: #F6E8C8 !important;
     border-color: #F0E0BC !important;
-    color:#04041B !important;
-    font-family:  Raleway-Regular!important;
+    color:#121323 !important;
+    font-family:  Kollektif!important;
     height: 40px !important;
     padding: 12px !important;
 }
@@ -1135,8 +1142,8 @@
 }
 
 .modal-settings .bar-header{
-    background-color: #04041B !important;
-    color: #ffefcd !important;
+    background-color: #121323 !important;
+    color: #F6E8C8 !important;
 }
 
 .modal-settings .logo img {
@@ -1154,7 +1161,7 @@
 }
 
 .modal-settings .input-list .item-title{
-    background-color: #ffefcd !important;
+    background-color: #F6E8C8 !important;
     border-color: #F0E0BC !important;
     padding: 12px;
     height: 40px !important;
@@ -1208,7 +1215,7 @@
 
 .footer .button.button-clear{
     font-size: 11px !important;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     color: #ffffff !important;
 }
 
@@ -1219,13 +1226,13 @@
 }
 
 .social .filter .button{
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 12px !important;
 }
 
 .info .filters h3{
     color:#ffffff !important;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     vertical-align: middle;
     text-align: center;
     margin: auto;
@@ -1240,7 +1247,7 @@
 }
 
 .info .list .item{
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 16px !important;
     font-weight: 600;
 }
@@ -1252,7 +1259,7 @@
 }
 
 .schedule .stage .list .item-divider p{
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 14px !important;
     color: #ffffff;
     padding: 5px;
@@ -1297,9 +1304,9 @@
     /* RGBa with 0.6 opacity */
     background-color: rgba(4, 4, 27, 0.9) !important;
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#04041B, endColorstr=#04041B) !important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#121323, endColorstr=#121323) !important;
     /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#04041B, endColorstr=#04041B)" !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#121323, endColorstr=#121323)" !important;
     border: none !important;
     font-size: 18px;
     line-height: 18px;
@@ -1317,7 +1324,7 @@
 
 .modal-player .track-name, .modal-player .track-duration, .modal-player .artist-name  {
     color: #ffffff !important;
-    font-family:  Raleway-Regular!important;
+    font-family:  Kollektif!important;
     font-size: 14px !important;
 }
 
@@ -1413,7 +1420,7 @@
 }
 
 .sponsor h3, .weather h3{
-    font-family: GallowTree, Raleway-Regular!important;
+    font-family: Interestelar-Regular, Kollektif!important;
     font-weight: lighter !important;
     color: #ffffff;
     text-align: center;
@@ -1423,7 +1430,7 @@
 .sponsor .subtitle, .weather .subtitle{
     width: 100% !important;
     height: 30px !important;
-    background-color: #2786bb !important;
+    background-color: #5EA2BF !important;
     padding: 0px !important;
     color: #ffffff !important;
     text-align: left;
@@ -1438,8 +1445,8 @@
 }
 
 .sponsor .images .col-50{
-    border-left: 1px solid #04041B;
-    border-bottom: 1px solid #04041B;
+    border-left: 1px solid #121323;
+    border-bottom: 1px solid #121323;
     padding: 0 !important;
 }
 
@@ -1463,7 +1470,7 @@
 }
 
 .facebook .item-body p, .twitter .item-body{
-    color: #000000;
+    color: #121323;
 }
 
 
@@ -1476,7 +1483,7 @@
 
 .weather .left{
     padding: 5px;
-    background-color: #ffefcd !important;
+    background-color: #F6E8C8 !important;
 }
 
 .weather .condition-icon{
@@ -1485,20 +1492,20 @@
 }
 
 .weather .time{
-    font-family: Raleway-Regular!important;
-    color: #04041B;
+    font-family: Kollektif!important;
+    color: #121323;
     font-size: 14px;
 }
 
 .weather .condition-name{
-    font-family: GallowTree, Raleway-Regular!important;
-    color: #04041B;
+    font-family: Interestelar-Regular, Kollektif!important;
+    color: #121323;
     font-size: 18px;
 }
 
 .weather .temperature{
-    font-family: GallowTree, Raleway-Regular!important;
-    color: #04041B;
+    font-family: Interestelar-Regular, Kollektif!important;
+    color: #121323;
     font-size: 20px;
 }
 

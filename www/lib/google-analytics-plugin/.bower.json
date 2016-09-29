@@ -1,0 +1,14 @@
+{
+  "name": "google-analytics-plugin",
+  "homepage": "https://github.com/danwilson/google-analytics-plugin",
+  "version": "0.8.1",
+  "_release": "0.8.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.8.1",
+    "commit": "6c5c4179b60b8023d040a1a5b313d362ecb54f93"
+  },
+  "_source": "https://github.com/danwilson/google-analytics-plugin.git",
+  "_target": "~0.8.1",
+  "_originalSource": "https://github.com/danwilson/google-analytics-plugin.git"
+}

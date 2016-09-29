@@ -9,7 +9,7 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
         $scope.pause = true;
 
         $scope.view.currentDate = $filter('date')(new Date(), 'yyyy-MM-dd');
-        $scope.view.feastDate =  $filter('date')(new Date('2016-07-01'), 'yyyy-MM-dd');
+        $scope.view.feastDate =  $filter('date')(new Date('2016-10-12'), 'yyyy-MM-dd');
 
         $scope.view.scheduleActive = false;
 

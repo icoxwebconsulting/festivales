@@ -1,4 +1,4 @@
-var app = angular.module('cabodeplata',
+var app = angular.module('interestelar',
     [
         'ionic',
         'ngCordova',
