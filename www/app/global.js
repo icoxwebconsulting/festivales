@@ -13,20 +13,20 @@ app.constant('GLOBAL', {
     },
     'spotify':{
         'country_iso': 'ES',
-        'user_id': 'cabodeplata',
-        'client_id': 'a332a6f5397f461d804cf4863c6499ef',
-        'playlist_id': '1J0HS4bjFG9zGKL6BLaFD9'
+        'user_id': 'interestelarsevilla',
+        'client_id': '2f375c768116422aa8c4e31d4165c34b',
+        'playlist_id': '2poZ8QqUhxexHx6MT8JXSW'
     },
     'facebook':{
         'api_version': 'v2.5',
-        'user_id': '904487902976625',
-        'client_id': '140237593052216',
-        'client_secret': 'b5c770c9b33ff950fbb99dd14049e6d2'
+        'user_id': '1670312023215494',
+        'client_id': '176626989445422',
+        'client_secret': 'a67cc1ceea3f86eece8b8f11bf11fbbd'
     },
     'twitter':{
-        'screen_name': 'cabodeplatafest',
-        'client_id': 'EUWrUcoeBsyc3WXcCeL7y3Cvl',
-        'client_secret': '1Dx2MY7zbypUPVK7anjIaTEb3fKxuwbeyC7mEV7MFvEULvJhz5'
+        'screen_name': 'InterestelarSev',
+        'client_id': 'DdaAG4427damW3kOk5O3GDwXr',
+        'client_secret': '6ft5v8DS7aZ2KqhbDPtc2vz6o4eka7IeweXaGMPRICgCbe9ZYr'
     },
     'instagram':{
         'user_id': '2234302526',

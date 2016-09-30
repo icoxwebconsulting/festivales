@@ -99,7 +99,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
             var PushNotification = window.PushNotification;
             var push = PushNotification.init({
                 android: {
-                    senderID: "706865749921",
+                    senderID: "86166158594",
                     icon: "icon",
                     iconColor: "lightgrey"
                 },
@@ -107,7 +107,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                     alert: "true",
                     badge: "true",
                     sound: "true",
-                    senderID: "706865749921" // GCM Sender ID (project ID)
+                    senderID: "86166158594" // GCM Sender ID (project ID)
                 }
             });
 

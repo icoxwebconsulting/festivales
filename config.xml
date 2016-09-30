@@ -62,7 +62,7 @@
   <allow-navigation href="https://*/*"/>
   <allow-navigation href="data:*"/>
   <plugin name="cordova-plugin-facebook4" spec="~1.7.1">
-    <variable name="APP_ID" value="140237593052216"/>
+    <variable name="APP_ID" value="176626989445422"/>
     <variable name="APP_NAME" value="Festival"/>
   </plugin>
 </widget>

@@ -226,7 +226,7 @@ app.controller('MenuController', function($rootScope, $scope, $ionicModal, Sched
         angular.forEach($scope.view.favorites, function (value, key) {
                 message += " \r\n"+$filter('cleanName')(value.name)+" \r\n"+$filter('parseDate')(value.schedule)+" - "+$filter('parseDate')(value.schedule, 'HH:mm')+"\r\n"+value.stage_name+" \r\n";
         });
-        $cordovaSocialSharing.share("Mis artistas favoritos  en el #cabodeplata \r\n"+message, "Cabo de plata festival", '', "\r\n http://www.cabodeplata.com/");
+        $cordovaSocialSharing.share("Mis artistas favoritos  en el #InterestelarSevilla \r\n"+message, "InterEstelar Sevilla", '', "\r\n http://www.interestelarsevilla.com/");
     };
 
     $scope.getWeather = function(){

@@ -476,7 +476,7 @@
 
 .discover .subtitle .col .center span{
     font-family: Kollektif  !important;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 700;
     color: #ffffff;
 }
@@ -723,7 +723,7 @@
 .artist .my-item.item p{
     font-family: Interestelar-Regular, Kollektif  !important;
     color: #121323;
-    font-size:16px;
+    font-size:18px;
     display: inline-block;
 }
 
@@ -774,7 +774,7 @@
 .artist .list .item-divider p{
     margin-left: 5px !important;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
     font-family: Kollektif !important;
 }
 
@@ -805,7 +805,7 @@
 
 .discover .legend p{
     font-family: Interestelar-Regular,Kollektif!important;
-    font-size: 16px;
+    font-size: 18px;
     display: inline-block;
     float: left;
     margin: 18px 10px;
@@ -836,7 +836,7 @@
 
 .artist-detail .legend p{
     font-family: Interestelar-Regular,Kollektif!important;
-    font-size: 14px;
+    font-size: 18px;
     display: inline-block;
     float: left;
     margin: 18px 10px;
@@ -875,7 +875,7 @@
 }
 
 .artist-detail .body .time, .artist-detail .body .stage-name, .artist-detail .body .description{
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom:0 !important;
     text-align: justify;
 }
