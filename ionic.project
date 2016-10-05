@@ -1,8 +1,0 @@
-{
-  "name": "Les Arts",
-  "app_id": "com.gravedad.lesarts",
-  "gulpStartupTasks": [
-    "default",
-    "watch"
-  ]
-}
