@@ -14,13 +14,12 @@
                     {{view.foodie.description}}
                 </p>
                 <hr>
-                <p class="social-title">Social</p>
+                <p class="social-title" ng-if="view.foodie.facebook.length || view.foodie.twitter.length || view.foodie.instagram.length || view.foodie.youtube.length">Social</p>
                 <div class="social">
-                    <img src="img/coolway/social-network/facebook_.png" ng-if="view.foodie.facebook.length" ng-click="openLink('{{view.foodie.facebook}}')">
-                    <img src="img/coolway/social-network/twitter_.png" ng-if="view.foodie.twitter.length" ng-click="openLink('{{view.foodie.twitter}}')">
-                    <img src="img/coolway/social-network/instagram_.png" ng-if="view.foodie.instagram.length" ng-click="openLink('{{view.foodie.instagram}}')">
-                    <img src="img/coolway/social-network/youtube_.png" ng-if="view.foodie.youtube.length">
-                    <img src="img/coolway/social-network/share_.png" ng-click="shareAnywhere(view.foodie)">
+                    <img src="img/coolway/social-network/facebook.png" ng-if="view.foodie.facebook.length" ng-click="openLink('{{view.foodie.facebook}}')">
+                    <img src="img/coolway/social-network/twitter.png" ng-if="view.foodie.twitter.length" ng-click="openLink('{{view.foodie.twitter}}')">
+                    <img src="img/coolway/social-network/instagram.png" ng-if="view.foodie.instagram.length" ng-click="openLink('{{view.foodie.instagram}}')">
+                    <img src="img/coolway/social-network/youtube.png" ng-if="view.foodie.youtube.length">
                 </div>
             </div>
         </div>

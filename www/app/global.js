@@ -4,7 +4,7 @@ app.constant('GLOBAL', {
         //'url': 'http://coolway.dev/app_dev.php/api/',
         //'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
         'version': 'v1',
-        'feast': 1
+        'feast': 5
     },
     'server':{
         'image': 'http://gravedadprod.mobi/uploads/'
