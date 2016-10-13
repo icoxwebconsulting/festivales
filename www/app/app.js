@@ -14,7 +14,7 @@ var app = angular.module('interestelar',
 
 app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, DBService, UserService, NotificationService, $cordovaGoogleAnalytics) {
     $ionicPlatform.ready(function () {
-        DBService.init(false);
+        DBService.init(true);
 
         function _waitForAnalytics(){
             if(typeof analytics !== 'undefined'){

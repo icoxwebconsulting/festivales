@@ -3,7 +3,7 @@
         <ion-list class="list">
             <ion-item ng-repeat="item in view.favorites | orderBy:'schedule'" overflow-scroll="true"  menu-close ng-click="showArtistDetail({{item.id}})">
                 <div class="left" ng-click="showDetail({{item.id}})">
-                    <img ng-src="{{view.server_image}}artists/{{item.id}}/100/{{item.image_profile}}"  class="artist-cover">
+                    <img err-SRC="img/artist/icon.png" ng-src="{{view.server_image}}artists/{{item.id}}/100/{{item.image_profile}}"  class="artist-cover">
                 </div>
                 <div class="center" ng-click="showDetail({{item.id}})">
                     <p class="artist-name">

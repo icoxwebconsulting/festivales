@@ -1,0 +1,8 @@
+{
+  "name": "Interestelar",
+  "app_id": "com.gravedad.interestelar",
+  "gulpStartupTasks": [
+    "default",
+    "watch"
+  ]
+}

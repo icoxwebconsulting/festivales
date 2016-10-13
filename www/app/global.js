@@ -1,15 +1,17 @@
 app.constant('GLOBAL', {
     'api':{
-        'url' : 'http://gravedadprod.mobi/app_dev.php/api/',
+        //'url' : 'http://gravedadprod.mobi/app_dev.php/api/',
         //'url': 'http://coolway.dev/app_dev.php/api/',
-        //'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
+        'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
+        //'url': 'http://62.75.210.58/app_dev.php/api/',
         'version': 'v1',
-        'feast': 5
+        'feast': 3
     },
     'server':{
-        'image': 'http://gravedadprod.mobi/uploads/'
+        //'image': 'http://gravedadprod.mobi/uploads/'
         //'image': 'http://coolway.dev/uploads/'
-        //'image': 'http://festivales.icox.mobi/uploads/'
+        'image': 'http://festivales.icox.mobi/uploads/'
+        //'image': 'http://62.75.210.58/uploads/'
     },
     'spotify':{
         'country_iso': 'ES',
