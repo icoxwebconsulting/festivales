@@ -255,7 +255,7 @@
 
 .menu-left .header-left-menu{
     display: inline-block;
-    margin-top: -60px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
@@ -1470,7 +1470,7 @@
 .sponsor .subtitle, .weather .subtitle{
     width: 100% !important;
     height: 30px !important;
-    background-color: #5EA2BF !important;
+    background-color: #B74E4A !important;
     padding: 0px !important;
     color: #ffffff !important;
     text-align: left;

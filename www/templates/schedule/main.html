@@ -3,7 +3,7 @@
         <div class="row subtitle filter" ng-if="view.scheduleActive">
             <div class="col col-100">
                 <div class="days">
-                    <button class="button button-clear" ng-click="setDay(21,'2016-10-21 00:00','2016-07-22 08:00')" ng-class="{'active': view.show_day  == 21}">
+                    <button class="button button-clear" ng-click="setDay(21,'2016-10-21 00:00','2016-10-22 08:00')" ng-class="{'active': view.show_day  == 21}">
                         <img src="img/schedule/21.png">
                     </button>
                     <button class="button button-clear" ng-click="setDay(22,'2016-10-22 10:00','2016-10-23 10:00')" ng-class="{'active': view.show_day  == 22}">
@@ -32,6 +32,6 @@
         <div ng-include="'templates/schedule/by-stage.html'" ng-if="view.show_list == 'stage' && view.scheduleActive" ></div>
     </ion-content>
     <div ng-if="!view.scheduleActive && view.ready" class="coming-soon">
-        <img src="img/coolway/coming_soon.png">
+        <img src="img/coolway/coming_soon.png" width="100%">
     </div>
 </ion-view>
