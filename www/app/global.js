@@ -5,7 +5,7 @@ app.constant('GLOBAL', {
         //'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
         //'url': 'http://62.75.210.58/app_dev.php/api/',
         'version': 'v1',
-        'feast': 3
+        'feast': 5
     },
     'server':{
         'image': 'http://gravedadprod.mobi/uploads/'
