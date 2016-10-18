@@ -1,49 +1,49 @@
 @font-face {
-    font-family: 'Ruina';
-    src: url("../lib/ionic/fonts/Ruina.eot");
-    src: url("../lib/ionic/fonts/Ruina.eot")
+    font-family: 'LosLanaNiuPro-Regular';
+    src: url("../lib/ionic/fonts/LosLanaNiuPro-Regular.eot");
+    src: url("../lib/ionic/fonts/LosLanaNiuPro-Regular.eot")
     format("embedded-opentype"),
-    url("../lib/ionic/fonts/Ruina.woff") format("woff"),
-    url("../lib/ionic/fonts/Ruina.ttf") format("truetype"),
-    url("../lib/ionic/fonts/Ruina.svg") format("svg");
+    url("../lib/ionic/fonts/LosLanaNiuPro-Regular.woff") format("woff"),
+    url("../lib/ionic/fonts/LosLanaNiuPro-Regular.ttf") format("truetype"),
+    url("../lib/ionic/fonts/LosLanaNiuPro-Regular.svg") format("svg");
 }
 
 @font-face {
-    font-family: 'ITC-ClearfaceStd-Regular';
-    src: url("../lib/ionic/fonts/ITC-ClearfaceStd-Regular.eot");
-    src: url("../lib/ionic/fonts/ITC-ClearfaceStd-Regular.eot")
+    font-family: 'Knile-Regular';
+    src: url("../lib/ionic/fonts/Knile-Regular.eot");
+    src: url("../lib/ionic/fonts/Knile-Regular.eot")
     format("embedded-opentype"),
-    url("../lib/ionic/fonts/ITC-ClearfaceStd-Regular.woff") format("woff"),
-    url("../lib/ionic/fonts/ITC-ClearfaceStd-Regular.ttf") format("truetype"),
-    url("../lib/ionic/fonts/ITC-ClearfaceStd-Regular.svg") format("svg");
+    url("../lib/ionic/fonts/Knile-Regular.woff") format("woff"),
+    url("../lib/ionic/fonts/Knile-Regular.ttf") format("truetype"),
+    url("../lib/ionic/fonts/Knile-Regular.svg") format("svg");
 }
 
 
 ::-webkit-input-placeholder{
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #0E3743 !important;
     opacity: 1 !important;
 }
 
 :-moz-placeholder{
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #0E3743 !important;
     opacity: 1 !important;
 }
 
 ::-moz-placeholder{
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #0E3743 !important;
     opacity: 1 !important;
 }
 
 :-ms-input-placeholder{
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 18px !important;
-    color: #04041B !important;
+    color: #0E3743 !important;
     opacity: 1 !important;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .nav-bar-block, .bar-footer{
-    background-color: #0A0A20 !important;
+    background-color: #0E3743 !important;
 }
 
 .bar-header{
@@ -104,9 +104,9 @@
 }
 
 .logo img{
-    max-width: 75% !important;
-    max-height: 40px;
-    margin-top: 4px;
+    max-width: 100%!important;
+    max-height: 140px;
+    margin-top: -2px;
 }
 
 .menu-button{
@@ -145,7 +145,7 @@
 }
 
 .menu{
-    font-family: Ruina, ITC-ClearfaceStd-Regular  !important;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
 }
 
 .menu-left .pane, .poster, .map, .coming-soon{
@@ -167,7 +167,7 @@
 
 .menu-left .header-left-menu{
     display: inline-block;
-    margin-top: -60px;
+    margin-top: -20px;
     margin-bottom: 10px;
 }
 
@@ -182,7 +182,7 @@
 }
 
 .menu-left .header-left-menu img{
-    width : 100%;
+    width : 90%;
     padding: 0px 25px;
 }
 
@@ -229,7 +229,7 @@
 
 .category img{
     height: 38px;
-    margin-left: 45px;
+    margin-left: 0px;
     vertical-align: middle;
 }
 
@@ -238,9 +238,11 @@
     margin:10px auto;
     text-align:left;
     color: #ffffff;
-    font-family: Ruina, ITC-ClearfaceStd-Regular  !important;
-    font-size: 18px;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
+    font-size: 21px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .category a:hover{
@@ -248,7 +250,7 @@
 }
 
 .header-right-menu{
-    background-color: #0A0A20 !important;
+    background-color: #0E3743 !important;
     height: 51px !important;
 }
 
@@ -268,7 +270,7 @@
 
 .sidebar-right .tab-item{
     margin-top: 18px !important;
-    font-family: Ruina, ITC-ClearfaceStd-Regular  !important;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
     color: #ffffff !important;
     font-size: 14px !important;
 }
@@ -315,7 +317,7 @@
     position: inherit;
     padding: 0px 20px;
     text-align: center;
-    font-family: ITC-ClearfaceStd-Regular  !important;
+    font-family: Knile-Regular  !important;
 }
 
 .menu-right .list.disable-user-behavior{
@@ -326,7 +328,7 @@
 
 .menu-right .favorites .item-content{
     background-color: #F5E5C1 !important;
-    color: #04041B;
+    color: #0E3743;
     border: none !important;
 }
 
@@ -335,9 +337,9 @@
 }
 
 .favorites .list .item .time, .favorites .list .item .stage-name, .notifications .list .item .stage-name, .notifications .list .item .time{
-    font-family: ITC-ClearfaceStd-Regular!important;
+    font-family: Knile-Regular!important;
     font-weight: lighter !important;
-    font-size: 13px !important;
+    font-size: 12px !important;
 }
 
 .notifications .list .item .time{
@@ -369,7 +371,7 @@
 }
 
 .discover .subtitle .col .center span{
-    font-family: ITC-ClearfaceStd-Regular  !important;
+    font-family: Knile-Regular  !important;
     font-size: 14px;
     font-weight: 700;
 }
@@ -407,7 +409,7 @@
 }
 
 .subtitle .days img{
-    height: 45px;
+    height: 35px;
     vertical-align: middle;
     margin-top: -10px;
 }
@@ -418,7 +420,7 @@
 }
 
 .filters{
-    background-color: #008D61 !important;
+    background-color: #0F8253 !important;
     position: static !important;
     height: 50px !important;
     padding: 0px !important;
@@ -470,7 +472,7 @@
 
 .filters .active{
     border-style: solid;
-    border-bottom: 4px solid #04041B;
+    border-bottom: 4px solid #0E3743;
     width: 100%;
     height: 50px;
 }
@@ -481,12 +483,12 @@
 }
 
 .list .item{
-    color: #04041B;
+    color: #0E3743;
     background-color: #F5E5C1 !important;
     border-top: none !important;
     border-right: none !important;
     border-left: none !important;
-    border-bottom: 1px solid #04041B;
+    border-bottom: 1px solid #0E3743;
     padding-bottom: 0 !important;
     padding-left: 0 !important;
     margin-bottom:2px;
@@ -525,13 +527,13 @@
 }
 
 .list .artist-name{
-    font-family: Ruina, ITC-ClearfaceStd-Regular  !important;
-    color: #04041B !important;
-    font-size: 20px;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
+    color: #0E3743 !important;
+    font-size: 14px;
 }
 
 .list .time, .list .stage-name{
-    color: #04041B;
+    color: #0E3743;
 }
 
 .list .right img{
@@ -613,10 +615,11 @@
     padding-bottom: 0;
 }
 
+
 .artist .my-item.item p{
-    font-family: Ruina, ITC-ClearfaceStd-Regular  !important;
-    color: #04041B;
-    font-size:18px;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
+    color: #0E3743;
+    font-size:13px;
     display: inline-block;
 }
 
@@ -645,11 +648,11 @@
 }
 
 .artist .list .item-divider-artist{
-    border-top: 1px solid #04041B !important;
+    border-top: 1px solid #0E3743 !important;
 }
 
 .artist .list .item-divider, .schedule .list .item-divider{
-    background-color: #008D61 !important;
+    background-color: #EC2F1B !important;
     border-style: none !important;
     border-top: none !important;
     margin: 0px !important;
@@ -667,7 +670,7 @@
     margin-left: 5px !important;
     color: #ffffff;
     font-size: 14px;
-    font-family: ITC-ClearfaceStd-Regular !important;
+    font-family: Knile-Regular !important;
 }
 
 .artist .list .favorite{
@@ -691,17 +694,18 @@
     background: -moz-linear-gradient(top,rgba(0,0,0,0) 0,rgba(10,10,32,.33) 20%,rgba(10,10,32,.35) 21%,rgba(10,10,32,.7) 43%)!important;
     background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(10,10,32,.33) 20%,rgba(10,10,32,.35) 21%,rgba(10,10,32,.7) 43%)!important;
     background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(10,10,32,.33) 20%,rgba(10,10,32,.35) 21%,rgba(10,10,32,.7) 43%)!important;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#b30a0a20', GradientType=0)!important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#b30E3743', GradientType=0)!important;
 }
 
 
 .discover .legend p{
-    font-family: Ruina,ITC-ClearfaceStd-Regular!important;
-    font-size: 16px;
+    font-family: LosLanaNiuPro-Regular,Knile-Regular!important;
+    font-size: 14px;
     display: inline-block;
     float: left;
     margin: 18px 10px;
     color: #ffffff;
+    font-weight: 800;
 }
 
 .artist-detail .header img{
@@ -723,16 +727,16 @@
     background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(10,10,32,0.33) 20%, rgba(10,10,32,0.35) 21%, rgba(10,10,32,0.7) 43%) !important;
     background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(10,10,32,0.33) 20%,rgba(10,10,32,0.35) 21%,rgba(10,10,32,0.7) 43%) !important;
     background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(10,10,32,0.33) 20%,rgba(10,10,32,0.35) 21%,rgba(10,10,32,0.7) 43%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b30a0a20',GradientType=0 ) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b30E3743',GradientType=0 ) !important;
 }
 
 .artist-detail .legend p{
-    font-family: Ruina,ITC-ClearfaceStd-Regular!important;
+    font-family: LosLanaNiuPro-Regular,Knile-Regular!important;
     font-size: 28px;
     display: inline-block;
     float: left;
     margin: 18px 10px;
-    color: #ffffff;
+    color: #FFA700;
 }
 
 .artist-detail .legend img{
@@ -751,8 +755,8 @@
 .artist-detail .body{
     height: auto;
     width: 100%;
-    font-family: ITC-ClearfaceStd-Regular  !important;
-    color: #04041B;
+    font-family: Knile-Regular  !important;
+    color: #0E3743;
     background-color: #F5E5C1 !important;
     position: absolute;
     display: block;
@@ -767,7 +771,7 @@
 }
 
 .artist-detail .body .time, .artist-detail .body .stage-name, .artist-detail .body .description{
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom:0 !important;
     text-align: justify;
 }
@@ -789,20 +793,20 @@
 }
 
 .artist-detail .body .listen p{
-    font-family: ITC-ClearfaceStd-Regular!important;
-    font-size: 12px;
+    font-family: Knile-Regular!important;
+    font-size: 14px;
     display: inline-block;
     font-weight: bold;
-    color: #04041B;
+    color: #0E3743;
     float:left;
     vertical-align: middle;
 }
 
 .artist-detail .body .social-title{
-    font-family:  Ruina,ITC-ClearfaceStd-Regular!important;
+    font-family:  LosLanaNiuPro-Regular,Knile-Regular!important;
     font-size: 28px;
     display: block;
-    color: #04041B;
+    color: #EC2F1B;
     float:left;
     width: 100%;
     margin-top:10px;
@@ -843,7 +847,7 @@
 }
 
 .login-header .button-clear, .login-header .button-clear{
-    color: #ffffff !important;
+    color: #0E3743 !important;
 }
 
 .login-header .header-tabs{
@@ -858,12 +862,12 @@
 }
 
 .login-header .active{
-    border-bottom: 5px solid #04041B !important;
+    border-bottom: 5px solid #0E3743 !important;
 }
 
 .login-header .btn-action{
-    color: #ffffff;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    color: #0E3743;
+    font-family:  Knile-Regular!important;
     font-size: 25px !important;
     margin-top:20px;
     font-weight: lighter;
@@ -883,14 +887,14 @@
 
 .login-content .title{
     text-align: center;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     margin-top: 40px;
     margin-bottom: 30px;
 }
 
 .login-content .title h4{
     font-size: 30px;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
 }
 
 .login-content .title span{
@@ -907,7 +911,7 @@
 
 .login-content .options .later{
     text-align: center;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-weight: bold;
     font-size: 15px;
     margin: 100px 0;
@@ -915,7 +919,7 @@
 }
 
 .login-content .options .later a{
-    color: #008D61 !important;
+    color: #EC2F1B !important;
 }
 
 .login-content .form {
@@ -923,7 +927,7 @@
 }
 
 .login-content .form .field{
-    border-bottom: 2px solid #04041B !important;
+    border-bottom: 2px solid #0E3743 !important;
     margin-top:10px;
     width: 100%;
 }
@@ -958,13 +962,13 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#F5E5C1, endColorstr=#F5E5C1)";
     border: none !important;
     width: 87%;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 18px;
 }
 
 .login-content .form .later{
     text-align: center;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 11px;
     margin-top: 5px;
     width: 100%;
@@ -976,7 +980,7 @@
     width: 100%;
     float: left;
     display: block;
-    color: #04041B !important;
+    color: #0E3743 !important;
 }
 
 .login-footer{
@@ -988,7 +992,7 @@
 
 .login-footer a{
     display: block;
-    color: #008D61 !important;
+    color: #EC2F1B !important;
 }
 
 
@@ -1023,8 +1027,8 @@
 .modal-settings .list .item{
     background-color: #F5E5C1 !important;
     border-color: #F0E0BC !important;
-    color:#04041B !important;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    color:#0E3743 !important;
+    font-family:  Knile-Regular!important;
     height: 40px !important;
     padding: 12px !important;
 }
@@ -1034,7 +1038,7 @@
 }
 
 .modal-settings .bar-header{
-    background-color: #04041B !important;
+    background-color: #0E3743 !important;
     color: #F5E5C1 !important;
 }
 
@@ -1107,7 +1111,7 @@
 
 .footer .button.button-clear{
     font-size: 11px !important;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     color: #ffffff !important;
 }
 
@@ -1118,13 +1122,13 @@
 }
 
 .social .filter .button{
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 12px !important;
 }
 
 .info .filters h3{
     color:#ffffff !important;
-    font-family:  Ruina, ITC-ClearfaceStd-Regular!important;
+    font-family:  LosLanaNiuPro-Regular, Knile-Regular!important;
     vertical-align: middle;
     text-align: center;
     margin: auto;
@@ -1138,7 +1142,7 @@
 }
 
 .info .list .item{
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 16px !important;
     font-weight: 600;
 }
@@ -1150,7 +1154,7 @@
 }
 
 .schedule .stage .list .item-divider p{
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 14px !important;
     color: #ffffff;
     padding: 5px;
@@ -1195,9 +1199,9 @@
     /* RGBa with 0.6 opacity */
     background-color: rgba(4, 4, 27, 0.9) !important;
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#04041B, endColorstr=#04041B) !important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0E3743, endColorstr=#0E3743) !important;
     /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#04041B, endColorstr=#04041B)" !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#0E3743, endColorstr=#0E3743)" !important;
     border: none !important;
     font-size: 18px;
     line-height: 18px;
@@ -1215,7 +1219,7 @@
 
 .modal-player .track-name, .modal-player .track-duration, .modal-player .artist-name  {
     color: #ffffff !important;
-    font-family:  ITC-ClearfaceStd-Regular!important;
+    font-family:  Knile-Regular!important;
     font-size: 14px !important;
 }
 
@@ -1311,7 +1315,7 @@
 }
 
 .sponsor h3, .weather h3{
-    font-family: Ruina, ITC-ClearfaceStd-Regular!important;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular!important;
     font-weight: lighter !important;
     color: #ffffff;
     text-align: center;
@@ -1336,13 +1340,13 @@
 }
 
 .sponsor .images .col-50{
-    border-left: 1px solid #04041B;
-    border-bottom: 1px solid #04041B;
+    border-left: 1px solid #0E3743;
+    border-bottom: 1px solid #0E3743;
     padding: 0 !important;
 }
 
 .sponsor .images .col-100{
-    border-bottom: 1px solid #04041B;
+    border-bottom: 1px solid #0E3743;
 }
 
 .sponsor .images img{
@@ -1387,20 +1391,20 @@
 }
 
 .weather .time{
-    font-family: ITC-ClearfaceStd-Regular!important;
-    color: #04041B;
+    font-family: Knile-Regular!important;
+    color: #0E3743;
     font-size: 14px;
 }
 
 .weather .condition-name{
-    font-family: Ruina, ITC-ClearfaceStd-Regular!important;
-    color: #04041B;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular!important;
+    color: #0E3743;
     font-size: 18px;
 }
 
 .weather .temperature{
-    font-family: Ruina, ITC-ClearfaceStd-Regular!important;
-    color: #04041B;
+    font-family: LosLanaNiuPro-Regular, Knile-Regular!important;
+    color: #0E3743;
     font-size: 20px;
 }
 
