@@ -1,5 +1,6 @@
 app.constant('GLOBAL', {
     'api':{
+        //'url': 'http://62.75.142.156/api/',
         'url' : 'http://gravedadprod.mobi/app_dev.php/api/',
         //'url': 'http://coolway.dev/app_dev.php/api/',
         //'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
@@ -7,6 +8,7 @@ app.constant('GLOBAL', {
         'feast': 1
     },
     'server':{
+        //'image': 'http://62.75.142.156/uploads/'
         'image': 'http://gravedadprod.mobi/uploads/'
         //'image': 'http://coolway.dev/uploads/'
         //'image': 'http://festivales.icox.mobi/uploads/'
