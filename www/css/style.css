@@ -8,6 +8,17 @@
     url("../lib/ionic/fonts/LosLanaNiuPro-Regular.svg") format("svg");
 }
 
+
+@font-face {
+    font-family: 'LosLanaNiuPro-Black';
+    src: url("../lib/ionic/fonts/LosLanaNiuPro-Black.eot");
+    src: url("../lib/ionic/fonts/LosLanaNiuPro-Black.eot")
+    format("embedded-opentype"),
+    url("../lib/ionic/fonts/LosLanaNiuPro-Black.woff") format("woff"),
+    url("../lib/ionic/fonts/LosLanaNiuPro-Black.ttf") format("truetype"),
+    url("../lib/ionic/fonts/LosLanaNiuPro-Black.svg") format("svg");
+}
+
 @font-face {
     font-family: 'Knile-Regular';
     src: url("../lib/ionic/fonts/Knile-Regular.eot");
@@ -100,13 +111,12 @@
 .logo{
     width: 100%;
     text-align: center;
-    margin-top: 2px;
+    height: 100%;
 }
 
 .logo img{
     max-width: 100%!important;
-    max-height: 140px;
-    margin-top: -2px;
+    max-height: 100%!important;
 }
 
 .menu-button{
@@ -238,11 +248,10 @@
     margin:10px auto;
     text-align:left;
     color: #ffffff;
-    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
-    font-size: 21px;
+    font-family: LosLanaNiuPro-Black  !important;
+    font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 .category a:hover{
@@ -530,6 +539,7 @@
     font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
     color: #0E3743 !important;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .list .time, .list .stage-name{
@@ -617,10 +627,11 @@
 
 
 .artist .my-item.item p{
-    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
+    font-family: LosLanaNiuPro-Regular !important;
     color: #0E3743;
     font-size:13px;
     display: inline-block;
+    font-weight: bold;
 }
 
 .artist .subtitle{
@@ -699,13 +710,13 @@
 
 
 .discover .legend p{
-    font-family: LosLanaNiuPro-Regular,Knile-Regular!important;
+    font-family: LosLanaNiuPro-Regular !important;
     font-size: 14px;
     display: inline-block;
     float: left;
     margin: 18px 10px;
     color: #ffffff;
-    font-weight: 800;
+    font-weight: bold;
 }
 
 .artist-detail .header img{
@@ -731,8 +742,9 @@
 }
 
 .artist-detail .legend p{
-    font-family: LosLanaNiuPro-Regular,Knile-Regular!important;
-    font-size: 28px;
+    font-family: LosLanaNiuPro-Regular !important;
+    font-size: 22px;
+    font-weight: bold !important;
     display: inline-block;
     float: left;
     margin: 18px 10px;
@@ -765,13 +777,13 @@
 }
 
 .artist-detail .body .date{
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 20px;
+    font-family: LosLanaNiuPro-Black !important;
     margin-bottom:0 !important;
 }
-
 .artist-detail .body .time, .artist-detail .body .stage-name, .artist-detail .body .description{
     font-size: 14px;
+    font-family: Knile-Regular !important;
     margin-bottom:0 !important;
     text-align: justify;
 }
@@ -781,6 +793,7 @@
     width: 100%;
     padding: 0 !important;
     margin-top:10px !important;
+    font-family: LosLanaNiuPro-Regular !important;
 }
 
 .artist-detail .body .listen img{
@@ -803,8 +816,8 @@
 }
 
 .artist-detail .body .social-title{
-    font-family:  LosLanaNiuPro-Regular,Knile-Regular!important;
-    font-size: 28px;
+    font-family:  LosLanaNiuPro-Black !important;
+    font-size: 20px;
     display: block;
     color: #EC2F1B;
     float:left;
@@ -867,10 +880,9 @@
 
 .login-header .btn-action{
     color: #0E3743;
-    font-family:  Knile-Regular!important;
-    font-size: 25px !important;
+    font-family:  LosLanaNiuPro-Regular!important;
+    font-size: 22px !important;
     margin-top:20px;
-    font-weight: lighter;
 }
 
 .login-header .active .btn-action{
@@ -893,12 +905,13 @@
 }
 
 .login-content .title h4{
-    font-size: 30px;
-    font-family:  Knile-Regular!important;
+    font-size: 24px;
+    font-family: Knile-Regular!important;
 }
 
 .login-content .title span{
-    font-size: 15px;
+    font-family: Knile-Regular!important;
+    font-size: 12px;
 }
 
 .login-content .options img{
@@ -933,6 +946,7 @@
 }
 
 .login-content .form .field img, .login-content .form .field input {
+    font-family: Knile-Regular !important;
     display: inline-block;
     margin-top: 10px;
 }
@@ -1128,7 +1142,7 @@
 
 .info .filters h3{
     color:#ffffff !important;
-    font-family:  LosLanaNiuPro-Regular, Knile-Regular!important;
+    font-family:  LosLanaNiuPro-Black !important;
     vertical-align: middle;
     text-align: center;
     margin: auto;
@@ -1142,9 +1156,8 @@
 }
 
 .info .list .item{
-    font-family:  Knile-Regular!important;
-    font-size: 16px !important;
-    font-weight: 600;
+    font-family:  LosLanaNiuPro-Regular!important;
+    font-size: 14px !important;
 }
 
 
@@ -1158,6 +1171,10 @@
     font-size: 14px !important;
     color: #ffffff;
     padding: 5px;
+}
+
+.schedule .stage,  .schedule .time{
+    font-family: Knile-Regular !important;
 }
 
 .schedule .stage .list .item{
@@ -1219,8 +1236,9 @@
 
 .modal-player .track-name, .modal-player .track-duration, .modal-player .artist-name  {
     color: #ffffff !important;
-    font-family:  Knile-Regular!important;
+    font-family:  LosLanaNiuPro-Regular!important;
     font-size: 14px !important;
+    font-weight: bold;
 }
 
 .modal-player .track-name  {
@@ -1359,6 +1377,7 @@
 }
 
 .facebook .item-avatar, .facebook .item-body, .twitter .item-avatar, .twitter .item-body {
+    font-family: Knile-Regular !important;
     background-color: #ffffff !important;
     margin-top: 0 !important;
     padding-top: 0 !important;
@@ -1459,7 +1478,7 @@
 }
 
 .facebook{
-    font-family: helvetica, arial, sans-serif !important;
+    font-family: Knile-Regular !important;
 }
 
 .title-facebook img{
@@ -1469,6 +1488,7 @@
 }
 
 .title-facebook h2, .fb-profile .legend h2{
+    font-family: LosLanaNiuPro-Regular !important;
     margin-top: 18px !important;
     font-size: 14px !important;
     line-height: 17px !important;
@@ -1479,7 +1499,7 @@
 .title-facebook p, .fb-profile .legend p{
     color: inherit !important;
     font-weight: normal !important;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 16px;
 }
 
