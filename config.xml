@@ -62,7 +62,7 @@
     <icon src="resources/android/icon/drawable-xxhdpi-icon.png" density="xxhdpi"/>
     <icon src="resources/android/icon/drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
   </platform>
-  <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
+  <icon src="resources/ios/icon/icon-small@3x.png"/>
   <allow-navigation href="https://*/*"/>
   <allow-navigation href="data:*"/>
   <plugin name="cordova-plugin-facebook4" spec="~1.7.1">
