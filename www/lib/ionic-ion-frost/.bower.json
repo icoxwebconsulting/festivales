@@ -1,0 +1,14 @@
+{
+  "name": "ionic-ion-frost",
+  "homepage": "https://github.com/driftyco/ionic-ion-frost",
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "36ec510c418a7dbc9ff83a5b6420d83f26b39541"
+  },
+  "_source": "https://github.com/driftyco/ionic-ion-frost.git",
+  "_target": "~1.0.0",
+  "_originalSource": "ionic-ion-frost"
+}
