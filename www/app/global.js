@@ -15,7 +15,7 @@ app.constant('GLOBAL', {
         'country_iso': 'ES',
         'user_id': 'cabodeplata',
         'client_id': 'a332a6f5397f461d804cf4863c6499ef',
-        'playlist_id': '1J0HS4bjFG9zGKL6BLaFD9'
+        'playlist_id': '3b5mvz7H8fZd4mvk5PziTg'
     },
     'facebook':{
         'api_version': 'v2.5',
