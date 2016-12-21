@@ -17,7 +17,7 @@ app.constant('GLOBAL', {
         'country_iso': 'ES',
         'user_id': 'festivalarenalsound',
         'client_id': 'aaa80968bb4d45aeb5c37f9e8705bce2',
-        'playlist_id': '2TG0v4cmJ3jriUHWopXuWM'
+        'playlist_id': '4uiGqNKUjHEJNnhjvhrXvZ'
     },
     'facebook':{
         'api_version': 'v2.5',
