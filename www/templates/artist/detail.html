@@ -15,7 +15,7 @@
                 <p class="date" ng-if="view.scheduleActive" >{{view.artist.schedule | parseDate: 'dddd, D MMMM'}}</p>
                 <p class="time" ng-if="view.scheduleActive" ><i class="ion-clock"> </i>&nbsp;{{view.artist.schedule | parseDate: 'HH:mm'}}</p>
                 <p class="stage-name" ng-if="view.scheduleActive" ><i class="ion-location">&nbsp;{{view.artist.stage_name}}</i></p>
-                <hr>
+                <hr ng-if="view.artist.description.length > 0" >
                 <p class="description">
                     {{view.artist.description}}
                 </p>
