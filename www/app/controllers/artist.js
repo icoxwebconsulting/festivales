@@ -310,7 +310,7 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
             //console.info('artist', artist);
             var name = artist.name;
             var image = $scope.view.server_image+"artists/"+artist.id+"/cover/"+artist.image_cover;
-            $cordovaSocialSharing.share("Te recomiendo "+name+" en el #festivaldelesarts", "Festival Les Arts", image, "http://www.festivaldelesarts.com/");
+            $cordovaSocialSharing.share("Te recomiendo "+name+" en el "+GLOBAL.festival.hashtag+"", ""+GLOBAL.festival.name+"", image, ""+GLOBAL.festival.website+"");
         };
 
     }

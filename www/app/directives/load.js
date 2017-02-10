@@ -1,7 +1,7 @@
-app.directive('lazyLoad', ['$window', '$q', function ($window, $q) {
+app.directive('lazyLoad', ['$window', '$q', function ($window, $q, GLOBAL) {
     function load_script() {
         var s = document.createElement('script'); // use global document since Angular's $document is weak
-        s.src = '/www.ticketea.com/entradas-festival-les-arts-2016/buy?width=600px&height=600px';
+        s.src = '/www.ticketea.com/'+GLOBAL.festival.ticketea+'/buy?width=600px&height=600px';
         document.body.appendChild(s);
     }
     function lazyLoadApi(key) {

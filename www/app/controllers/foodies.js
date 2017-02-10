@@ -158,7 +158,7 @@ app.controller('FoodiesController', function ($rootScope, $scope,DBService,  $st
         $scope.shareAnywhere = function(foodies) {
             var name = foodies.name;
             var image = $scope.view.server_image+"foodies/"+foodies.id+"/cover/"+foodies.image_cover;
-            $cordovaSocialSharing.share("Te recomiendo "+name+" en el #FestivalDeLesArts", "Festival de les arts", image, "http://www.festivaldelesarts.com/");
+            $cordovaSocialSharing.share("Te recomiendo "+name+" en el "+GLOBAL.festival.hashtag+"", ""+GLOBAL.festival.name+"", image, ""+GLOBAL.festival.website+"");
         };
 
     }

@@ -15,9 +15,9 @@ app.constant('GLOBAL', {
     },
     'spotify':{
         'country_iso': 'ES',
-        'user_id': 'festivaldelesarts',
-        'client_id': '77b0545674984c768ed449759d5911c8',
-        'playlist_id': '011a5EKvlFSphDJdhnKljP'
+        'user_id': 'alhambrasound',
+        'client_id': 'c0c298e9a718462ea3e8641ca85acbcc',
+        'playlist_id': '2Rc2T6hNW1pfdgNBq6X6hk'
     },
     'facebook':{
         'api_version': 'v2.5',
@@ -34,5 +34,12 @@ app.constant('GLOBAL', {
         'user_id': '2234302526',
         'client_id': '56fd33cfcc54452eac65742adf6aaaa0',
         'token': '49993566.6ed3bd5.e38eade499524ff5b66b90c7cf9fa87b'
+    },
+    'festival':{
+        'hashtag': '#FestivalGranadaSound',
+        'name': 'Festival Granada Sound',
+        'website': 'http://www.granadasound.com/',
+        'ticketea': 'entradas-festival-granada-sound-2017',
+        'year': '2017'
     }
 });
