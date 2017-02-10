@@ -1,6 +1,6 @@
 {
-  "name": "Les Arts",
-  "app_id": "com.gravedad.lesarts",
+  "name": "Granada Sound",
+  "app_id": "com.gravedad.granadasound",
   "gulpStartupTasks": [
     "default",
     "watch"

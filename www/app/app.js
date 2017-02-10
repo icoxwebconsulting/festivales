@@ -1,4 +1,4 @@
-var app = angular.module('lesarts',
+var app = angular.module('granadasound',
     [
         'ionic',
         'ngCordova',
