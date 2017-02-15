@@ -2,7 +2,7 @@
     <div ng-show="view.show_login === 'options'">
         <div class="title">
             <h4>Reg&iacute;strate ahora</h4>
-            <span>Te llevar&aacute; &uacute;nicamente unos minutos</span>
+            <span>Te llevar&aacute; &uacute;nicamente unos segundos</span>
         </div>
         <div class="options">
             <img src="img/login/facebook.png" ng-click="loginFacebook()">
@@ -10,6 +10,9 @@
             <!--<div class="later">-->
                 <!--<a ng-click="later()">Registrarme m&aacute;s tarde</a>-->
             <!--</div>-->
+        </div>
+        <div class="footer-sun">
+          <img src="img/login/sun.png" alt=""/>
         </div>
     </div>
     <div ng-show="view.show_login === 'form'">
@@ -31,8 +34,9 @@
             </div>
         </div>
         <div class="login-footer">
-            <img src="img/login/sign-in.png" ng-click="login()">
-            <a ng-click="openLink('http://www.festivaldelesarts.com/wp-content/uploads/2015/10/Condiciones_Generales_Arts_2016.pdf')">T&eacute;rminos y condiciones</a>
+          <a ng-click="openLink('http://www.granadasound.com/wp-content/uploads/2016/12/condiciones_generales_granada_sound_2017.pdf')">T&eacute;rminos y condiciones</a>
+          <a ng-click="openLink('http://www.granadasound.com/wp-content/uploads/2016/11/aviso_legal_granada_sound_17.pdf')">Pol&iacute;tica de privacidad</a>
+          <img src="img/login/sign-in.png" ng-click="login()">
         </div>
     </div>
 
