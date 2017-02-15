@@ -29,6 +29,25 @@
     url("../lib/ionic/fonts/Knile-Regular.svg") format("svg");
 }
 
+@font-face {
+  font-family: 'Ahmet-Altun-3';
+  src: url('../fonts/Ahmet-Altun-No3.otf');
+}
+
+@font-face {
+  font-family: 'Rubik-Bold';
+  src: url('../fonts/Rubik-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik-Medium';
+  src: url('../fonts/Rubik-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Rubik-Regular';
+  src: url('../fonts/Rubik-Regular.ttf');
+}
 
 ::-webkit-input-placeholder{
     font-family:  Knile-Regular!important;
@@ -98,13 +117,23 @@
     border-bottom: none !important;
 }
 
-.nav-bar-block, .bar-footer{
-    background-color: #0E3743 !important;
+.bar-footer{
+  background-color: #2E2E2E !important;
+}
+
+.nav-bar-block{
+  background-color: rgba(50,50,48,0.99) !important;
+  background-image: url(../img/background.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 97px;
+  position: absolute;
 }
 
 .bar-header{
     position: static !important;
-    height: 50px !important;
+    height: 75px !important;
 }
 
 
@@ -159,11 +188,15 @@
 }
 
 .menu-left .pane, .poster, .map, .coming-soon{
-    background-image: url('../img/menu/background.jpg') !important;
+    /*background-image: url('../img/menu/background.jpg') !important;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
     background-attachment: fixed;
+}
+
+.menu-left .pane{
+  background-color: #2d2d2d;
 }
 
 .menu-left .powered-by{
@@ -248,8 +281,8 @@
     margin:10px auto;
     text-align:left;
     color: #ffffff;
-    font-family: LosLanaNiuPro-Black  !important;
-    font-size: 20px;
+    font-family: Ahmet-Altun-3 !important  !important;
+    font-size: 30px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -259,7 +292,7 @@
 }
 
 .header-right-menu{
-    background-color: #0E3743 !important;
+    background-color: #B83B44 !important;
     height: 51px !important;
 }
 
@@ -272,14 +305,14 @@
 }
 
 .sidebar-right .menu-tabs{
-    background-color: #FFA700 !important;
+    background-color: #2D2D2D !important;
     border: none !important;
     margin: 0 !important;
 }
 
 .sidebar-right .tab-item{
     margin-top: 18px !important;
-    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
+    font-family: Rubik-Regular  !important;
     color: #ffffff !important;
     font-size: 14px !important;
 }
@@ -346,9 +379,13 @@
 }
 
 .favorites .list .item .time, .favorites .list .item .stage-name, .notifications .list .item .stage-name, .notifications .list .item .time{
-    font-family: Knile-Regular!important;
+    font-family: Rubik-Regular!important;
     font-weight: lighter !important;
     font-size: 12px !important;
+}
+
+.notifications .list .item .stage-name{
+  font-family: Rubik-Medium !important;
 }
 
 .notifications .list .item .time{
@@ -367,7 +404,7 @@
 }
 
 .subtitle{
-    background-color: #FFA700!important;
+    background-color: #F2979B!important;
     position: static!important;
     height: 60px!important;
     text-align: center;
@@ -429,7 +466,7 @@
 }
 
 .filters{
-    background-color: #0F8253 !important;
+    background-color: #D83B44 !important;
     position: static !important;
     height: 50px !important;
     padding: 0px !important;
@@ -492,12 +529,12 @@
 }
 
 .list .item{
-    color: #0E3743;
+    color: #2D2D2D;
     background-color: #F5E5C1 !important;
     border-top: none !important;
     border-right: none !important;
     border-left: none !important;
-    border-bottom: 1px solid #0E3743;
+    border-bottom: 1px solid #2D2D2D;
     padding-bottom: 0 !important;
     padding-left: 0 !important;
     margin-bottom:2px;
@@ -509,7 +546,7 @@
 }
 
 .list .left{
-    background-color: #FFA700 !important;
+    /*background-color: #FFA700 !important;*/
     width:20%;
     height:80px;
 }
@@ -536,14 +573,14 @@
 }
 
 .list .artist-name{
-    font-family: LosLanaNiuPro-Regular, Knile-Regular  !important;
-    color: #0E3743 !important;
-    font-size: 14px;
-    font-weight: bold;
+    font-family: Ahmet-Altun-3 !important;
+    color: #D93B44 !important;
+    font-size: 22px;
+    font-weight: normal;
 }
 
 .list .time, .list .stage-name{
-    color: #0E3743;
+    color: #2D2D2D;
 }
 
 .list .right img{
@@ -617,7 +654,8 @@
     width: 80px;
     float: left;
     margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .artist .my-item.item {
@@ -627,11 +665,11 @@
 
 
 .artist .my-item.item p{
-    font-family: LosLanaNiuPro-Regular !important;
-    color: #0E3743;
-    font-size:13px;
+    font-family: Ahmet-Altun-3!important;
+    color: #E2BE48;
+    font-size:23px;
     display: inline-block;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .artist .subtitle{
@@ -651,19 +689,19 @@
 }
 
 .artist .list .item{
-    background-color: #F5E5C1 !important;
-    margin: 0 5px;
+    background-color: #2D2D2D !important;
+    margin: 0;
     height: 100px;
     max-height: 100px;
     border-bottom: none !important;
 }
 
 .artist .list .item-divider-artist{
-    border-top: 1px solid #0E3743 !important;
+    border-top: 1px solid #66959D !important;
 }
 
 .artist .list .item-divider, .schedule .list .item-divider{
-    background-color: #EC2F1B !important;
+    background-color: #D83B44 !important;
     border-style: none !important;
     border-top: none !important;
     margin: 0px !important;
@@ -681,14 +719,14 @@
     margin-left: 5px !important;
     color: #ffffff;
     font-size: 14px;
-    font-family: Knile-Regular !important;
+    font-family: Rubik-Regular!important;
 }
 
 .artist .list .favorite{
     margin-top: 20px;
     float: right;
     display: inline-block;
-    left:20px;
+    left: 15px;
 }
 
 .artist .list .favorite img{
@@ -710,13 +748,13 @@
 
 
 .discover .legend p{
-    font-family: LosLanaNiuPro-Regular !important;
-    font-size: 14px;
+    font-family: Ahmet-Altun-3 !important;
+    font-size: 23px;
     display: inline-block;
     float: left;
     margin: 18px 10px;
     color: #ffffff;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .artist-detail .header img{
@@ -742,13 +780,13 @@
 }
 
 .artist-detail .legend p{
-    font-family: LosLanaNiuPro-Regular !important;
-    font-size: 22px;
-    font-weight: bold !important;
+    font-family: Ahmet-Altun-3 !important;
+    font-size: 25px;
+    font-weight: normal !important;
     display: inline-block;
     float: left;
     margin: 18px 10px;
-    color: #FFA700;
+    color: #FFFFFF;
 }
 
 .artist-detail .legend img{
@@ -767,8 +805,8 @@
 .artist-detail .body{
     height: auto;
     width: 100%;
-    font-family: Knile-Regular  !important;
-    color: #0E3743;
+    font-family: Rubik-Regular  !important;
+    color: #2D2D2D;
     background-color: #F5E5C1 !important;
     position: absolute;
     display: block;
@@ -806,20 +844,20 @@
 }
 
 .artist-detail .body .listen p{
-    font-family: Knile-Regular!important;
+    font-family: Rubik-Regular!important;
     font-size: 14px;
     display: inline-block;
     font-weight: bold;
-    color: #0E3743;
+    color: #2D2D2D;
     float:left;
     vertical-align: middle;
 }
 
 .artist-detail .body .social-title{
-    font-family:  LosLanaNiuPro-Black !important;
+    font-family:  Ahmet-Altun-3!important;
     font-size: 20px;
     display: block;
-    color: #EC2F1B;
+    color: #D83B44;
     float:left;
     width: 100%;
     margin-top:10px;
@@ -854,13 +892,13 @@
 .login-header{
     width: 100% !important;
     height: 70px !important;
-    background-color: #FFA700 !important;
+    background-color: #d83b44 !important;
     padding: 0 !important;
     color: #ffffff !important;
 }
 
 .login-header .button-clear, .login-header .button-clear{
-    color: #0E3743 !important;
+    color: #ffffff !important;
 }
 
 .login-header .header-tabs{
@@ -875,7 +913,7 @@
 }
 
 .login-header .active{
-    border-bottom: 5px solid #0E3743 !important;
+    border-bottom: 5px solid #F5E5C1 !important;
 }
 
 .login-header .btn-action{
@@ -895,6 +933,10 @@
     /*background: -webkit-linear-gradient(top,  rgba(245,229,193,0.7) 99%,rgba(245,229,193,0) 100%,rgba(245,229,193,0) 101%);*/
     /*background: linear-gradient(to bottom,  rgba(245,229,193,0.7) 99%,rgba(245,229,193,0) 100%,rgba(245,229,193,0) 101%);*/
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3f5e5c1', endColorstr='#00f5e5c1',GradientType=0 );*/
+}
+
+.login-content.has-header{
+  top: 0px !important;
 }
 
 .login-content .title{
@@ -991,22 +1033,25 @@
 
 .login-content .form a{
     display: inline-block;
-    width: 100%;
+    width: initial;
     float: left;
     display: block;
-    color: #0E3743 !important;
+    color: #D83B44 !important;
 }
 
 .login-footer{
     text-align: center;
     width: 100%;
     font-size: 12px;
-    margin: 100px 0;
+    /*position: fixed;*/
+    /*bottom: 100px;*/
+    /*bottom: 175px;*/
+    margin: 150px 0 17px;
 }
 
 .login-footer a{
     display: block;
-    color: #EC2F1B !important;
+    color: #D83B44 !important;
 }
 
 
@@ -1125,7 +1170,7 @@
 
 .footer .button.button-clear{
     font-size: 11px !important;
-    font-family:  Knile-Regular!important;
+    font-family:  Rubik-Regular!important;
     color: #ffffff !important;
 }
 
@@ -1136,13 +1181,13 @@
 }
 
 .social .filter .button{
-    font-family:  Knile-Regular!important;
+    font-family:  Rubik-Regular!important;
     font-size: 12px !important;
 }
 
 .info .filters h3{
     color:#ffffff !important;
-    font-family:  LosLanaNiuPro-Black !important;
+    font-family:  Rubik-Bold !important;
     vertical-align: middle;
     text-align: center;
     margin: auto;
@@ -1156,7 +1201,7 @@
 }
 
 .info .list .item{
-    font-family:  LosLanaNiuPro-Regular!important;
+    font-family: Rubik-Medium !important;
     font-size: 14px !important;
 }
 
@@ -1333,7 +1378,7 @@
 }
 
 .sponsor h3, .weather h3{
-    font-family: LosLanaNiuPro-Regular, Knile-Regular!important;
+    font-family: Rubik-Bold, Rubik-Medium!important;
     font-weight: lighter !important;
     color: #ffffff;
     text-align: center;
@@ -1343,7 +1388,7 @@
 .sponsor .subtitle, .weather .subtitle{
     width: 100% !important;
     height: 30px !important;
-    background-color: #FFA700 !important;
+    background-color: #D83B44 !important;
     padding: 0px !important;
     color: #ffffff !important;
     text-align: left;
@@ -1410,20 +1455,20 @@
 }
 
 .weather .time{
-    font-family: Knile-Regular!important;
-    color: #0E3743;
+    font-family: Rubik-Regular!important;
+    color: #2D2D2D;
     font-size: 14px;
 }
 
 .weather .condition-name{
-    font-family: LosLanaNiuPro-Regular, Knile-Regular!important;
-    color: #0E3743;
+    font-family: Rubik-Medium!important;
+    color: #2D2D2D;
     font-size: 18px;
 }
 
 .weather .temperature{
-    font-family: LosLanaNiuPro-Regular, Knile-Regular!important;
-    color: #0E3743;
+    font-family: Rubik-Regular!important;
+    color: #2D2D2D;
     font-size: 20px;
 }
 
@@ -1551,3 +1596,24 @@
     padding: 5px;
 }
 
+.pane, .view {
+  background-color: #fae9c5;
+}
+
+.footer-sun img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 65px;
+}
+
+.has-header {
+  /*top: 0px !important;*/
+  top: 92px !important;
+}
+
+.sun{
+  display: block;
+  width: 100% !important;
+  padding-top: 15px;
+}
