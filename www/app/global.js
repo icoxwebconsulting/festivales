@@ -26,7 +26,7 @@ app.constant('GLOBAL', {
         'client_secret': '99a5617adda2ef35f914ab9f01dbc626'
     },
     'twitter':{
-        'screen_name': 'festivaldelesarts',
+        'screen_name': 'lesartsfest',
         'client_id': '8QUfegI5DJhiC9GDQsMPKhAkN',
         'client_secret': 'BUZj4Inlg2qitfDO5asiCqXIrmybcDxCXM0nawYGG98l7z25Sb'
     },
