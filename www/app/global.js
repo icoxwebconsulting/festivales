@@ -21,7 +21,7 @@ app.constant('GLOBAL', {
     },
     'facebook':{
         'api_version': 'v2.5',
-        'user_id': '850431581647988',
+        'user_id': '334933873257820',
         'client_id': '208879216254934',
         'client_secret': 'c3f812dee549167dfd377a8db3d93195'
     },
