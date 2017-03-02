@@ -22,8 +22,8 @@ app.constant('GLOBAL', {
     'facebook':{
         'api_version': 'v2.5',
         'user_id': '850431581647988',
-        'client_id': '1706543149628857',
-        'client_secret': '99a5617adda2ef35f914ab9f01dbc626'
+        'client_id': '208879216254934',
+        'client_secret': 'c3f812dee549167dfd377a8db3d93195'
     },
     'twitter':{
         'screen_name': 'lesartsfest',
