@@ -5,7 +5,7 @@ app.constant('GLOBAL', {
         //'url': 'http://coolway.dev/app_dev.php/api/',
         //'url' : 'http://festivales.icox.mobi/app_dev.php/api/',
         'version': 'v1',
-        'feast': 1
+        'feast': 6
     },
     'server':{
         //'image': 'http://62.75.142.156/uploads/'
@@ -26,9 +26,9 @@ app.constant('GLOBAL', {
         'client_secret': 'c3f812dee549167dfd377a8db3d93195'
     },
     'twitter':{
-        'screen_name': 'lesartsfest',
-        'client_id': '8QUfegI5DJhiC9GDQsMPKhAkN',
-        'client_secret': 'BUZj4Inlg2qitfDO5asiCqXIrmybcDxCXM0nawYGG98l7z25Sb'
+        'screen_name': 'granadasound',
+        'client_id': 'IEm3WX1FBaiZ1DBGbkwwEC2Au',
+        'client_secret': 'Z17jjl0xBCtEwxWJdk8SxKr0KnrCe0iAm38JTMGBVyzMCaW7BS'
     },
     'instagram':{
         'user_id': '2234302526',
