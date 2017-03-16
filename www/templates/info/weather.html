@@ -12,7 +12,7 @@
                 </div>
                 <div class="center">
                     <p class="condition-name">{{item.condition_day}}</p>
-                    <p class="time"><i class="ion-clock"></i>&nbsp;{{item.forecast_date.date | parseDate: 'd MMMM'}}</p>
+                    <p class="time"><i class="ion-clock"></i>&nbsp;{{item.forecast_date.date | parseDate: 'D MMMM'}}</p>
                 </div>
                 <div class="right">
                     <p class="temperature">&nbsp;{{ ( (item.min_temp + item.max_temp) / 2 ) | number:0}} &deg;</p>
