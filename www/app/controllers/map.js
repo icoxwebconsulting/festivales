@@ -182,6 +182,5 @@ app.controller('MapController', function ($scope, $cordovaGeolocation, $ionicLoa
             });
     };
 
-    $scope.init();
 
 });
