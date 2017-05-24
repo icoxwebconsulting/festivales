@@ -177,11 +177,11 @@
 }
 
 .nav-bar-block{
-    background-color: #172e3c !important;
+    background-color: #ffffff !important;
 }
 
 .bar-footer{
-    background-color: #172e3c !important;
+    background-color: #000000 !important;
 }
 
 .bar-header{
@@ -242,11 +242,11 @@
 }
 
 .menu-left .pane, .poster{
-    background-color: #172e3c;
+    background-color: #000000;
 }
 
 .coming-soon{
-    background-color: #FBF7D7 !important;
+    background-color: #DFC710 !important;
 }
 
 
@@ -260,18 +260,12 @@
     display: block;
 }
 
-.coming-soon .text{
-    position: relative;
-    height: 100%;
-}
-
 .coming-soon .text img{
     position: relative;
     margin-right: auto;
     width: 100%;
-    bottom: 0;
-    height: 55%;
-    margin-top: 25%
+    bottom: 100%;
+    height: auto;
 }
 
 .coming-soon .footer{
@@ -444,7 +438,7 @@
 }
 
 .header-right-menu{
-    background-color: #172e3c !important;
+    background-color: #ffffff !important;
     height: 51px !important;
 }
 
@@ -457,7 +451,7 @@
 }
 
 .sidebar-right .menu-tabs{
-    background-color: #51abb4 !important;
+    background-color: #FFE200 !important;
     border: none !important;
     margin: 0 !important;
 }
@@ -465,7 +459,7 @@
 .sidebar-right .tab-item{
     margin-top: 18px !important;
     font-family: roboto-regular  !important;
-    color: #ffffff !important;
+    color: #000000 !important;
     font-size: 14px !important;
 }
 
@@ -483,7 +477,7 @@
 }
 
 .menu-right .pane{
-    background-color: #ffefcd !important;
+    background-color: #000000 !important;
 }
 
 .menu-right .favorites .pane, .menu-right .notifications .pane{
@@ -506,12 +500,13 @@
     width: 120px;
 }
 
-.menu-right .favorites .not-found .text{
+.menu-right .favorites .not-found .text, .menu-right .notifications .not-found .text{
     display: block;
     position: inherit;
     padding: 0px 20px;
     text-align: center;
     font-family: roboto-regular  !important;
+    color: #ffffff;
 }
 
 .menu-right .list.disable-user-behavior{
@@ -521,8 +516,8 @@
 }
 
 .menu-right .favorites .item-content{
-    background-color: #ffefcd !important;
-    color: #04041B;
+    background-color: #000000 !important;
+    color: #ffffff;
     border: none !important;
 }
 
@@ -534,6 +529,7 @@
     font-family: roboto-regular!important;
     font-weight: lighter !important;
     font-size: 13px !important;
+    color: #ffffff !important;
 }
 
 .notifications .list .item .time{
@@ -697,12 +693,12 @@
 }
 
 .list .item{
-    color: #04041B;
-    background-color: #ffefcd !important;
+    color: #ffffff;
+    background-color: #000000 !important;
     border-top: none !important;
     border-right: none !important;
     border-left: none !important;
-    border-bottom: 1px solid #04041B;
+    border-bottom: 2px solid #504F4E;
     padding-bottom: 0 !important;
     padding-left: 0 !important;
     margin-bottom:2px;
@@ -742,12 +738,12 @@
 
 .list .artist-name{
     font-family: bebasneue-regular, roboto-regular  !important;
-    color: #04041B !important;
+    color: #ffffff !important;
     font-size: 18px;
 }
 
 .list .time, .list .stage-name{
-    color: #04041B;
+    color: #ffffff;
 }
 
 .list .right img{
@@ -838,7 +834,7 @@
 
 .artist .subtitle{
     height: 50px !important;
-    background-color: #51abb4 !important;
+    background-color: #FFE200 !important;
 }
 
 .artist .full-width {
@@ -850,23 +846,24 @@
 }
 
 .artist .listed{
-    background-color: #ffefcd !important;
+    background-color: #000000 !important;
 }
 
 .artist .list .item{
-    background-color: #ffefcd !important;
+    background-color: #000000 !important;
     margin: 0 5px;
     height: 100px;
     max-height: 100px;
     border-bottom: none !important;
+    color: #ffffff;
 }
 
 .artist .list .item-divider-artist{
-    border-top: 1px solid #04041B !important;
+    border-top: 2px solid #504F4E !important;
 }
 
 .artist .list .item-divider, .schedule .list .item-divider{
-    background-color: #bd4858 !important;
+    background-color: #F78998 !important;
     border-style: none !important;
     border-top: none !important;
     margin: 0px !important;
@@ -970,7 +967,7 @@
     width: 100%;
     font-family: roboto-regular  !important;
     color: #04041B;
-    background-color: #ffefcd !important;
+    background-color: #000000 !important;
     position: absolute;
     display: block;
     margin-top: 250px;
@@ -987,6 +984,7 @@
     font-size: 12px;
     margin-bottom:0 !important;
     text-align: justify;
+    color: #ffffff
 }
 
 .artist-detail .body .listen{
@@ -1019,7 +1017,7 @@
     font-family:  bebasneue-regular,roboto-regular!important;
     font-size: 28px;
     display: block;
-    color: #04041B;
+    color: #ffffff;
     float:left;
     width: 100%;
     margin-top:10px;
@@ -1041,26 +1039,35 @@
 
 .login{
     /* Fallback for web browsers that don't support RGBa */
-    background-color: rgb(245, 229, 193);
+    background-color: rgb(255, 255, 255);
     /* RGBa with 0.6 opacity */
-    background-color: rgba(245, 229, 193, 1);
+    background-color: rgba(255, 255, 255, 1);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff);
     /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff)";
     padding: 0 !important;
 }
+
+.login-preheader{
+    width: 100% !important;
+    height: 30px !important;
+    background-color: #000000 !important;
+    padding: 0 !important;
+    color: #000000 !important;
+}
+
 
 .login-header{
     width: 100% !important;
     height: 70px !important;
-    background-color: #bd4858 !important;
+    background-color: #FFE525 !important;
     padding: 0 !important;
     color: #ffffff !important;
 }
 
 .login-header .button-clear, .login-header .button-clear{
-    color: #ffffff !important;
+    color: #000000 !important;
 }
 
 .login-header .header-tabs{
@@ -1075,7 +1082,7 @@
 }
 
 .login-header .active{
-    border-bottom: 5px solid #172e3c !important;
+    border-bottom: 9px solid #172000 !important;
 }
 
 .login-header .btn-action{
@@ -1123,7 +1130,7 @@
 }
 
 .login-content .options .later{
-    text-align: center;
+    text-align: left;
     font-family:  roboto-regular!important;
     font-weight: bold;
     font-size: 15px;
@@ -1166,13 +1173,13 @@
 
 .login-content .form .field input{
     /* Fallback for web browsers that don't support RGBa */
-    background-color: rgb(255, 239, 205);
+    background-color: rgb(255, 255, 255);
     /* RGBa with 0.6 opacity */
-    background-color: rgba(255, 239, 205, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     /* For IE 5.5 - 7*/
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff);
     /* For IE 8*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffefcd, endColorstr=#ffefcd)";
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#ffffff)";
     border: none !important;
     width: 87%;
     font-size: 18px;
@@ -1180,7 +1187,7 @@
 }
 
 .login-content .form .later{
-    text-align: center;
+    text-align: left;
     font-family:  roboto-regular!important;
     font-size: 11px;
     margin-top: 5px;
@@ -1205,7 +1212,7 @@
 
 .login-footer a{
     display: block;
-    color: #bd4858 !important;
+    color: #000000 !important;
 }
 
 
@@ -1238,7 +1245,7 @@
 }
 
 .modal-settings .list .item{
-    background-color: #ffefcd !important;
+    background-color: #ffffff !important;
     border-color: #F0E0BC !important;
     color:#04041B !important;
     font-family:  roboto-regular!important;
@@ -1251,8 +1258,8 @@
 }
 
 .modal-settings .bar-header{
-    background-color: #04041B !important;
-    color: #ffefcd !important;
+    background-color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 .modal-settings .logo img {
@@ -1267,14 +1274,16 @@
     background-color: #ffffff !important;
     border-color: #ffffff !important;
     height: 45px !important;
+    color: #000000;
 }
 
 .modal-settings .input-list .item-title{
-    background-color: #ffefcd !important;
+    background-color: #000000 !important;
     border-color: #F0E0BC !important;
     padding: 12px;
     height: 40px !important;
     margin: 0 !important;
+    color: #ffffff !important;
 }
 
 .button-100{
@@ -1592,7 +1601,7 @@
 
 .weather .left{
     padding: 5px;
-    background-color: #ffefcd !important;
+    background-color: #ffffff !important;
 }
 
 .weather .condition-icon{

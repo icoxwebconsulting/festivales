@@ -15,7 +15,7 @@
                 <p class="date" ng-if="view.scheduleActive" >{{view.artist.schedule | parseDate: 'dddd, D MMMM'}}</p>
                 <p class="time" ng-if="view.scheduleActive" ><i class="ion-clock"> </i>&nbsp;{{view.artist.schedule | parseDate: 'HH:mm'}}</p>
                 <p class="stage-name" ng-if="view.scheduleActive" ><i class="ion-location">&nbsp;{{view.artist.stage_name}}</i></p>
-                <hr>
+                <hr style="border-top: 1px solid #504F4E;">
                 <p class="description">
                     {{view.artist.description}}
                 </p>
@@ -23,7 +23,7 @@
                     <img src="img/coolway/social-network/spotify.png">
                     <p>Escucha r&aacute;pida </p>
                 </button>
-                <hr>
+                <hr class="artist-detail-divider">
                 <p class="social-title">SOCIAL</p>
                 <div class="social">
                     <img src="img/coolway/social-network/facebook.png" ng-if="view.artist.facebook.length" ng-click="openLink('{{view.artist.facebook}}')">

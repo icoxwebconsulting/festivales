@@ -8,8 +8,8 @@
         </div>
     </ion-header-bar>
     <ion-content>
-        <ion-list>
-            <ion-item class="item-divider"><span>Notificaciones</span></ion-item>
+        <ion-list class="input-list">
+            <ion-item class="item-divider item-title"><span>Notificaciones</span></ion-item>
         </ion-list>
         <div class="list input-list">
             <ion-toggle ng-model="view.notificationActive" ng-change="changeNotification()">
@@ -38,8 +38,8 @@
                 <button class="button button-stable button-100" ng-disabled="!view.pass.current_password.length || !view.pass.new_password.length || !view.pass.confirm" ng-click="changePassword()">Actualizar</button>
             </label>
         </ion-list>
-        <ion-list>
-            <ion-item class="item-divider"><span>Cuenta</span></ion-item>
+        <ion-list class="input-list">
+            <ion-item class="item-divider item-title"><span>Cuenta</span></ion-item>
         </ion-list>
         <div class="list input-list">
             <button class="button button-stable button-100" ng-click="logout()">Cerrar sesi&oacute;n</button>
