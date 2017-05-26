@@ -178,6 +178,10 @@
 
 .nav-bar-block{
     background-color: #ffffff !important;
+    background-image: url('../img/logo.png') !important; 
+    border-bottom: none !important;
+    background-size: 90% 100% !important;
+    background-position: center center !important;
 }
 
 .bar-footer{
@@ -188,6 +192,7 @@
     position: static !important;
     height: 50px !important;
 }
+
 
 
 .logo{
@@ -246,7 +251,7 @@
 }
 
 .coming-soon{
-    background-color: #DFC710 !important;
+    background-color: #feda00 !important;
 }
 
 
@@ -1259,15 +1264,10 @@
 
 .modal-settings .bar-header{
     background-color: #ffffff !important;
-    color: #ffffff !important;
-}
-
-.modal-settings .logo img {
-    max-width: 50%!important;
-    max-height: 40px;
-    margin-top: 2px;
-    float: left;
-    margin-left: 20%;
+    background-image: url('../img/logo.png') !important; 
+    border-bottom: none !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
 }
 
 .modal-settings .input-list .item{
