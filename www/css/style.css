@@ -337,7 +337,7 @@
     height : 100px;
 }
 
-.menu-left .header-left-menu{
+.menu-left .header-left-menu{    
     display: inline-block;
     margin-top: -100px;
     margin-bottom: 10px;
@@ -377,7 +377,7 @@
 .menu-left .header-left-menu img{
     width : 100%;
     padding: 0px 50px;
-    margin-left: 25px;
+    margin-left: 25px;    
 }
 
 .menu-left .footer-left-menu img{
@@ -443,8 +443,11 @@
 }
 
 .header-right-menu{
+    background-image: url('../img/logo.png') !important; 
     background-color: #ffffff !important;
-    height: 51px !important;
+    border-bottom: none !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;    
 }
 
 .header-right-menu img{
@@ -456,7 +459,7 @@
 }
 
 .sidebar-right .menu-tabs{
-    background-color: #FFE200 !important;
+    background-color: #feda00 !important;
     border: none !important;
     margin: 0 !important;
 }
@@ -839,7 +842,7 @@
 
 .artist .subtitle{
     height: 50px !important;
-    background-color: #FFE200 !important;
+    background-color: #feda00 !important;
 }
 
 .artist .full-width {
@@ -1748,7 +1751,7 @@
 
 .ticket{
     background: url('../img/ticket/background.png');
-    background-size: 102% 101%;
+    background-size: 100% 100%;
     margin-left: -6px;
 }
 
@@ -1757,6 +1760,6 @@
 }
 
 .ticket .bg img{
-    margin-top: 55%;
+    margin-top: 65%;
     width: 60%;
 }

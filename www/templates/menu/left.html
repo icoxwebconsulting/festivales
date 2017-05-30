@@ -3,17 +3,12 @@
         <div class="powered-by">
             <img src="img/menu/coolway_powered.png">
         </div>
-        <div class="temperature" ng-show="view.weathers.length" ng-init="getWeather()">
+        <!--div class="temperature" ng-show="view.weathers.length" ng-init="getWeather()">
             <img ng-src="img/weather/{{view.weathers[0].condition_day}}.png" class="condition">
             <p>{{ ( (view.weathers[0].min_temp + view.weathers[0].max_temp) / 2 ) | number:0}} &deg;</p>
-        </div>
+        </div-->
         <div class="header-left-menu" menu-close ui-sref="menu.artist-discover">
-            <div class="left">
-                <br>
-            </div>
-            <div class="right">
-                <img src="img/menu/logo.png">
-            </div>
+            <img src="img/menu/logo.png">
         </div>
 
         <button class="button button-clear category" menu-close ui-sref="menu.artist-list">
