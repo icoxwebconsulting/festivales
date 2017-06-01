@@ -1,0 +1,8 @@
+{
+  "name": "Les Arts",
+  "app_id": "a38cbf4b",
+  "gulpStartupTasks": [
+    "default",
+    "watch"
+  ]
+}
