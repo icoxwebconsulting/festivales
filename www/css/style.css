@@ -422,19 +422,18 @@
 }
 
 .category img{
-    height: 38px;
+    width: 27px;
+    height: 20px;
     margin-left: 45px;
-    vertical-align: middle;
 }
 
 .category a{
     width:800px;
-    margin:10px auto;
+    margin:10px 6px;
     text-align:left;
     color: #ffffff;
     font-family: bebasneue-regular, roboto-regular  !important;
     font-size: 22px;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -938,7 +937,7 @@
 
 .artist-detail .legend{
     width:100% !important;
-    height: 50px !important;
+    height: auto !important;
     position: absolute;
     margin-top: 200px;
     z-index: 12 !important;
@@ -970,8 +969,12 @@
     float: right !important;
 }
 
+.artist-detail .item-divider-artist{
+    border: 1px solid #504F4E !important;
+}
+
 .artist-detail .body{
-    height: auto;
+    height: 100%;
     width: 100%;
     font-family: roboto-regular  !important;
     color: #04041B;
@@ -979,7 +982,7 @@
     position: absolute;
     display: block;
     margin-top: 250px;
-    margin-bottom: 50px;
+    margin-bottom: auto;
 }
 
 .artist-detail .body .date{
@@ -1034,7 +1037,7 @@
 .artist-detail .body .social img{
     height: 40px!important;
     width:  auto !important;
-    display: inline-block;
+    display: block;
     margin-right: 15px;
     float: left;
     vertical-align: middle;
