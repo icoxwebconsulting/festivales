@@ -60,15 +60,9 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
             maxWidth: 200,
             showDelay: 0
         });
-        //InstagramService.GetFeed().then(function(items) {
-        //    $scope.view.pics = items.concat($scope.items);
-        //},function(error) {
-        //    $ionicPopup.alert({
-        //        title: "Sin conexión a internet"
-        //    });
-        //    $ionicLoading.hide();
-        //});
-        if ($localStorage.hasOwnProperty("fbAccessToken") === true) {
+
+
+        if ($localStorage.fbAccessToken === true) {
             FacebookService.fetchFeed().then(function (response) {
                 $scope.view.facebookFeed = response.data;
                 $ionicLoading.hide();
@@ -79,7 +73,7 @@ app.controller('SocialController', function($scope, FacebookService, InstagramSe
 
         }else{
             FacebookService.getAccessToken().then(function (data) {
-                $localStorage.fbAccessToken = data;
+                $localStorage.fbAccessToken = data.access_token;
                 FacebookService.fetchFeed().then(function (response) {
                     $scope.view.facebookFeed = response.data;
                     $ionicLoading.hide();

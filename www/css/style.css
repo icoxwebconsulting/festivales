@@ -375,9 +375,8 @@
 
 
 .menu-left .header-left-menu img{
-    width : 100%;
-    padding: 0px 50px;
-    margin-left: 25px;    
+    height: 80px;
+    margin-right: 35px;
 }
 
 .menu-left .footer-left-menu img{
@@ -834,7 +833,7 @@
 
 .artist .my-item.item p{
     font-family: bebasneue-regular, roboto-regular  !important;
-    color: #04041B;
+    color: #fff;
     font-size:18px;
     display: inline-block;
 }
@@ -1607,7 +1606,7 @@
 
 .weather .left{
     padding: 5px;
-    background-color: #ffffff !important;
+    background-color: #000 !important;
 }
 
 .weather .condition-icon{
@@ -1617,19 +1616,19 @@
 
 .weather .time{
     font-family: roboto-regular!important;
-    color: #04041B;
+    color: #ffffff;
     font-size: 14px;
 }
 
 .weather .condition-name{
     font-family: bebasneue-regular, roboto-regular!important;
-    color: #04041B;
+    color: #ffffff;
     font-size: 18px;
 }
 
 .weather .temperature{
     font-family: bebasneue-regular, roboto-regular!important;
-    color: #04041B;
+    color: #ffffff;
     font-size: 20px;
 }
 

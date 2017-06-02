@@ -4,7 +4,7 @@ app.factory('FacebookService', function ($rootScope, GLOBAL, $http, $q, $localSt
         var deferred = $q.defer();
 
 
-        $http.get('https://graph.facebook.com/'+ GLOBAL.facebook.user_id + '/feed?fields=full_picture,comments,likes,shares,description,from,story,message,name,created_time,link,picture&' + $localStorage.fbAccessToken)
+        $http.get('https://graph.facebook.com/'+ GLOBAL.facebook.user_id + '/feed?fields=full_picture,comments,likes,shares,description,from,story,message,name,created_time,link,picture&access_token=' + $localStorage.fbAccessToken)
             .success(function (response) {
                 deferred.resolve(response);
             }).error(function () {
@@ -28,7 +28,7 @@ app.factory('FacebookService', function ($rootScope, GLOBAL, $http, $q, $localSt
 
     function getProfile() {
         var deferred = $q.defer();
-        $http.get('https://graph.facebook.com/' + GLOBAL.facebook.user_id + '?' + $localStorage.fbAccessToken + '&fields=id,name,picture,cover,about,category,website&format=json')
+        $http.get('https://graph.facebook.com/' + GLOBAL.facebook.user_id + '?access_token=' + $localStorage.fbAccessToken + '&fields=id,name,picture,cover,about,category,website&format=json')
             .success(function (response) {
                 deferred.resolve(response);
             }).error(function () {
