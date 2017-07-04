@@ -5,9 +5,9 @@ app.controller('ScheduleController', function($scope,ArtistService, ScheduleServ
         $scope.view = {};
         $scope.view.ready = false;
         $scope.view.show_list = 'time';
-        $scope.view.show_day = 9;
-        $scope.view.show_day_from = '2016-07-01 00:00';
-        $scope.view.show_day_to = '2016-07-02 06:00';
+        $scope.view.show_day = 6;
+        $scope.view.show_day_from = '2017-07-06 00:00';
+        $scope.view.show_day_to = '2017-07-07 06:00';
         $scope.view.server_image = GLOBAL.server.image;
         $scope.view.scheduleActive = false;
         $ionicLoading.show({
