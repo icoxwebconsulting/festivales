@@ -1,0 +1,8 @@
+{
+  "name": "Arenal Sound",
+  "app_id": "0c82ce73",
+  "gulpStartupTasks": [
+    "default",
+    "watch"
+  ]
+}

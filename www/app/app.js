@@ -9,10 +9,11 @@ var app = angular.module('arenalsound',
         'ngTwitter',
         'spotify',
         'ionic-zoom-view',
-        'angularMoment'
+        'angularMoment',
+        'ionic.cloud'
     ]);
 
-app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, DBService, UserService, NotificationService, $cordovaGoogleAnalytics) {
+app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistory, $state, DBService, UserService, NotificationService, $cordovaGoogleAnalytics, $ionicPopup) {
     $ionicPlatform.ready(function () {
         DBService.init(false);
 
@@ -109,5 +110,13 @@ app.run(function ($rootScope, $state, $stateParams, $ionicPlatform, $ionicHistor
                 navigator.app.exitApp();
             }
         });
+
+        $rootScope.$on('cloud:push:notification', function(event, data) {
+            var msg = data.message;
+            $ionicPopup.alert({
+                title: msg.title + ': ' + msg.text
+            });
+        });
+
     });
 });

@@ -1,5 +1,23 @@
-app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $ionicCloudProvider) {
     $ionicConfigProvider.backButton.text('').icon('my-back-button');
+
+    $ionicCloudProvider.init({
+        "core": {
+            "app_id": "0c82ce73"
+        },
+        "push": {
+            "sender_id": "663159325044",
+            "pluginConfig": {
+                "ios": {
+                    "badge": true,
+                    "sound": true
+                },
+                "android": {
+                    "iconColor": "#343434"
+                }
+            }
+        }
+    });
 
     $stateProvider
         .state('base', {

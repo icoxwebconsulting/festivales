@@ -1,5 +1,5 @@
 'use strict';
-app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorage, $ionicPopup, DeviceService, $q, $state) {
+app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorage, $ionicPopup, DeviceService, $q, $state, $ionicPush) {
 
     var resource = $resource(GLOBAL.api.url + GLOBAL.api.version + '/users', {}, {
         'register': {
@@ -95,48 +95,23 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
 
 
     function registerNotifications() {
-        if (window.PushNotification) {
-            var PushNotification = window.PushNotification;
-            var push = PushNotification.init({
-                android: {
-                    senderID: "32315875068",
-                    icon: "icon",
-                    iconColor: "lightgrey"
-                },
-                ios: {
-                    alert: "true",
-                    badge: "true",
-                    sound: "true",
-                    senderID: "32315875068" // GCM Sender ID (project ID)
-                }
-            });
 
-            if (getUser().device_token === null || getUser().device_token === undefined && (push !== null) ) {
-                push.on('registration', function (data) {
-                    // android by default
-                    var os = '0';
-                    if (ionic.Platform.isIOS())
-                        os = '1';
+        if (typeof getUserId() != "undefined")
+        {
+            return $ionicPush.register().then(function (t) {
+                return $ionicPush.saveToken(t);
+            }).then(function (t) {
++
 
-                    $localStorage.device_token = data.registrationId;
-                    $localStorage.os = os;
-                    registerDevice({
-                        access_token: getUser().access_token,
-                        os: os,
-                        device_token: data.registrationId
-                    });
+                var os = '0';
+                if (ionic.Platform.isIOS())
+                    os = '1';
+
+                registerDevice({
+                    access_token: getUser().access_token,
+                    os: os,
+                    device_token: t.token
                 });
-            }
-
-            push.on('notification', function (data) {
-                $ionicPopup.alert({
-                    title: data.title,
-                    template: data.message
-                });
-            });
-
-            push.on('error', function (e) {
-                // e.message
             });
         }
     }
