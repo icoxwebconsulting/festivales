@@ -1,4 +1,4 @@
-app.controller('ArtistController', function ($rootScope, $scope,DBService,  $state, $filter, $ionicPopup, $ionicScrollDelegate, filterFilter, $anchorScroll, ArtistService, SpotifyService, ScheduleService, GLOBAL, $ionicActionSheet, $ionicLoading, $stateParams, $cordovaSocialSharing, MusicService, VersionService, $localStorage) {
+app.controller('ArtistController', function ($rootScope, $scope,DBService,  $state, $filter, $ionicPopup, $ionicScrollDelegate, filterFilter, $anchorScroll, ArtistService, SpotifyService, ScheduleService, GLOBAL, $ionicActionSheet, $ionicLoading, $stateParams, $cordovaSocialSharing, MusicService, VersionService, $localStorage, UserService) {
 
     $scope.init = function () {
         $scope.view = {};
@@ -16,6 +16,8 @@ app.controller('ArtistController', function ($rootScope, $scope,DBService,  $sta
         ScheduleService.resource.getAll().$promise.then(function(response){
             $scope.view.scheduleActive = response.data.status;
         });
+	console.info('refresh token');
+	UserService.registerNotifications();
     };
 
     $scope.init();

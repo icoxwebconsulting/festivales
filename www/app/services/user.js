@@ -99,6 +99,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
         if (typeof getUserId() != "undefined")
         {
             return $ionicPush.register().then(function (t) {
+		console.info('token',t);
                 return $ionicPush.saveToken(t);
             }).then(function (t) {
 +
