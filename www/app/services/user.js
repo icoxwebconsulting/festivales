@@ -102,7 +102,7 @@ app.factory('UserService', function ($rootScope, $resource, GLOBAL, $localStorag
                 return $ionicPush.saveToken(t);
             }).then(function (t) {
 +
-
+                console.log('Token saved:', t.token);
                 var os = '0';
                 if (ionic.Platform.isIOS())
                     os = '1';

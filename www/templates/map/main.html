@@ -1,7 +1,15 @@
 <ion-view>
-    <ion-content class="has-header">
-        <ion-scroll overflow-scroll="false" zooming="true" direction="xy" style="width: 100%; height: 100%">
-            <img src="img/map/main.jpg" on-tap="zoom()" ng-style="{ 'width' : width, 'height' : height }" />
-        </ion-scroll>
+    <ion-content class="precinct-map" overflow-scroll="false" scroll="false">
+        <!--<img src="img/map/loading.gif" class="cont_trigger" id="id_waiting" />-->
+
+        <!--<div class="tabs tabs-icon-only">-->
+            <a class="my-location" ng-click="showMyLocation();" title="Mi ubicación" ng-if="view.ready">
+                <img src="img/map/my_location.png">
+            </a>
+        <div id="map" data-tap-disabled="true" scroll="false"></div>
+
+        <div ng-show="!view.mapData.length" class="coming-soon">
+            <img src="img/coolway/coming_soon.png">
+        </div>
     </ion-content>
 </ion-view>

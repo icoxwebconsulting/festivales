@@ -18,7 +18,6 @@ app.controller('PosterController', function ($scope, $cordovaGeolocation, $ionic
 
             if(poster.length > 0)
             {
-                console.info('database', poster);
                 $scope.view.poster = poster[0];
                 $ionicLoading.hide();
                 $scope.view.ready = true;
